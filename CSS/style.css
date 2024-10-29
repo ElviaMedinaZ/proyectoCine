@@ -1,0 +1,250 @@
+/* Estilos del menu principal */
+
+*{
+    margin: 0;
+}
+
+body{
+    background-color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+    background-size: cover;
+    background-position:center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    min-width: 100vw;
+    position: relative;
+}
+
+/* menu superior */
+.header{
+    background-color: #830c00;
+    padding: 20px 40px;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 79px;
+    height: 53px;
+    /* espacio del logo */
+    margin-right: 10px;
+}
+
+/* Elementos de la lista flotante a la derecha */
+.nav-left{
+    float: left;
+}
+
+/* Estilo de la lista del menu navegar */
+.nav-left li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 15px;
+}
+
+/* Texto del menu de navegar */
+.nav-left li a{
+    text-decoration: none;
+    color:rgb(255, 255, 255);
+    font-weight:700;
+    font-size: 18px;
+}
+
+.search-container {
+    position: relative;
+    display: flex;
+    margin-left: 40px; /* Ajusta la distancia al lado izquierdo */
+}
+
+/* Estilos del cuadro de busqueda */
+.search{
+    border-radius: 15px;
+    padding: 10px 20px;
+    width: 350px;
+    /* Mover a la derecha del menu */
+    margin-left: 50px;
+}
+
+/* icono de busqueda */
+.search-container i {
+    margin: 12px 352px;
+    position: absolute;
+    font-size: 18px; /* Ajusta el tamaño del icono */
+    color: #D9D9D9; /*Cambia el color del icono*/
+}
+
+/* Para modificar el texto adentro del input de busqueda */
+input::placeholder {
+    /* Color del texto */
+    color: #830c00;
+    /* Tipografía */
+    font-family: "Montserrat", sans-serif;
+    /* Tamaño de fuente */
+    font-size: 16px;
+    /* Peso de la fuente */
+    font-weight: 800;
+}
+
+/* Estilo lista desplegable */
+.places{
+    padding: 10px 10px;
+    margin-left: 150px;
+    background-color: #830c00;
+    /* Tipografía */
+    font-family: "Montserrat", sans-serif;
+    /* Color del texto */
+    color: #ffffff;
+    /* Borde */
+    border: none;
+    /* Tamaño de fuente */
+    font-size: 18px;
+    /* Peso de la fuente */
+    font-weight: 700;
+}
+
+/* perfil del usuario */
+.profile {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-icon img {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    margin-left: 170px; /*lo manda a la izquierda*/
+}
+
+/* Menú desplegable oculto inicialmente */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #ffffff;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 1px;
+    width: 150px;
+    z-index: 1;
+}
+
+/* Estilos de los enlaces del menú */
+.dropdown-menu a {
+    display: block;
+    padding: 10px;
+    color: #f2f2f2;
+    background-color: #830c00;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f2f2f2;
+    color: #830c00;
+}
+
+/* Mostrar el menú al pasar el ratón o al hacer clic */
+.profile:hover .dropdown-menu,
+.profile:focus-within .dropdown-menu {
+    display: block;
+}
+
+/* Estilos del login */
+.login-page{
+    background-color: #830c00;
+    font-family: "Montserrat", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* columna para que el logo quede arriba del contenedor */
+    flex-direction: column;
+}
+
+.login-page .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px; /* espacio del logo arriba del contenedor */
+}
+
+.login-page .container {
+    background-color: rgb(255, 255, 255);
+    /* ancho */
+    width: 500px;
+    /* alto */
+    height: 450px;
+    /* margenes de alto */
+    padding-top: 50px;
+    /* subir para arriba el contenedor blanco */
+    margin-bottom: 10px;
+    position: relative;
+    /* espacio entre el contenedor y los componentes lado izquierdo */
+    padding-left: 70px;
+    /* espacio entre el contenedor y los componentes lado derecho */
+    padding-right: 70px;
+    border-radius: 15px;
+}
+
+.login-page .logo {
+    position: absolute;
+    top: 20px;  /* Ajusta este valor para la posición vertical */
+    left: 45%; /* Ajusta este valor para moverlo hacia la izquierda */
+    width: 120px;
+    height: 100px;
+}
+
+.login-page img {
+    width: 100%;
+    height: 100%;
+}
+
+.login-page .title{
+    color: #AD6D01;
+    /* grosor del texto */
+    font-weight:700;
+    /* tamaño del texto */
+    font-size: 30px;
+    text-align: center;
+    /* mover el texto hacia la derecha */
+    margin: 120px;
+}
+
+.login-page .user, .password{
+    color: #830c00;
+    font-weight:400;
+    font-size: 20px;
+}
+
+.login-page .form {
+    /* cuanto se mueve hacia abajo los inputs */
+    /* padding-top: 25px; */
+    align-items: center;
+    /* espacio entre los inputs y el form */
+    margin: 20px 120px;
+}
+
+.login-page input, .btn-login {
+    background-color: #f3f3f3;
+    width: 100%;
+    padding: 10px 20px;
+    /* espacio entre los componentes usuario y contraseña */
+    margin-bottom: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 20px;
+    box-sizing: border-box;
+    /* color del texto de los inputs */
+    color: #830c00;
+    /* grosor del texto de los inputs */
+    font-weight:700;
+}
+
+.login-page .text-container {
+    text-align: center;
+    margin-top: 5px; /* Ajusta el espacio superior */
+}
