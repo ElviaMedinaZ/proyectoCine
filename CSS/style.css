@@ -262,3 +262,46 @@ input::placeholder {
 .login-page a{
     color: #003EDF;
 }
+
+/* Hoja de estilo register */
+.login-page .btn-register {
+    background-color: #f3f3f3;
+    width: 100%;
+    padding: 10px 20px;
+    /* espacio entre los componentes usuario y contraseña */
+    margin-bottom: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 20px;
+    box-sizing: border-box;
+    /* grosor del texto de los inputs */
+    font-weight:700;
+}
+
+.login-page .btn-register {
+    background-color: #AD6D01;
+    padding: 15px 10px;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+    font-weight:600;
+}
+
+.login-page .title-register{
+    color: #AD6D01;
+    /* grosor del texto */
+    font-weight:700;
+    /* tamaño del texto */
+    font-size: 30px;
+    text-align: center;
+    /* mover el texto hacia la derecha */
+    margin: 180px;
+}
+
+.login-page .email{
+    font-size: 20px;
+    /* color del texto de los inputs */
+    color: #830c00;
+    /* grosor del texto de los inputs */
+    font-weight:400;
+}
