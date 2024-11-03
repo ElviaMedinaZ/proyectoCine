@@ -395,3 +395,26 @@ figcaption {
     text-align: center;
     font-size: 1vw; /* Tamaño adaptable */
 }
+
+/* ======================================= Hoja de estilo Nosotros =======================================*/
+.container-about h1 {
+    display: flex;
+    font-weight: 800; /* Aumenta el grosor de la fuente */
+    color: #AD6D01;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-about img{
+    float: right;
+    width: 35%;
+    height: 100%;
+    margin: 5em;
+}
+
+.container-about .about{
+    /* margin-top: 0.5em; */
+    font-size: 3vh;
+    margin: 4em;
+    /* padding: 1em 100px; */
+}
