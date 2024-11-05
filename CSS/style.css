@@ -336,7 +336,15 @@ input::placeholder {
     color: #830c00;
     font-weight: 400;
 }
+/* ======================================= Hoja de estilo recuperar contraseña ======================================*/
+.login-page img{
+    width: 40%;
+}
 
+.login-page p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 
 /* ======================================= Hoja de estilo cartelera ======================================*/
 .container-cartelera h1 {
