@@ -40,7 +40,7 @@ body {
 
 .logo img {
     width: 79px;
-    height: 53px;
+    height: auto;
     margin-right: -35px;
 }
 
@@ -192,6 +192,7 @@ input::placeholder {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 0;
     flex-direction: column; /* columna para que el logo quede arriba del contenedor */
 }
 
@@ -199,85 +200,105 @@ input::placeholder {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 50px; /* espacio del logo arriba del contenedor */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    z-index: 1000;
+    
 }
 
+.login-page .header .logo {
+    content: url('../image/logo_cineplus.png'); /* Actualiza la imagen */
+    width: 100px; /* Ajusta el tamaño según sea necesario */
+    height: auto; /* Mantiene la proporción del logo */
+}
+
+
+/* Estilos del contenedor de login */
 .login-page .container {
-    background-color: rgb(255, 255, 255);
-    width: 35%;
-    max-width: 500px;
-    height: auto;
-    padding-top: 50px;
-    margin-bottom: 10px;
-    position: relative;
-    padding-left: 70px;
-    padding-right: 70px;
+    display: flex;
+    background-color: #ffffff;
+    width: 480px; /* Ajusta el ancho para coincidir con la imagen */
+    padding: 30px 100px;
     border-radius: 15px;
+    margin: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Añade sombra */
+    text-align: center; /* Centra el contenido */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+
 }
 
-.login-page .logo {
-    position: absolute;
-    top: 5%; /* Ajusta este valor para la posición vertical */
-    left: 45%; /* Ajusta este valor para moverlo hacia la izquierda */
-    width: 140px;
-    height: auto;
-}
-
-.login-page img {
-    width: 100%;
-    height: auto;
-}
-
+/* Estilo del título */
 .login-page .title {
     color: #AD6D01;
     font-weight: 700;
-    font-size: 30px;
+    font-size: 26px;
+    margin: 30px 0; /* Márgenes iguales arriba y abajo */
     text-align: center;
-    margin: 120px;
 }
-
-.login-page .user,
-.password {
-    color: #830c00;
+/* Estilos para el label y el input */
+.login-page label {
+    display: block;
+    color: #830C00;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 18px; /* Ajusta el tamaño */
+    margin-bottom: 5px;
+    text-align: left;
+    font-weight: 500;
 }
 
-.login-page .form {
-    align-items: center;
-    margin: 20px 120px;
-}
-
-.login-page input,
-.btn-login {
+.login-page input {
     background-color: #f3f3f3;
     width: 100%;
-    padding: 10px 20px;
+    padding: 10px;
     margin-bottom: 20px;
-    border: 1px solid black;
+    border: 1px solid #656565;
     border-radius: 10px;
-    font-size: 20px;
-    box-sizing: border-box;
-    color: #830c00;
-    font-weight: 700;
+    font-size: 14px;
+    color: #000000;
+    font-weight: 100;
 }
 
+/* Cambiar el color del placeholder */
+.login-page input::placeholder {
+    color: #2e2e2e; /* Color gris */
+    opacity: 1; /*no transparente */
+    font-weight: 300;
+}
+
+
+/* Estilo del enlace de "Olvidaste tu contraseña" */
+.login-page .forget-password {
+    display: block;
+    color: #003EDF;
+    font-size: 14px;
+    text-decoration: none;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Estilo del botón de login */
 .login-page .btn-login {
     background-color: #AD6D01;
-    padding: 15px 10px;
     color: white;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
     cursor: pointer;
-    margin-top: 50px;
-    font-weight: 600;
+    width: 100%;
 }
 
+/* Estilo del texto de registro */
 .login-page .text-container {
-    text-align: center;
-    margin-top: 5px; /* Ajusta el espacio superior */
+    font-size: 14px;
+    margin-top: 15px;
 }
 
-.login-page a {
+.login-page .text-container a {
     color: #003EDF;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 /* ======================================= Hoja de estilo register =======================================*/
@@ -317,7 +338,7 @@ input::placeholder {
 }
 
 
-/* ======================================= Hoja de estilo cartelera =======================================*/
+/* ======================================= Hoja de estilo cartelera ======================================*/
 .container-cartelera h1 {
     display: flex;
     font-weight: 800; /* Aumenta el grosor de la fuente */
@@ -396,247 +417,101 @@ figcaption {
     font-size: 1vw; /* Tamaño adaptable */
 }
 
-/* =========================================Seleccion de horarios=========================================*/
+/* ======================================= Estilos de la sección de pago ======================================= */
 
-/* Contenedor principal de la página */
-.detalle-pelicula-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+.payment-section {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 15px;
     padding: 20px;
-    gap: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Estilos del contenedor de los detalles de la película */
-.detalle-pelicula {
-    display: flex;
-    gap: 50px;
-    /* Aumenta el espacio entre la imagen y el texto */
-    padding: 20px;
-    border-radius: 8px;
-
-}
-
-.pelicula-poster {
-    width: 250px;
-    height: auto;
-    border-radius: 5px;
-}
-
-.pelicula-info h2 {
-    margin: 0 0 15px 0;
-    /* Añade un margen inferior al título */
-    font-size: 38px;
-    color: #a76b0b;
-}
-
-.pelicula-info p {
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 10px;
-    /* Espacio entre párrafos */
-}
-
-.pelicula-info p .color {
-    color: #e1190a;
-}
-
-/* Contenedor principal de horarios */
-.horarios {
-    width: 120vw;
+    margin: 60px auto;
     max-width: 800px;
-    /* Puedes ajustar el ancho máximo */
-    font-family: Arial, sans-serif;
-    border: 1px solid #333;
-    /* Borde negro */
-    border-radius: 8px;
-    overflow: hidden;
-    margin: 3px auto;
-    padding-bottom: 100px;
-    /* Centra el contenedor */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Encabezado de la sección con fondo de color */
-.horarios-header {
-    background-color: #e3c197;
-    padding: 15px;
-    text-align: left;
-    color: #A01010;
-}
-
-.horarios-header h3 {
-    margin: 0;
-    font-size: 22px;
-    color: #A01010;
-    font-weight: bold;
-}
-
-.horarios-header p {
-    margin: 10px 20px;
-    font-size: 18px;
-    color: #A01010;
-    font-weight: bold;
-
-}
-
-.cine-linea {
-    border-top: 1px solid #575756;
-    margin: 10px 20px;
-}
-
-
-/* Tabla de fechas */
-.horarios table {
-    width: 100%;
-    border-collapse: collapse;
-    text-align: center;
-    margin: 0;
-    background-color: #fff;
-
-    margin-bottom: 10px;
-}
-
-.cine-texto {
-    margin-top: 10px;
-    /* Espacio hacia abajo desde el borde superior */
-    margin-left: 20px;
-    /* Espacio hacia la derecha desde el borde izquierdo */
-    padding-top: 10px;
-    /* Espacio dentro del contenedor */
-}
-
-.horarios .color {
-    color: #e1190a;
-}
-
-.horarios th {
-    font-weight: normal;
-    font-size: 14px;
-    padding: 8px;
-}
-
-.fila-fechas td {
-    border-top: 1px solid #e1190a;
-    border-bottom: 1px solid #e1190a;
-    padding: 10px 5px;
-    /* Ajusta el padding para dar espacio en los bordes */
-}
-
-/* Estilo normal de los enlaces de fecha */
-.fecha {
-    color: #e1190a;
-    text-decoration: none;
-    padding: 2px 4px;
-    border-radius: 4px;
-    display: inline-block;
-    white-space: nowrap;
-    font-size: 11px;
-    /* Tamaño de letra más pequeño */
-    transition: color 0.3s, background-color 0.3s;
-}
-
-/* Ocultar los radio buttons */
-.fecha-input {
-    display: none;
-}
-
-/* Estilo para la fecha seleccionada */
-.fecha-input:checked+.fecha {
-    border: 2px solid red;
-    /* Borde rojo alrededor */
-    background-color: #e1190a;
-    /* Fondo rojo */
-    color: white;
-    /* Texto blanco */
-}
-
-.horarios td {
-    font-size: 14px;
-    color: #e1190a;
-    padding: 8px;
-    font-weight: normal;
-}
-
-/* Tipos de sesión */
-.sesion-tipo {
-    font-size: 16px;
-    color: #e1190a;
-    margin: 15px 0 8px;
-    text-align: left;
-    padding-left: 20px;
-}
-
-/* Estilos de las sesiones de horarios */
-.horarios ul {
-    list-style: none;
-    padding: 0 20px 20px;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    /* Espaciado entre los elementos de la lista */
-    background-color: #fff;
-    justify-content: flex-start;
-    /* Alineación a la izquierda */
-}
-
-.horarios ul li {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.horario {
-    display: block;
-    /* Asegura que el label ocupe todo el ancho del li */
-    padding: 4px 7px;
-    /* Ajusta el espacio interno para que el área clicable sea más cómoda */
-    border-radius: 6px;
-    background-color: #e6c083;
-    /* Fondo normal */
-    color: #333;
-    font-weight: bold;
-    text-align: center;
-    cursor: pointer;
-    /* Cambia el cursor para indicar que es seleccionable */
-    transition: background-color 0.3s, color 0.3s;
-}
-
-/* Estilo para el horario seleccionado */
-.horario-input:checked+.horario {
-    background-color: #5a3c1d;
-    /* Color más fuerte y oscuro para el horario seleccionado */
-    color: white;
-    border: none;
-    /* Elimina bordes no deseados */
-}
-
-/* Asegura que el input no interfiera */
-.horario-input {
-    display: none;
-}
-
-/* ======================================= Hoja de estilo Nosotros =======================================*/
-.container-about h1 {
-    display: flex;
-    font-weight: 800; /* Aumenta el grosor de la fuente */
+.payment-section h2 {
     color: #AD6D01;
-    align-items: center;
-    justify-content: center;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 24px;
 }
 
-.container-about img{
-    float: right;
-    width: 35%;
-    height: 100%;
-    margin: 5em;
+
+.payment-section input::placeholder {
+    color: #2e2e2e; /* Color gris */
+    opacity: 1; /*no transparente */
+    font-weight: 500;
 }
 
-.container-about .about{
-    /* margin-top: 0.5em; */
-    font-size: 3vh;
-    margin: 4em;
-    /* padding: 1em 100px; */
+.payment-info {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.payment-info .input-field {
+    width: calc(50% - 10px);
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+}
+
+.payment-method {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.payment-option {
+    flex: 1 1 calc(50% - 10px);
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.payment-option:hover {
+    background-color: #e6e6e6;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.confirm-btn, .cancel-btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+.confirm-btn {
+    background-color: #AD6D01;
+    color: #ffffff;
+}
+
+.confirm-btn:hover {
+    background-color: rgb(123, 97, 47);
+}
+
+.cancel-btn {
+    background-color: #E0190B;
+    color: #ffffff;
+}
+
+.cancel-btn:hover {
+    background-color: #9b2727;
 }
