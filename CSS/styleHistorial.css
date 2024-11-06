@@ -1,0 +1,119 @@
+/* Contenedor principal */
+.historial-compras {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #5a3c1d;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Título principal */
+.historial-compras h1 {
+    font-size: 2em;
+    color: #A57D20;
+    margin-bottom: 10px;
+}
+
+/* Fecha actual */
+.fecha-actual {
+    font-size: 1em;
+    color: #8E2413;
+    margin-bottom: 30px;
+    margin-left: 500px;
+}
+
+/* Wrapper para centrar las tarjetas y navegación */
+.tarjetas-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    max-width: 100%;
+}
+
+/* Contenedor de tarjetas */
+.tarjetas-container {
+
+    display: flex;
+    gap: 30px;
+}
+
+/* Botones de navegación */
+.navegacion {
+    background-color: transparent;
+    border: none;
+    font-size: 2.5em;
+    color: #5a3c1d;
+    cursor: pointer;
+}
+
+/* Tarjetas */
+.tarjeta {
+    background-color: #f7e6c3;
+    border-radius: 15px;
+    padding: 20px;
+    width: 400px;
+    /* Aumenta el ancho de la tarjeta */
+    min-height: 450px;
+    /* Altura mínima para hacer la tarjeta más larga */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    position: relative;
+    padding-right: 120px;
+    /* Ajusta el espacio a la derecha para la imagen */
+}
+
+/* Posiciona la imagen en la esquina superior derecha */
+.tarjeta img {
+    margin-top: 10px;
+    width: 100px;
+    height: auto;
+    border-radius: 8px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+/* Estilo del título en la tarjeta */
+.tarjeta h2 {
+    margin-top: 10px;
+    font-size: 1.1em;
+    /* Tamaño más pequeño para el título */
+    color: #A01010;
+    margin-bottom: 10px;
+}
+
+/* Texto de la tarjeta */
+.tarjeta p {
+    font-size: 0.85em;
+    /* Tamaño más pequeño para el texto */
+    margin: 6px;
+    /* Reduce el margen entre los párrafos */
+    color: #000000;
+}
+
+.color {
+    color: #581E1E;
+}
+
+/* Estilo para el total de la compra */
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 0.9em;
+    /* Tamaño más pequeño para el total */
+}
+
+.total-precio {
+    color: #581E1E;
+    font-weight: bold;
+    font-size: 0.9em;
+    /* Tamaño más pequeño para el precio */
+}
