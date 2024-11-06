@@ -1,0 +1,216 @@
+/* =========================================Seleccion de horarios=========================================*/
+/* Contenedor principal de la página */
+.detalle-pelicula-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilos del contenedor de los detalles de la película */
+.detalle-pelicula {
+    display: flex;
+    gap: 50px;
+    /* Aumenta el espacio entre la imagen y el texto */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.pelicula-poster {
+    width: 250px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.pelicula-info h2 {
+    margin: 0 0 15px 0;
+    /* Añade un margen inferior al título */
+    font-size: 38px;
+    color: #a76b0b;
+}
+
+.pelicula-info p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    /* Espacio entre párrafos */
+}
+
+.pelicula-info p .color {
+    color: #e1190a;
+}
+
+/* Contenedor principal de horarios */
+.horarios {
+    width: 120vw;
+    max-width: 800px;
+    /* Puedes ajustar el ancho máximo */
+    font-family: Arial, sans-serif;
+    border: 1px solid #333;
+    /* Borde negro */
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 3px auto;
+    padding-bottom: 100px;
+    /* Centra el contenedor */
+}
+
+/* Encabezado de la sección con fondo de color */
+.horarios-header {
+    background-color: #e3c197;
+    padding: 15px;
+    text-align: left;
+    color: #A01010;
+}
+
+.horarios-header h3 {
+    margin: 0;
+    font-size: 22px;
+    color: #A01010;
+    font-weight: bold;
+}
+
+.horarios-header p {
+    margin: 10px 20px;
+    font-size: 18px;
+    color: #A01010;
+    font-weight: bold;
+}
+
+.cine-linea {
+    border-top: 1px solid #575756;
+    margin: 10px 20px;
+}
+
+/* Tabla de fechas */
+.horarios table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    margin: 0;
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+
+.cine-texto {
+    margin-top: 10px;
+    /* Espacio hacia abajo desde el borde superior */
+    margin-left: 20px;
+    /* Espacio hacia la derecha desde el borde izquierdo */
+    padding-top: 10px;
+    /* Espacio dentro del contenedor */
+}
+
+.horarios .color {
+    color: #e1190a;
+}
+
+.horarios th {
+    font-weight: normal;
+    font-size: 14px;
+    padding: 8px;
+}
+
+.fila-fechas td {
+    border-top: 1px solid #e1190a;
+    border-bottom: 1px solid #e1190a;
+    padding: 10px 5px;
+    /* Ajusta el padding para dar espacio en los bordes */
+}
+
+/* Estilo normal de los enlaces de fecha */
+.fecha {
+    color: #e1190a;
+    text-decoration: none;
+    padding: 2px 4px;
+    border-radius: 4px;
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 11px;
+    /* Tamaño de letra más pequeño */
+    transition: color 0.3s, background-color 0.3s;
+}
+
+/* Ocultar los radio buttons */
+.fecha-input {
+    display: none;
+}
+
+/* Estilo para la fecha seleccionada */
+.fecha-input:checked+.fecha {
+    border: 2px solid red;
+    /* Borde rojo alrededor */
+    background-color: #e1190a;
+    /* Fondo rojo */
+    color: white;
+    /* Texto blanco */
+}
+
+.horarios td {
+    font-size: 14px;
+    color: #e1190a;
+    padding: 8px;
+    font-weight: normal;
+}
+
+/* Tipos de sesión */
+.sesion-tipo {
+    font-size: 16px;
+    color: #e1190a;
+    margin: 15px 0 8px;
+    text-align: left;
+    padding-left: 20px;
+}
+
+/* Estilos de las sesiones de horarios */
+.horarios ul {
+    list-style: none;
+    padding: 0 20px 20px;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    /* Espaciado entre los elementos de la lista */
+    background-color: #fff;
+    justify-content: flex-start;
+    /* Alineación a la izquierda */
+}
+
+.horarios ul li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.horario {
+    display: block;
+    /* Asegura que el label ocupe todo el ancho del li */
+    padding: 4px 7px;
+    /* Ajusta el espacio interno para que el área clicable sea más cómoda */
+    border-radius: 6px;
+    background-color: #e6c083;
+    /* Fondo normal */
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    /* Cambia el cursor para indicar que es seleccionable */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Estilo para el horario seleccionado */
+.horario-input:checked+.horario {
+    background-color: #5a3c1d;
+    /* Color más fuerte y oscuro para el horario seleccionado */
+    color: white;
+    border: none;
+    /* Elimina bordes no deseados */
+}
+
+/* Asegura que el input no interfiera */
+.horario-input {
+    display: none;
+}
