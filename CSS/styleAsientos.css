@@ -1,0 +1,368 @@
+/*========================================Hoja Seleccion de acientos ===================================== */
+
+.seleccion-asientos-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 20px;
+    max-width: 1200px;
+    margin: 10;
+}
+
+.seleccion-asientos {
+    text-align: center;
+    width: 100%;
+}
+
+.seleccion-asientos h2 {
+    font-size: 24px;
+    color: #a76b0b;
+    padding-bottom: 20px;
+}
+
+.leyenda {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 10px 0;
+}
+
+.opcion {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    margin: 10px 0 10px 0;
+    /* Reduce el espacio entre el ícono y el texto */
+    font-size: 12px;
+    /* Ajusta el tamaño del texto si es necesario */
+    color: #5a3c1d;
+}
+
+.icono-asiento {
+    width: 20px;
+    /* Tamaño más pequeño para el ícono */
+    margin: 10px;
+    height: 20px;
+}
+
+.leyenda span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+}
+
+.asiento {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+/* Línea curva encima de la pantalla */
+.linea-curva {
+    width: 45%;
+    /* Ajusta el ancho para cambiar el tamaño del arco */
+    height: 40px;
+    /* Ajusta la altura para cambiar la curvatura */
+    border-top: 2px solid #830c00;
+    /* Define el color y grosor del arco apuntando hacia arriba */
+    border-radius: 50%;
+    /* Convierte el borde superior en un arco */
+    margin: 0 auto;
+    transform: translateY(50%);
+    /* Ajusta la posición vertical si es necesario */
+}
+
+.pantalla {
+    font-size: 17px;
+    color: #830c00;
+    margin: 5px 0;
+}
+
+.asientos-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    margin-left: 120px;
+}
+
+.fila {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.fila-label {
+    width: 20px;
+    text-align: left;
+    font-weight: bold;
+    color: #a76b0b;
+}
+
+.asiento {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+}
+
+.asiento img {
+    width: 100%;
+    height: auto;
+}
+
+.blanco {
+    width: 40px;
+    /* Ajusta el tamaño para que coincida con el ancho de los asientos */
+}
+
+/* Números de columnas */
+.column-numbers {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 30px;
+    /* Ajusta este valor para que coincida con el ancho de la fila de asientos */
+    gap: 5px;
+    font-weight: bold;
+    color: #a76b0b;
+
+}
+
+.column-numbers span {
+    width: 30px;
+    /* Coincide con el ancho del asiento para alineación */
+    text-align: center;
+    margin-right: 10px;
+
+}
+
+.resumen-compra {
+    width: 700px;
+    /* Ancho total del contenedor */
+    border: 1px solid #e3c197;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    color: #5a3c1d;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.resumen-heder {
+    background-color: #e3c197;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 24px;
+    /* Tamaño más grande para elementos destacados */
+    text-align: left;
+    color: #A01010;
+}
+
+.contenedor {
+    display: flex;
+    align-items: flex-start;
+    /* Alinea la imagen y el contenido al borde superior */
+    gap: 20px;
+    padding: 20px;
+}
+
+.imagenes-resumenS {
+    flex: 0 0 auto;
+    /* Evita que la imagen se redimensione automáticamente */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.imagenes-resumenS img {
+    width: 100px;
+    /* Tamaño ajustable de la imagen */
+    height: auto;
+    border-radius: 8px;
+}
+
+.informacion {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: #000000;
+    font-weight: 500;
+}
+
+.detalles p {
+    margin: 4px 0;
+    font-size: 14px;
+    padding-bottom: 10px;
+    /* Espacio entre el texto y la línea */
+    border-bottom: 1px solid #ddd;
+    /* Línea divisoria */
+}
+
+.color-letra {
+    color: #e1190a;
+}
+
+
+
+.clasificacion {
+    display: inline-block;
+    /* Hace que el span se comporte como un bloque */
+    background-color: #575757;
+    /* Fondo negro */
+    color: #fff;
+    /* Texto en blanco */
+    padding: 2px 6px;
+    /* Espacio interno para dar forma al cuadro */
+    border-radius: 4px;
+    /* Bordes redondeados (opcional) */
+    font-size: 12px;
+    /* Tamaño de fuente ajustado */
+    font-weight: bold;
+    /* Negrita para resaltar */
+    margin-right: 5px;
+}
+
+.detalles p:last-child {
+    border-bottom: none;
+    /* Quita la línea del último elemento */
+}
+
+.tipo-boleto {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.boletos {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.boleto {
+    display: flex;
+    justify-content: flex-start;
+    /* Alinea el contenido a la izquierda */
+    align-items: center;
+}
+
+.nombre {
+    flex: 1;
+    /* Empuja el nombre a la izquierda */
+    margin-right: 10px;
+}
+
+.precio-contador {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    /* Espacio entre el precio y el botón de decremento */
+}
+
+.precio {
+    color: #e1190a;
+    margin-right: 5px;
+    /* Espacio mínimo entre el precio y el botón "-" */
+}
+
+.contador {
+    display: flex;
+    align-items: center;
+}
+
+.contador button {
+    width: 25px;
+    height: 25px;
+    background-color: #ddd;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.contador .cantidad {
+    min-width: 20px;
+    text-align: center;
+    font-weight: bold;
+    margin-left: 5px;
+    /* Espacio entre el número y el botón "+" */
+}
+
+.contador button.incrementar {
+    margin-left: 5px;
+    /* Espacio entre el número y el botón "+" */
+}
+
+.total-container {
+    display: flex;
+    justify-content: space-between;
+    /* Alinea el texto "Total:" a la izquierda y el precio a la derecha */
+    align-items: center;
+    width: 100%;
+    /* Asegura que ocupe todo el ancho del contenedor padre */
+    padding: 10px 0;
+    margin-top: 20px;
+    /* Espacio superior para separar del contenido anterior */
+}
+
+.total-text {
+    font-size: 16px;
+    font-weight: bold;
+    color: #A01010;
+    /* Color del texto "Total:" */
+}
+
+.total-precio {
+    color: #A57D20;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.botones {
+    display: flex;
+    flex-direction: column;
+    /* Coloca los botones en columna */
+    align-items: center;
+    /* Centra los botones horizontalmente */
+    gap: 10px;
+    /* Espacio entre los botones */
+    margin-top: 20px;
+    /* Espacio superior para separar los botones del contenido */
+    margin-bottom: 20px;
+}
+
+.boton-seleccionar,
+.boton-volver {
+    width: 80%;
+    /* Hace que los botones tengan un ancho del 80% del contenedor */
+    max-width: 300px;
+    /* Ancho máximo para evitar que crezcan demasiado */
+    padding: 12px 0;
+    /* Espaciado vertical dentro de los botones */
+    border: none;
+    border-radius: 8px;
+    /* Bordes redondeados */
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.boton-seleccionar {
+    background-color: #A57D20;
+    /* Color marrón para el botón de seleccionar */
+    color: white;
+    /* Texto blanco */
+}
+
+.boton-volver {
+    background-color: #D3D3D3;
+    /* Color gris para el botón de volver */
+    color: #333;
+    /* Texto gris oscuro */
+}
