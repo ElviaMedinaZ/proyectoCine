@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- libreria font awesome (iconos) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+    <!-- fuente de la pagina -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- hoja de estilos -->
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/styleAsientos.css">
+    <title>Cineplus</title>
+</head>
+<body>
+
+    <!-- Encabezado de navegación -->
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="../image/logo_cineplus.png" alt="logo cineplus">
+            </div>
+            <nav class="nav-left">
+                <ul>
+                    <li><a href="">Inicio</a></li>
+                    <li><a href="">Cartelera</a></li>
+                    <li><a href="/HTML/nosotros.html">Nosotros</a></li>
+                </ul>
+            </nav>
+            <div class="search-container">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="search" id="site-search" class="search" placeholder="Buscar película"/>
+            </div>
+            <div class="select_places">
+                <select class="places" name="selection_places" id="places">
+                    <option value="plazas">Las Plazas</option>
+                    <option value="liverpool">Liverpool</option>
+                    <option value="forjadores">Forjadores</option>
+                </select>
+            </div>
+            <div class="profile">
+                <div class="profile-icon">
+                    <img src="../image/profile.png" alt="Profile Image">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="seleccion-asientos-container">
+        <!-- Selección de Asientos -->
+        <section class="seleccion-asientos">
+
+
+
+            <h2>Selección de asientos</h2>
+
+            <div class="leyenda">
+                <div class="opcion">
+                    <img src="/image/asientos/asiento_normal.png" alt="Disponible" class="icono-asiento">
+                    <span>Disponible</span>
+                </div>
+                <div class="opcion">
+                    <img src="/image/asientos/asiento dorado .png" alt="Selección" class="icono-asiento">
+                    <span>Selección</span>
+                </div>
+                <div class="opcion">
+                    <img src="/image/asientos/asiento rojo .png" alt="Ocupado" class="icono-asiento">
+                    <span>Ocupado</span>
+                </div>
+                <div class="opcion">
+                    <img src="/image/asientos/asiento_discapacitados.png" alt="Silla de ruedas" class="icono-asiento">
+                    <span>Silla de ruedas</span>
+                </div>
+            </div>
+
+            <div class="linea-curva"></div>
+            <div class="pantalla">Pantalla</div>
+            
+            <div class="asientos-grid">
+                <!-- Fila A -->
+                <div class="fila">
+                    <span class="fila-label">A</span>
+                    <div class="blanco"></div>
+                    <div class="blanco"></div>
+                    <div class="asiento disponible"><img src="/image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento disponible"><img src="/image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento disponible"><img src="/image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento disponible"><img src="/image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento silla-ruedas"><img src="/image/asientos/asiento_discapacitados.png" alt=""></div>
+                    <div class="asiento silla-ruedas"><img src="/image/asientos/asiento_discapacitados.png" alt=""></div>
+                    <div class="blanco"></div>
+                    <div class="blanco"></div>
+                </div>
+                
+                <!-- Fila B -->
+                <div class="fila">
+                    <span class="fila-label">B</span>
+                    <div class="blanco"></div>
+                    <div class="blanco"></div>
+                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="blanco"></div>
+                    <div class="blanco"></div>
+                </div>
+                
+                <!-- Fila C -->
+                <div class="fila">
+                    <span class="fila-label">C</span>
+                    <div class="blanco"></div>
+                    <div class="blanco"></div>
+                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="blanco"></div>
+                    <div class="blanco"></div>
+                </div>
+                <!-- Fila D -->
+                <div class="fila">
+                    <span class="fila-label">D</span>
+                    <div class="blanco"></div>
+                    <div class="blanco"></div>
+                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="blanco"></div>
+                    <div class="blanco"></div>
+                </div>
+                <!-- Fila E -->
+                <div class="fila">
+                    <span class="fila-label">E</span>
+                    <div class="blanco"></div>
+                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="blanco"></div>
+                </div>
+                <!-- Fila F -->
+                <div class="fila">
+                    <span class="fila-label">F</span>
+                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento "><img src="/image/asientos/asiento rojo .png" alt=""></div>
+                    <div class="asiento "><img src="/image/asientos/asiento rojo .png" alt=""></div>
+                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
+                </div>
+                <!-- Números de columnas -->
+                <div class="column-numbers">
+                    <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span>
+                </div>
+            </div>
+        </section>
+    
+    
+        <!-- Resumen de la película y compra -->
+        <section class="resumen-compra">
+            <div class="resumen-heder">
+                  <h3 class="titulo-pelicula"><strong>Shrek 2</strong></h3>
+            </div>
+            
+            <div class="contenedor">
+                
+                <div class="imagenes-resumenS">
+                    <img src="/image/Forjadores/shrek 2.jpg" alt="Shrek 2" class="pelicula-poster">
+                </div>
+
+                <div class="informacion"></div>
+
+                    <div class="detalles">
+                        <p><strong>Clasificación:</strong> <span class="clasificacion">B</span> <strong>Duración:</strong> 113 min</p>
+                        <p><strong>Cine:</strong> Las Plazas</p>
+                        <p><strong>Fecha y hora:</strong> 12 septiembre 2024, 4:15 pm</p>
+                    </div>
+
+                
+            
+                    <div class="tipo-boleto">
+                        <p>Tipo de boleto</p>
+                        <div class="boletos">
+                            <div class="boleto">
+                                <span>Adulto</span> <span class="precio">$90</span>
+                                <input type="number" min="0" value="2">
+                            </div>
+                            <div class="boleto">
+                                <span>Niños</span> <span class="precio">$70</span>
+                                <input type="number" min="0" value="1">
+                            </div>
+                            <div class="boleto">
+                                <span>Tercera edad</span> <span class="precio">$70</span>
+                                <input type="number" min="0" value="0">
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="total">
+                        <p>Total: <span class="total-precio">$180.00</span></p>
+                    </div>
+
+                </div>
+            
+                <div class="botones">
+                    <button class="boton-seleccionar">Seleccionar</button>
+                    <button class="boton-volver">Volver</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+
+</body>
+</html>
