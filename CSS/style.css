@@ -523,3 +523,71 @@ figcaption {
 .cancel-btn:hover {
     background-color: #9b2727;
 }
+
+
+/* ======================================= Estilos de la sección de pago ======================================= */
+.carousel {
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-container {
+    width: 80%; /* Ancho del contenedor del carrusel */
+    max-width: 1000px; /* Ancho máximo */
+    overflow: hidden;
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.carousel-slide img {
+    width: 100% !important;
+    height: 250px !important;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.carousel:hover img {
+    transform: scale(1.05); /* Escala la imagen al 105% */
+}
+
+/* Overlay oscuro en la imagen */
+.carousel img:hover {
+    filter: brightness(50%); /* Reduce el brillo para oscurecer la imagen */
+}
+
+
+.destacadas {
+    padding: 20px;
+    text-align: center;
+}
+
+.destacadas h1 {
+    color: #900;
+    margin-bottom: 15px;
+}
+
+.movies-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    width: 800px;
+    flex-wrap: wrap;
+}
+
+.pelicula {
+    width: 120px;
+    text-align: center;
+}
+
+.pelicula img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 5px;
+}
+
+.pelicula p {
+    font-size: 14px;
+    color: #333;
+}
+
