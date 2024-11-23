@@ -7,53 +7,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="CSS/style.css">
     <title>Cineplus</title>
 </head>
 <body>
-    <!-- Menú superior -->
-    <header class="header">
-        <div class="nav-container">
-            <div class="logo">
-                <img src="../image/logo_cineplus.png" alt="logo cineplus">
-            </div>
-            <nav class="nav-left">
-                <ul>
-                    <li><a href="">Inicio</a></li>
-                    <li><a href="../HTML/carteleraForjadores.html">Cartelera</a></li>
-                    <li><a href="../HTML/nosotros.html">Nosotros</a></li>
-                </ul>
-            </nav>
-            <div class="search-container">
-                <input type="search" id="site-search" class="search" placeholder="Buscar película"/>
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
-            <div class="select_places">
-                <select class="places" name="selection_places" id="places">
-                    <option value="plazas">Las Plazas</option>
-                    <option value="liverpool">Liverpool</option>
-                    <option value="forjadores">Forjadores</option>
-                </select>
-            </div>
-            <div class="profile">
-                <div class="profile-icon">
-                    <img src="../image/profile.png" alt="Profile Image">
-                </div>
-                <div class="dropdown-menu">
-                    <a href="../HTML/perfil.html">Información personal</a>
-                    <a href="../HTML/Historial.html">Historial de compras</a>
-                    <a href="../index.html">Cerrar sesión</a>
 
-                </div>
-            </div>
-        </div>
-    </header>
+    <?php
+        include ('php/header.php');
+    ?>
 
     <!-- Carrusel de películas destacadas -->
     <section class="carousel">
         <div class="carousel-container">
             <div class="carousel-slide">
-                <img src="../image/Forjadores/alien.jpeg" alt="alien">
+                <img src="image/Forjadores/alien.jpeg" alt="alien">
             </div>
             
         </div>
@@ -68,37 +35,37 @@
                 <section class="cartelera">
                     
                     <figure class="pelicula">
-                        <img src="../image/Forjadores/cenicienta.jpg" alt="Cenicienta">
+                        <img src="image/Forjadores/cenicienta.jpg" alt="Cenicienta">
                         <div class="ver-mas">Ver más</div>
                         <figcaption>Cenicienta</figcaption>
                     </figure>
                     
                     <figure class="pelicula">
-                        <img src="../image/Forjadores/romper circulo.jpg" alt="Romper el Círculo">
+                        <img src="image/Forjadores/romper circulo.jpg" alt="Romper el Círculo">
                         <div class="ver-mas">Ver más</div>
                         <figcaption>Romper el círculo</figcaption>
                     </figure>
     
                     <figure class="pelicula">
-                        <img src="../image/Forjadores/Deadpool&Wolverine.jpg" alt="Deadpool y Wolverine">
+                        <img src="image/Forjadores/Deadpool&Wolverine.jpg" alt="Deadpool y Wolverine">
                         <div class="ver-mas">Ver más</div>
                         <figcaption>Deadpool y Wolverine</figcaption>
                     </figure>
                     
                     <figure class="pelicula">
-                        <img src="../image/Forjadores/alien.jpeg" alt="Alien">
+                        <img src="image/Forjadores/alien.jpeg" alt="Alien">
                         <div class="ver-mas">Ver más</div>
                         <figcaption>Alien</figcaption>
                     </figure>
     
                     <figure class="pelicula">
-                        <img src="../image/Forjadores/shrek 2.jpg" alt="Wall-e">
+                        <img src="image/Forjadores/shrek 2.jpg" alt="Wall-e">
                         <div class="ver-mas">Ver más</div>
                         <figcaption>Wall-e</figcaption>
                     </figure>
                     
                     <figure class="pelicula">
-                        <img src="../image/Forjadores/como entrenar a tu dragon 3.jpg" alt="Como Entrenar a tu Dragon 3">
+                        <img src="image/Forjadores/como entrenar a tu dragon 3.jpg" alt="Como Entrenar a tu Dragon 3">
                         <div class="ver-mas">Ver más</div>
                         <figcaption>Como entrenar a tu dragon 3</figcaption>
                     </figure>
