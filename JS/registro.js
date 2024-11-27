@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const formData = new FormData(form);
 
         // Enviar los datos al servidor usando fetch
-        fetch("../PHP/registro.php", {
+        fetch("../php_funcion/registro.php", {
             method: "POST",
             body: formData,
         })

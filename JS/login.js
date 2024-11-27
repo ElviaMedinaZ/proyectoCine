@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const formData = new FormData(form);
 
         // Enviar los datos al servidor
-        fetch("../PHP/inicio_secion.php", {
+        fetch("../php_funcion/inicio_secion.php", {
             method: "POST",
             body: formData,
         })

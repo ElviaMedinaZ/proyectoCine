@@ -22,9 +22,9 @@ $username = $_SESSION['username']; // Opcional
             </div>
             <nav class="nav-left">
                 <ul>
-                    <li><a href="/proyectoCine/php/landingSesionAbierta.php">Inicio</a></li>
-                    <li><a href="/proyectoCine/php/carteleraForjadores.php">Cartelera</a></li>
-                    <li><a href="/proyectoCine/php/nosotros.php">Nosotros</a></li>
+                    <li><a href="/proyectoCine/php_html/landingSesionAbierta.php">Inicio</a></li>
+                    <li><a href="/proyectoCine/php_html/carteleraForjadores.php">Cartelera</a></li>
+                    <li><a href="/proyectoCine/php_html/nosotros.php">Nosotros</a></li>
                 </ul>
             </nav>
             <div class="search-container">
@@ -43,8 +43,8 @@ $username = $_SESSION['username']; // Opcional
                     <img src="/proyectoCine/image/profile.png" alt="Profile Image">
                 </div>
                 <div class="dropdown-menu">
-                    <a href="/proyectoCine/php/login.php">Iniciar sesión</a>
-                    <a href="/proyectoCine/php/register.php">Registrarse</a>
+                    <a href="/proyectoCine/php_html/login.php">Iniciar sesión</a>
+                    <a href="/proyectoCine/php_html/register.php">Registrarse</a>
                 </div>
             </div>
         </div>
