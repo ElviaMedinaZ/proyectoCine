@@ -49,3 +49,20 @@ $username = $_SESSION['username']; // Opcional
             </div>
         </div>
     </header>
+
+<?php
+//aqui es para cerrar secion pero tengo que implementar el boton 
+/*session_start(); // Inicia la sesión
+
+// Verifica si el usuario está autenticado
+if (!isset($_SESSION['user_id'])) {
+    // Si no hay sesión activa, redirige al login
+    header("Location: login.php");
+    exit();
+}
+
+// Accede al ID del usuario
+$user_id = $_SESSION['user_id'];
+$username = $_SESSION['username']; // Opcional
+*/
+?>
