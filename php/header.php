@@ -2,13 +2,13 @@
 <header class="header">
         <div class="nav-container">
             <div class="logo">
-                <img src="image/logo_cineplus.png" alt="logo cineplus">
+                <img src="/proyectoCine/image/logo_cineplus.png" alt="logo cineplus">
             </div>
             <nav class="nav-left">
                 <ul>
-                    <li><a href="">Inicio</a></li>
-                    <li><a href="php/carteleraForjadores.html">Cartelera</a></li>
-                    <li><a href="php/nosotros.html">Nosotros</a></li>
+                    <li><a href="/proyectoCine/php/landingSesionAbierta.php">Inicio</a></li>
+                    <li><a href="/proyectoCine/php/carteleraForjadores.php">Cartelera</a></li>
+                    <li><a href="/proyectoCine/php/nosotros.php">Nosotros</a></li>
                 </ul>
             </nav>
             <div class="search-container">
@@ -24,11 +24,11 @@
             </div>
             <div class="profile">
                 <div class="profile-icon">
-                    <img src="image/profile.png" alt="Profile Image">
+                    <img src="/proyectoCine/image/profile.png" alt="Profile Image">
                 </div>
                 <div class="dropdown-menu">
-                    <a href="php/login.html">Iniciar sesión</a>
-                    <a href="php/register.html">Registrarse</a>
+                    <a href="/proyectoCine/php/login.php">Iniciar sesión</a>
+                    <a href="/proyectoCine/php/register.php">Registrarse</a>
                 </div>
             </div>
         </div>
