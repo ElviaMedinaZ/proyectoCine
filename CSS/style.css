@@ -591,3 +591,24 @@ figcaption {
     color: #333;
 }
 
+/* =====================vista nosotros========================= */
+h1{
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    color: #AD6D01;
+}
+
+img{
+    display: flex;
+    float: right;
+    width: 35em; 
+    height: 25em; 
+    margin: 5%;
+}
+
+.about{
+    margin: 5%;
+    font-size: 20px;
+}
+
