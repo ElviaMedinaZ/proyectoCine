@@ -23,7 +23,7 @@
 
         <main>
 
-            <form class="form" id="registerForm">
+            <form class="form" id="registerForm" action="../php_funcion/registro.php" method="POST">
             
                 <h1 class="title">Registro</h1>
 

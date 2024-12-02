@@ -43,8 +43,8 @@ $username = $_SESSION['username']; // Opcional
                     <img src="/proyectoCine/image/profile.png" alt="Profile Image">
                 </div>
                 <div class="dropdown-menu">
-                    <a href="/proyectoCine/php_html/login.php">Iniciar sesión</a>
-                    <a href="/proyectoCine/php_html/register.php">Registrarse</a>
+                    <a href="/proyectoCine/php_html/perfil.php">Perfil</a>
+                    <a href="/proyectoCine/php_funcion/cerrar_sesion.php">Cerrar Sesión</a>
                 </div>
             </div>
         </div>
