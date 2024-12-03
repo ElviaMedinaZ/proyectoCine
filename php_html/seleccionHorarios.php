@@ -17,41 +17,14 @@
 <body>
 
     <!-- Encabezado de navegación -->
-    <header class="header">
-        <div class="nav-container">
-            <div class="logo">
-                <img src="../image/logo_cineplus.png" alt="logo cineplus">
-            </div>
-            <nav class="nav-left">
-                <ul>
-                    <li><a href="">Inicio</a></li>
-                    <li><a href="">Cartelera</a></li>
-                    <li><a href="/HTML/nosotros.html">Nosotros</a></li>
-                </ul>
-            </nav>
-            <div class="search-container">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="search" id="site-search" class="search" placeholder="Buscar película"/>
-            </div>
-            <div class="select_places">
-                <select class="places" name="selection_places" id="places">
-                    <option value="plazas">Las Plazas</option>
-                    <option value="liverpool">Liverpool</option>
-                    <option value="forjadores">Forjadores</option>
-                </select>
-            </div>
-            <div class="profile">
-                <div class="profile-icon">
-                    <img src="../image/profile.png" alt="Profile Image">
-                </div>
-            </div>
-        </div>
-    </header>
+    <?php
+        include ('header.php');
+    ?>
 
     <!-- Contenedor de los detalles de la película -->
     <main class="detalle-pelicula-container">
         <section class="detalle-pelicula">
-            <img src="/image/Forjadores/shrek 2.jpg" alt="Shrek 2" class="pelicula-poster">
+            <img src="../image/Forjadores/shrek 2.jpg" alt="Shrek 2" class="pelicula-poster">
             <div class="pelicula-info">
                 <h2>Shrek 2</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec lacinia dui. Etiam vehicula neque in dolor vehicula, sed sagittis metus sagittis. Fusce sit amet hendrerit purus. Nunc accumsan, nunc ac fermentum feugiat, tortor sapien laoreet ligula, a consequat nisi eros non lorem.</p>

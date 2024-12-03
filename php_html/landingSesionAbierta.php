@@ -65,9 +65,11 @@
                     </figure>
     
                     <figure class="pelicula">
-                        <img src="../image/Forjadores/shrek 2.jpg" alt="Wall-e">
-                        <div class="ver-mas">Ver más</div>
-                        <figcaption>Wall-e</figcaption>
+                        <img src="../image/Forjadores/shrek 2.jpg" alt="shrek 2">
+                        <div class="ver-mas">
+                            <a href="/proyectoCine/php_html/seleccionHorarios.php">Ver más</a>
+                        </div>
+                        <figcaption>shrek 2</figcaption>
                     </figure>
                     
                     <figure class="pelicula">
