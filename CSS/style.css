@@ -429,6 +429,41 @@ input::placeholder {
     }
 }
 
+/* ======================================= Hoja de estilo register =======================================*/
+.login-page .btn-register {
+    background-color: #f3f3f3;
+    width: 100%;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 20px;
+    box-sizing: border-box;
+    font-weight: 700;
+}
+
+.login-page .btn-register {
+    background-color: #AD6D01;
+    padding: 15px 10px;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.login-page .title-register {
+    color: #AD6D01;
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+    margin: 180px;
+}
+
+.login-page .email {
+    font-size: 20px;
+    color: #830c00;
+    font-weight: 400;
+}
 /* ======================================= Hoja de estilo recuperar contraseña ======================================*/
 .login-page img{
     width: 40%;
