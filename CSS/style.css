@@ -634,3 +634,69 @@ img{
     font-size: 20px;
 }
 
+/* =====================vista puntos y recompensas========================= */
+h1{
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    color: #AD6D01;
+}
+
+h2{
+    float: right;
+    margin-right:5em;
+    color: #830c00;
+}
+
+.carrusel{
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos */
+    margin-top: 5%;
+    gap: 4%; /* Espaciado uniforme entre elementos */
+    overflow: hidden;
+}
+
+.elemento{
+    flex: auto;
+    background-color: #E0CB9B;
+    width: 10em;
+    height: 25em;
+    border-radius: 30px;
+    position: relative;
+}
+
+.elemento-seleccion{
+    background-color: #E5BC60; 
+}
+
+.carrusel .flechas{
+    margin: 2em; /* Márgenes horizontales más pequeños */
+}
+
+.flechas img{
+    justify-content: center;
+    width: 40px;
+    height: auto;
+}
+
+.recompensa{
+    margin: 3.2em;
+    width: 15em; 
+    height: auto; 
+    margin-bottom: 10%; /* Espacio entre la imagen y el texto */
+}
+
+.elemento p{
+    margin: 12%;
+    font-weight: 700;
+    font-size: 25px;
+    color: #830c00;
+}
+
+.elemento a{
+    margin: 30%;
+    font-weight: 500;
+    font-size: 20px;
+    color: #830c00;
+}
+

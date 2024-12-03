@@ -44,6 +44,8 @@ $username = $_SESSION['username']; // Opcional
                 </div>
                 <div class="dropdown-menu">
                     <a href="/proyectoCine/php_html/perfil.php">Perfil</a>
+                    <a href="/proyectoCine/php_html/historial.php">Historial</a>
+                    <a href="/proyectoCine/php_html/recompensas.php">Recompensa</a>
                     <a href="/proyectoCine/php_funcion/cerrar_sesion.php">Cerrar Sesión</a>
                 </div>
             </div>
