@@ -18,20 +18,26 @@
 
     <!-- Carrusel de películas destacadas -->
     <section class="carousel">
+        <div class="flecha flecha-izquierda">
+            <img src="../image/recompensas/Chevron left.png" alt="flecha izquierda">
+        </div>
         <div class="carousel-container">
             <div class="carousel-slide">
                 <img src="../image/Forjadores/alien.jpeg" alt="alien">
             </div>
-            
+        </div>
+        <div class="flecha flecha-derecha">
+            <img src="../image/recompensas/Chevron right.png" alt="flecha derecha">
         </div>
     </section>
 
     <!-- Sección de películas destacadas -->
     <section class="destacadas">
+        <div class="titulo-destacadas">
+            <h1>Destacadas</h1>
+        </div>
         <div class="container-cartelera">
             <main>
-                <h1>Destacadas</h1>
-                
                 <section class="cartelera">
                     
                     <figure class="pelicula">
@@ -70,6 +76,8 @@
                         <figcaption>Como entrenar a tu dragon 3</figcaption>
                     </figure>
                 </section>
+            </main>
+        </div>
     </section>
 </body>
 </html>

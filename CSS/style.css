@@ -669,7 +669,8 @@ figcaption {
 
 /* ======================================= Estilos de la landing page ======================================= */
 .carousel-container {
-    margin: 60px;
+    margin: 0 15em;
+    margin-top: 3em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -707,14 +708,49 @@ figcaption {
     object-fit: cover;
 }
 
+.flecha {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer; /* Cambia el cursor a mano */
+    position: absolute; /* Necesario para posicionar con respecto al carrusel */
+    top: 50%; /* Alinea verticalmente al 50% del contenedor */
+    transform: translateY(-50%); /* Ajusta para centrar perfectamente */
+    z-index: 2; /* Asegura que estén sobre el carrusel */
+}
+
+.flecha img {
+    display: flex;
+    width: 40px;
+    height: auto;
+    object-fit: contain; /* Asegura que la imagen no se distorsione */
+}
+
+.flecha-izquierda {
+    position: absolute;
+    left: 12em; /* Ajusta la distancia del borde izquierdo */
+}
+
+.flecha-derecha {
+    position: absolute;
+    right: 14em; /* Ajusta la distancia del borde derecho */
+}
+
 .destacadas {
-    padding: 20px;
+    padding: 40px;
     text-align: center;
 }
 
-.destacadas h1 {
+.titulo-destacadas{
+    position: absolute;
     color: #900;
-    margin-bottom: 15px;
+    text-align: left;
+    margin-bottom: 40px;
+    margin-left: 145px;
+}
+
+.titulo-destacadas h1{
+    color: #900;
 }
 
 .movies-container {
