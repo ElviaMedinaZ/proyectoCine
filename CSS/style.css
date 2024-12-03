@@ -11,15 +11,18 @@ body {
     background-color: #ffffff;
     font-family: "Montserrat", sans-serif;
     min-height: 100vh;
-    overflow-y: auto; /*scroll vertical */
+    overflow-y: auto;
+    /*scroll vertical */
 
 }
 
 /* menu superior */
 .header {
     background-color: #830c00;
-    padding: 5px 0; /* Ajusta el padding arriba y abajo*/
-    width: 100%; /* Asegura que el menú tenga 100% de ancho */
+    padding: 5px 0;
+    /* Ajusta el padding arriba y abajo*/
+    width: 100%;
+    /* Asegura que el menú tenga 100% de ancho */
 }
 
 .search::placeholder {
@@ -35,7 +38,8 @@ body {
     white-space: nowrap;
     /* overflow: hidden; */
     justify-content: center;
-    width: 100%; /* Asegura que el contenedor del menú tenga 100% de ancho */
+    width: 100%;
+    /* Asegura que el contenedor del menú tenga 100% de ancho */
 }
 
 .logo img {
@@ -81,7 +85,8 @@ body {
     border-radius: 15px;
     padding: 10px 20px;
     width: 360px;
-    margin-left: 20px; /* Mover a la derecha del menu */
+    margin-left: 20px;
+    /* Mover a la derecha del menu */
     border: none;
 }
 
@@ -89,8 +94,10 @@ body {
 .search-container i {
     margin: 10px 355px;
     position: absolute;
-    font-size: 18px; /* Ajusta el tamaño del icono */
-    color: #6c6c6c; /* Cambia el color del icono */
+    font-size: 18px;
+    /* Ajusta el tamaño del icono */
+    color: #6c6c6c;
+    /* Cambia el color del icono */
 }
 
 /* -------------------- ubicacion ---------------------- */
@@ -98,18 +105,26 @@ body {
     padding: 10px 30px 10px 10px;
     margin-left: 90px;
     background-color: #830c00;
-    color: #ffffff; /* Color del texto */
-    border: none; /* Borde */
-    font-size: 18px; /* Tamaño de fuente */
-    font-weight: 700; /* Peso de la fuente */
-    outline: none;/* quita el borde del foco */
-    border-radius: 0px;/* redondea el borde del foco*/
-    appearance: none;/* quita la flecha predeterminada */
+    color: #ffffff;
+    /* Color del texto */
+    border: none;
+    /* Borde */
+    font-size: 18px;
+    /* Tamaño de fuente */
+    font-weight: 700;
+    /* Peso de la fuente */
+    outline: none;
+    /* quita el borde del foco */
+    border-radius: 0px;
+    /* redondea el borde del foco*/
+    appearance: none;
+    /* quita la flecha predeterminada */
     width: auto;
 }
 
 .places::after {
-    content: "▼"; /* personalizar la flecha para el dropdown */
+    content: "▼";
+    /* personalizar la flecha para el dropdown */
     font-size: 12px;
     color: #ffffff;
     padding-left: 10px;
@@ -118,10 +133,14 @@ body {
 
 /* Para modificar el texto adentro del input de busqueda */
 input::placeholder {
-    color: #830c00; /* Color del texto */
-    font-family: "Montserrat", sans-serif; /* Tipografía */
-    font-size: 16px; /* Tamaño de fuente */
-    font-weight: 800; /* Peso de la fuente */
+    color: #830c00;
+    /* Color del texto */
+    font-family: "Montserrat", sans-serif;
+    /* Tipografía */
+    font-size: 16px;
+    /* Tamaño de fuente */
+    font-weight: 800;
+    /* Peso de la fuente */
 }
 
 /* -------------------- perfil ---------------------- */
@@ -140,7 +159,8 @@ input::placeholder {
     width: 60px;
     height: 60px;
     cursor: pointer;
-    margin-left: 40px; /* Ajusta el margen a la izquierda para la foto de perfil */
+    margin-left: 40px;
+    /* Ajusta el margen a la izquierda para la foto de perfil */
 }
 
 /* Estilo lista desplegable */
@@ -193,22 +213,27 @@ input::placeholder {
     justify-content: center;
     align-items: center;
     margin-top: 0;
-    flex-direction: column; /* columna para que el logo quede arriba del contenedor */
+    flex-direction: column;
+    /* columna para que el logo quede arriba del contenedor */
 }
 
 .login-page .header {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%; /* Asegura que ocupe todo el ancho */
+    width: 100%;
+    /* Asegura que ocupe todo el ancho */
     z-index: 1000;
-    
+
 }
 
 .login-page .header .logo {
-    content: url('../image/logo_cineplus.png'); /* Actualiza la imagen */
-    width: 100px; /* Ajusta el tamaño según sea necesario */
-    height: auto; /* Mantiene la proporción del logo */
+    content: url('../image/logo_cineplus.png');
+    /* Actualiza la imagen */
+    width: 100px;
+    /* Ajusta el tamaño según sea necesario */
+    height: auto;
+    /* Mantiene la proporción del logo */
 }
 
 
@@ -216,14 +241,19 @@ input::placeholder {
 .login-page .container {
     display: flex;
     background-color: #ffffff;
-    width: 480px; /* Ajusta el ancho para coincidir con la imagen */
+    width: 480px;
+    /* Ajusta el ancho para coincidir con la imagen */
     padding: 30px 100px;
     border-radius: 15px;
     margin: 20px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Añade sombra */
-    text-align: center; /* Centra el contenido */
-    justify-content: center; /* Centra verticalmente */
-    align-items: center; /* Centra horizontalmente */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    /* Añade sombra */
+    text-align: center;
+    /* Centra el contenido */
+    justify-content: center;
+    /* Centra verticalmente */
+    align-items: center;
+    /* Centra horizontalmente */
 
 }
 
@@ -232,15 +262,18 @@ input::placeholder {
     color: #AD6D01;
     font-weight: 700;
     font-size: 26px;
-    margin: 30px 0; /* Márgenes iguales arriba y abajo */
+    margin: 30px 0;
+    /* Márgenes iguales arriba y abajo */
     text-align: center;
 }
+
 /* Estilos para el label y el input */
 .login-page label {
     display: block;
     color: #830C00;
     font-weight: 400;
-    font-size: 18px; /* Ajusta el tamaño */
+    font-size: 18px;
+    /* Ajusta el tamaño */
     margin-bottom: 5px;
     text-align: left;
     font-weight: 500;
@@ -260,8 +293,10 @@ input::placeholder {
 
 /* Cambiar el color del placeholder */
 .login-page input::placeholder {
-    color: #2e2e2e; /* Color gris */
-    opacity: 1; /*no transparente */
+    color: #2e2e2e;
+    /* Color gris */
+    opacity: 1;
+    /*no transparente */
     font-weight: 300;
 }
 
@@ -296,7 +331,8 @@ input::placeholder {
 }
 
 .remember-me {
-    display: none; /* Oculta la casilla en pantallas grandes */
+    display: none;
+    /* Oculta la casilla en pantallas grandes */
 }
 
 .login-page .text-container a {
@@ -320,30 +356,41 @@ input::placeholder {
     .login-page .container {
         background-color: #ffffff;
         box-shadow: none;
-        color: #000000; /* Texto en negro */
+        color: #000000;
+        /* Texto en negro */
         font-family: "Montserrat", sans-serif;
     }
 
     .forget-password {
-        visibility: hidden; /* Oculta el texto original pero mantiene el espacio ocupado */
-        position: relative; /* Necesario para colocar el pseudo-elemento */
+        visibility: hidden;
+        /* Oculta el texto original pero mantiene el espacio ocupado */
+        position: relative;
+        /* Necesario para colocar el pseudo-elemento */
         display: flex;
         align-items: center;
-        font-size: 12px; /* Tamaño ajustado */
+        font-size: 12px;
+        /* Tamaño ajustado */
     }
 
     .forget-password::after {
-        content: "Recuperar contraseña"; /* Nuevo texto */
+        content: "Recuperar contraseña";
+        /* Nuevo texto */
         font-family: "Montserrat", sans-serif;
-        color: #830C00; /* Color del nuevo texto */
-        visibility: visible; /* Asegura que el texto generado sea visible */
-        position: fixed; /* Lo posiciona de manera fija en la pantalla */
-        bottom: 160px; /* Ajusta la distancia desde el fondo de la pantalla */
-        right: 100px; /* Ajusta la distancia desde el borde derecho de la pantalla */
-        font-size: 12px; /* Tamaño ajustado del texto */
+        color: #830C00;
+        /* Color del nuevo texto */
+        visibility: visible;
+        /* Asegura que el texto generado sea visible */
+        position: fixed;
+        /* Lo posiciona de manera fija en la pantalla */
+        bottom: 160px;
+        /* Ajusta la distancia desde el fondo de la pantalla */
+        right: 100px;
+        /* Ajusta la distancia desde el borde derecho de la pantalla */
+        font-size: 12px;
+        /* Tamaño ajustado del texto */
     }
-    
-    
+
+
     .login-page .title {
         color: #830C00;
         font-weight: 600px;
@@ -353,15 +400,20 @@ input::placeholder {
     }
 
     .login-page label {
-        font-size: 12px; /* Tamaño ajustado */
-        color: #830C00; /* Color del texto del label */
+        font-size: 12px;
+        /* Tamaño ajustado */
+        color: #830C00;
+        /* Color del texto del label */
     }
 
     .login-page input {
-        background-color: #eaeaea; /* Fondo gris */
+        background-color: #eaeaea;
+        /* Fondo gris */
         color: #830C00;
-        border-color: #000000; /* Borde negro */
-        font-size: 12px; /* Tamaño ajustado */
+        border-color: #000000;
+        /* Borde negro */
+        font-size: 12px;
+        /* Tamaño ajustado */
     }
 
     .login-page input::placeholder {
@@ -370,34 +422,45 @@ input::placeholder {
 
     /* Contenedor para la casilla "Recordarme" y el enlace "Recuperar contraseña" */
     .login-page .remember-me-container {
-        display: flex; /* Asegura que ambos elementos estén en una fila */
-        align-items: center; /* Alinea verticalmente */
-        justify-content: flex-start; /* Alinea a la izquierda */
-        font-size: 12px; /* Tamaño ajustado */
-    }
-    
-    .login-page .remember-me {
-        display: flex; /* Alinea la casilla con el texto */
+        display: flex;
+        /* Asegura que ambos elementos estén en una fila */
         align-items: center;
-        margin-right: 10px; /* Espacio entre la casilla y el enlace */
+        /* Alinea verticalmente */
+        justify-content: flex-start;
+        /* Alinea a la izquierda */
+        font-size: 12px;
+        /* Tamaño ajustado */
+    }
+
+    .login-page .remember-me {
+        display: flex;
+        /* Alinea la casilla con el texto */
+        align-items: center;
+        margin-right: 10px;
+        /* Espacio entre la casilla y el enlace */
     }
 
     .login-page .remember-me input {
-        margin-right: 2px; /* Espacio entre la casilla y el texto */
-        transform: scale(0.8); /* Reduce el tamaño de la casilla */
+        margin-right: 2px;
+        /* Espacio entre la casilla y el texto */
+        transform: scale(0.8);
+        /* Reduce el tamaño de la casilla */
     }
 
     /* Asegura que el enlace "Recuperar contraseña" esté en la misma línea */
     .login-page .forget-password {
-        display: inline-flex; /* Asegura que el enlace esté en la misma fila */
+        display: inline-flex;
+        /* Asegura que el enlace esté en la misma fila */
         color: #830C00;
-        font-size: 12px; /* Tamaño ajustado */
+        font-size: 12px;
+        /* Tamaño ajustado */
         text-decoration: none;
     }
 
     .login-page .forget-password {
         color: #830C00;
-        font-size: 12px; /* Tamaño ajustado */
+        font-size: 12px;
+        /* Tamaño ajustado */
     }
 
     .login-page .btn-login {
@@ -407,17 +470,20 @@ input::placeholder {
     }
 
     .login-page .text-container a {
-        font-size: 12px; /* Tamaño ajustado */
+        font-size: 12px;
+        /* Tamaño ajustado */
         color: #830C00;
         display: block;
     }
 
     .login-page input::placeholder {
-        font-size: 12px; /* Tamaño ajustado */
+        font-size: 12px;
+        /* Tamaño ajustado */
     }
 
     .login-page .text-container {
-        font-size: 12px; /* Tamaño ajustado */
+        font-size: 12px;
+        /* Tamaño ajustado */
     }
 
     .login-page .container {
@@ -425,7 +491,8 @@ input::placeholder {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        font-size: 12px; /* Tamaño ajustado */
+        font-size: 12px;
+        /* Tamaño ajustado */
     }
 }
 
@@ -464,12 +531,13 @@ input::placeholder {
     color: #830c00;
     font-weight: 400;
 }
+
 /* ======================================= Hoja de estilo recuperar contraseña ======================================*/
-.login-page img{
+.login-page img {
     width: 40%;
 }
 
-.login-page p{
+.login-page p {
     margin-top: 10px;
     margin-bottom: 10px;
 }
@@ -477,7 +545,8 @@ input::placeholder {
 /* ======================================= Hoja de estilo cartelera ======================================*/
 .container-cartelera h1 {
     display: flex;
-    font-weight: 800; /* Aumenta el grosor de la fuente */
+    font-weight: 800;
+    /* Aumenta el grosor de la fuente */
     color: #AD6D01;
     align-items: center;
     justify-content: center;
@@ -485,40 +554,52 @@ input::placeholder {
 
 .cartelera {
     display: grid;
-    grid-template-columns: repeat(6, 1fr); /* Mantiene 6 columnas flexibles */
-    gap: 3vw; /* Espacio entre filas y columnas adaptado a la pantalla */
+    grid-template-columns: repeat(6, 1fr);
+    /* Mantiene 6 columnas flexibles */
+    gap: 3vw;
+    /* Espacio entre filas y columnas adaptado a la pantalla */
     padding: 6vh 5vw;
     margin: 0 5vw;
 
     align-items: start;
-    
+
 }
 
 .pelicula {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between; /* Distribuye los elementos de la tarjeta */
-    height: 40vh; /* Altura fija de las tarjetas de las películas */
-    width: 100%; /* Mantener el ancho del contenedor */
-    position: relative; /* Necesario para el posicionamiento del overlay */
-    overflow: hidden; /* Ocultar cualquier desbordamiento */
+    justify-content: space-between;
+    /* Distribuye los elementos de la tarjeta */
+    height: 40vh;
+    /* Altura fija de las tarjetas de las películas */
+    width: 100%;
+    /* Mantener el ancho del contenedor */
+    position: relative;
+    /* Necesario para el posicionamiento del overlay */
+    overflow: hidden;
+    /* Ocultar cualquier desbordamiento */
 }
 
 .pelicula .img-container {
     width: 100%;
-    height: 85%; /* Altura relativa al contenedor */
+    height: 85%;
+    /* Altura relativa al contenedor */
     border-radius: 1vw;
-    overflow: hidden; /* Asegura que el borde redondeado se mantenga */
+    overflow: hidden;
+    /* Asegura que el borde redondeado se mantenga */
 }
 
 .pelicula img {
     width: 100%;
-    height: 100%; /* La imagen ocupará todo el contenedor */
-    object-fit: cover; /* Asegura que la imagen cubra el contenedor sin distorsionarse */
+    height: 100%;
+    /* La imagen ocupará todo el contenedor */
+    object-fit: cover;
+    /* Asegura que la imagen cubra el contenedor sin distorsionarse */
     border: 0.1vw solid #AD6D01;
     border-radius: 1vw;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Sombra predeterminada */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    /* Sombra predeterminada */
 }
 
 figcaption {
@@ -526,37 +607,51 @@ figcaption {
     font-weight: bold;
     color: #830C00;
     text-align: center;
-    font-size: 1vw; /* Tamaño adaptable */
-    min-height: 2rem; /* Asegura que los textos tengan un espacio mínimo fijo */
+    font-size: 1vw;
+    /* Tamaño adaptable */
+    min-height: 2rem;
+    /* Asegura que los textos tengan un espacio mínimo fijo */
 }
 
 /* Efecto de escala al pasar el cursor sobre la imagen */
 .pelicula:hover img {
-    transform: scale(1.05); /* Escala la imagen al 105% */
+    transform: scale(1.05);
+    /* Escala la imagen al 105% */
 }
 
 
 /* Overlay oscuro en la imagen */
 .pelicula img:hover {
-    filter: brightness(50%); /* Reduce el brillo para oscurecer la imagen */
+    filter: brightness(50%);
+    /* Reduce el brillo para oscurecer la imagen */
 }
 
 /* Texto "Ver más" */
 .pelicula .ver-mas {
     position: absolute;
-    top: 50%; /* Centra verticalmente */
-    left: 50%; /* Centra horizontalmente */
-    transform: translate(-50%, -50%); /* Ajusta la posición para centrar */
-    color: white; /* Color del texto */
-    font-size: 1vw; /* Tamaño adaptable */
-    font-weight: bold; /* Negrita */
-    opacity: 0; /* Ocultarlo */
-    transition: opacity 0.3s ease; /* Transición suave */
-    z-index: 2; /* sobre la imagen el texto*/
+    top: 50%;
+    /* Centra verticalmente */
+    left: 50%;
+    /* Centra horizontalmente */
+    transform: translate(-50%, -50%);
+    /* Ajusta la posición para centrar */
+    color: white;
+    /* Color del texto */
+    font-size: 1vw;
+    /* Tamaño adaptable */
+    font-weight: bold;
+    /* Negrita */
+    opacity: 0;
+    /* Ocultarlo */
+    transition: opacity 0.3s ease;
+    /* Transición suave */
+    z-index: 2;
+    /* sobre la imagen el texto*/
 }
 
-.pelicula img:hover + .ver-mas {
-    opacity: 1; /* Muestra el texto al pasar el mouse */
+.pelicula img:hover+.ver-mas {
+    opacity: 1;
+    /* Muestra el texto al pasar el mouse */
 }
 
 figcaption {
@@ -564,7 +659,8 @@ figcaption {
     font-weight: bold;
     color: #830C00;
     text-align: center;
-    font-size: 1vw; /* Tamaño adaptable */
+    font-size: 1vw;
+    /* Tamaño adaptable */
 }
 
 /* ======================================= Estilos de la sección de pago ======================================= */
@@ -588,8 +684,10 @@ figcaption {
 
 
 .payment-section input::placeholder {
-    color: #2e2e2e; /* Color gris */
-    opacity: 1; /*no transparente */
+    color: #2e2e2e;
+    /* Color gris */
+    opacity: 1;
+    /*no transparente */
     font-weight: 500;
 }
 
@@ -638,7 +736,8 @@ figcaption {
     justify-content: flex-end;
 }
 
-.confirm-btn, .cancel-btn {
+.confirm-btn,
+.cancel-btn {
     padding: 12px 20px;
     border: none;
     border-radius: 8px;
@@ -667,130 +766,15 @@ figcaption {
 }
 
 
-/* ======================================= Estilos de la landing page ======================================= */
-.carousel-container {
-    margin: 0 15em;
-    margin-top: 3em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    position: relative;
-    border-radius: 20px; /* Mantén el redondeo si lo necesitas */
-    background: #20232a; /* Fondo oscuro (opcional, en caso de errores de carga) */
-    width: 1000px; /* Ancho completo del contenedor */
-    height: 400px; /* Altura fija del carrusel */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Sombra opcional */
-}
-
-.carousel {
-  transition: transform 0.5s ease-in-out; /* Animación suave para scroll */
-  width: 100%;
-  height: 100%;
-}
-
-.carousel-item {
-  flex: 0 0 100%; /* Cada imagen ocupa el 100% del contenedor */
-  height: 100%; /* Altura completa */
-}
-
-.carousel-item img {
-    width: 100%;
-    height: 100%; /* La imagen ocupará todo el contenedor */
-    border: 0.1vw solid #AD6D01;
-    border-radius: 1vw;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Sombra predeterminada */
-}
-
-.carousel-slide img {
-    width:1150px!important;
-    height: 1000px !important;
-    object-fit: cover;
-}
-
-.flecha {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer; /* Cambia el cursor a mano */
-    position: absolute; /* Necesario para posicionar con respecto al carrusel */
-    top: 50%; /* Alinea verticalmente al 50% del contenedor */
-    transform: translateY(-50%); /* Ajusta para centrar perfectamente */
-    z-index: 2; /* Asegura que estén sobre el carrusel */
-}
-
-.flecha img {
-    display: flex;
-    width: 40px;
-    height: auto;
-    object-fit: contain; /* Asegura que la imagen no se distorsione */
-}
-
-.flecha-izquierda {
-    position: absolute;
-    left: 12em; /* Ajusta la distancia del borde izquierdo */
-}
-
-.flecha-derecha {
-    position: absolute;
-    right: 14em; /* Ajusta la distancia del borde derecho */
-}
-
-.destacadas {
-    padding: 40px;
-    text-align: center;
-}
-
-.titulo-destacadas{
-    position: absolute;
-    color: #900;
-    text-align: left;
-    margin-bottom: 35px;
-    margin-left: 145px;
-}
-
-.titulo-destacadas h1{
-    color: #900;
-}
-
-.movies-container {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    width: 800px;
-    flex-wrap: wrap;
-}
-
-.pelicula {
-    width: 120px;
-    text-align: center;
-}
-
-.pelicula img {
-    width: 100%;
-    border-radius: 8px;
-    margin-bottom: 5px;
-}
-
-.pelicula p {
-    font-size: 14px;
-    color: #333;
-}
-
-.ver-mas a{
-    color: #ffff;
-    text-decoration: none;
-}
-
 /* =====================vista nosotros========================= */
-h1{
+h1 {
     display: flex;
     justify-content: center;
     margin-top: 2%;
     color: #AD6D01;
 }
 
-img{
+img {
     display: flex;
     float: right;
     width: 35em;
@@ -798,34 +782,36 @@ img{
     margin: 5%;
 }
 
-.about{
+.about {
     margin: 5%;
     font-size: 20px;
 }
 
 /* =====================vista puntos y recompensas========================= */
-h1{
+h1 {
     display: flex;
     justify-content: center;
     margin-top: 2%;
     color: #AD6D01;
 }
 
-h2{
+h2 {
     float: right;
-    margin-right:5em;
+    margin-right: 5em;
     color: #830c00;
 }
 
-.carrusel{
+.carrusel {
     display: flex;
-    align-items: center; /* Alinea verticalmente los elementos */
+    align-items: center;
+    /* Alinea verticalmente los elementos */
     margin-top: 5%;
-    gap: 4%; /* Espaciado uniforme entre elementos */
+    gap: 4%;
+    /* Espaciado uniforme entre elementos */
     overflow: hidden;
 }
 
-.elemento{
+.elemento {
     flex: auto;
     background-color: #E0CB9B;
     width: 10em;
@@ -834,38 +820,39 @@ h2{
     position: relative;
 }
 
-.elemento-seleccion{
-    background-color: #E5BC60; 
+.elemento-seleccion {
+    background-color: #E5BC60;
 }
 
-.carrusel .flechas{
-    margin: 2em; /* Márgenes horizontales más pequeños */
+.carrusel .flechas {
+    margin: 2em;
+    /* Márgenes horizontales más pequeños */
 }
 
-.flechas img{
+.flechas img {
     justify-content: center;
     width: 40px;
     height: auto;
 }
 
-.recompensa{
+.recompensa {
     margin: 3.2em;
-    width: 15em; 
-    height: auto; 
-    margin-bottom: 10%; /* Espacio entre la imagen y el texto */
+    width: 15em;
+    height: auto;
+    margin-bottom: 10%;
+    /* Espacio entre la imagen y el texto */
 }
 
-.elemento p{
+.elemento p {
     margin: 12%;
     font-weight: 700;
     font-size: 25px;
     color: #830c00;
 }
 
-.elemento a{
+.elemento a {
     margin: 30%;
     font-weight: 500;
     font-size: 20px;
     color: #830c00;
 }
-

@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 
     // Verificar si el usuario o el correo ya existen
-    $check_sql = "SELECT Username, Correo FROM usuario WHERE Username = ? OR Correo = ?";
+    $check_sql = "SELECT usuario, correo FROM usuarios WHERE usuario = ? OR correo = ?";
     $stmt = $conn->prepare($check_sql);
     $stmt->bind_param("ss", $user, $email);
     $stmt->execute();
@@ -21,21 +21,20 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
-        if (strtolower($row['Username']) === strtolower($user)) {
+        if (strtolower($row['usuario']) === strtolower($user)) {
             echo "<script>alert('El nombre de usuario ya existe.'); window.history.back();</script>";
             exit();
         }
-        if (strtolower($row['Correo']) === strtolower($email)) {
+        if (strtolower($row['correo']) === strtolower($email)) {
             echo "<script>alert('El correo electrónico ya está registrado.'); window.history.back();</script>";
             exit();
         }
     }
 
-    // Insertar el nuevo usuario
-    $hashed_password = password_hash($password, PASSWORD_BCRYPT);
-    $insert_sql = "INSERT INTO usuario (Username, Correo, Password) VALUES (?, ?, ?)";
+    // Insertar el nuevo usuario con la contraseña sin encriptar
+    $insert_sql = "INSERT INTO usuarios (usuario, correo, contraseña) VALUES (?, ?, ?)";
     $stmt = $conn->prepare($insert_sql);
-    $stmt->bind_param("sss", $user, $email, $hashed_password);
+    $stmt->bind_param("sss", $user, $email, $password);
 
     if ($stmt->execute()) {
         echo "<script>alert('Registro exitoso. Redirigiendo al inicio de sesión...'); window.location.href = '../php_html/login.php';</script>";

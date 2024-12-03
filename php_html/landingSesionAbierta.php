@@ -8,28 +8,31 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/styles_carrucel">
+    
     <title>Cineplus</title>
 </head>
 <body>
    
     <?php
-        include ('header.php');
+        include ('header.php'); // Menú de navegación
     ?>
 
     <!-- Carrusel de películas destacadas -->
     <section class="carousel">
-        <div class="flecha flecha-izquierda">
+        <div class="flecha flecha-izquierda" onclick="prevSlide()">
             <img src="../image/recompensas/Chevron left.png" alt="flecha izquierda">
         </div>
         <div class="carousel-container">
-            <div class="carousel-slide">
-                <img src="../image/Forjadores/alien.jpeg" alt="alien">
+            <div class="carousel-slides">
+                 <?php include('../php_funcion/cargar_carrucel.php'); // Cargar películas destacadas ?>
             </div>
         </div>
-        <div class="flecha flecha-derecha">
+        <div class="flecha flecha-derecha" onclick="nextSlide()">
             <img src="../image/recompensas/Chevron right.png" alt="flecha derecha">
         </div>
     </section>
+
 
     <!-- Sección de películas destacadas -->
     <section class="destacadas">
@@ -39,47 +42,12 @@
         <div class="container-cartelera">
             <main>
                 <section class="cartelera">
-                    
-                    <figure class="pelicula">
-                        <img src="../image/Forjadores/cenicienta.jpg" alt="Cenicienta">
-                        <div class="ver-mas">Ver más</div>
-                        <figcaption>Cenicienta</figcaption>
-                    </figure>
-                    
-                    <figure class="pelicula">
-                        <img src="../image/Forjadores/romper circulo.jpg" alt="Romper el Círculo">
-                        <div class="ver-mas">Ver más</div>
-                        <figcaption>Romper el círculo</figcaption>
-                    </figure>
-    
-                    <figure class="pelicula">
-                        <img src="../image/Forjadores/Deadpool&Wolverine.jpg" alt="Deadpool y Wolverine">
-                        <div class="ver-mas">Ver más</div>
-                        <figcaption>Deadpool y Wolverine</figcaption>
-                    </figure>
-                    
-                    <figure class="pelicula">
-                        <img src="../image/Forjadores/alien.jpeg" alt="Alien">
-                        <div class="ver-mas">Ver más</div>
-                        <figcaption>Alien</figcaption>
-                    </figure>
-    
-                    <figure class="pelicula">
-                        <img src="../image/Forjadores/shrek 2.jpg" alt="shrek 2">
-                        <div class="ver-mas">
-                            <a href="/proyectoCine/php_html/seleccionHorarios.php">Ver más</a>
-                        </div>
-                        <figcaption>shrek 2</figcaption>
-                    </figure>
-                    
-                    <figure class="pelicula">
-                        <img src="../image/Forjadores/como entrenar a tu dragon 3.jpg" alt="Como Entrenar a tu Dragon 3">
-                        <div class="ver-mas">Ver más</div>
-                        <figcaption>Como entrenar a tu dragon 3</figcaption>
-                    </figure>
+                    <?php include('../php_funcion/cargar_destacados.php'); // Cargar películas destacadas ?>
                 </section>
             </main>
         </div>
     </section>
+
+    <script src="../JS/carrucel.js"></script> <!-- Archivo JS para el carrusel -->
 </body>
 </html>

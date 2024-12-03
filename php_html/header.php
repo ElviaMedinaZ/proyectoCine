@@ -32,12 +32,20 @@ $username = $_SESSION['username']; // Opcional
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
             <div class="select_places">
-                <select class="places" name="selection_places" id="places">
-                    <option value="plazas">Las Plazas</option>
-                    <option value="liverpool">Liverpool</option>
-                    <option value="forjadores">Forjadores</option>
-                </select>
+                <form method="POST" action="/proyectoCine/php_html/carteleraForjadores.php" id="cineForm">
+                    <?php
+                    // Obtener la selección actual (por defecto: 'plazas')
+                    $cine_seleccionado = $_POST['selection_places'] ?? 'plazas';
+                    ?>
+                    <select class="places" name="selection_places" id="places" onchange="document.getElementById('cineForm').submit();">
+                        <option value="plazas" <?php echo ($cine_seleccionado == 'plazas') ? 'selected' : ''; ?>>Las Plazas</option>
+                        <option value="liverpool" <?php echo ($cine_seleccionado == 'liverpool') ? 'selected' : ''; ?>>Liverpool</option>
+                        <option value="forjadores" <?php echo ($cine_seleccionado == 'forjadores') ? 'selected' : ''; ?>>Forjadores</option>
+                    </select>
+                </form>
             </div>
+
+
             <div class="profile">
                 <div class="profile-icon">
                     <img src="/proyectoCine/image/profile.png" alt="Profile Image">

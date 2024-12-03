@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 // Obtener los datos del usuario para mostrar en el formulario
-$sql = "SELECT Nombre, Username, Correo, Imagen, Puntos FROM usuario WHERE ID_Usuario = ?";
+$sql = "SELECT nombre, usuario, Correo, Imagen, Puntos FROM usuarios WHERE ID_Usuario = ?";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("i", $user_id);
 $stmt->execute();

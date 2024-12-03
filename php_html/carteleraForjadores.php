@@ -16,124 +16,16 @@
 </head>
 <body>
 
-    <?php
-        include ('header.php');
-    ?>
-    
+    <?php include('header.php'); ?>
+
     <div class="container-cartelera">
         <main>
             <h1>Cartelera</h1>
             <section class="cartelera">
-                
-                <figure class="pelicula">
-                    <img src="../image/Forjadores/cenicienta.jpg" alt="Cenicienta">
-                    <div class="ver-mas">Ver más</div>
-                    <figcaption>Cenicienta</figcaption>
-                </figure>
-                
-                <figure class="pelicula">
-                    <img src="../image/Forjadores/romper circulo.jpg" alt="Romper el Círculo">
-                    <div class="ver-mas">Ver más</div>
-                    <figcaption>Romper el círculo</figcaption>
-                </figure>
-
-                <figure class="pelicula">
-                    <img src="../image/Forjadores/Deadpool&Wolverine.jpg" alt="Deadpool y Wolverine">
-                    <div class="ver-mas">Ver más</div>
-                    <figcaption>Deadpool y Wolverine</figcaption>
-                </figure>
-                
-                <figure class="pelicula">
-                    <img src="../image/Forjadores/alien.jpeg" alt="Alien">
-                    <div class="ver-mas">Ver más</div>
-                    <figcaption>Alien</figcaption>
-                </figure>
-
-                <figure class="pelicula">
-                    <img src="../image/Forjadores/shrek 2.jpg" alt="Wall-e">
-                    <div class="ver-mas">Ver más</div>
-                    <figcaption>Wall-e</figcaption>
-                </figure>
-                
-                <figure class="pelicula">
-                    <img src="../image/Forjadores/como entrenar a tu dragon 3.jpg" alt="Como Entrenar a tu Dragon 3">
-                    <div class="ver-mas">Ver más</div>
-                    <figcaption>Como entrenar a tu dragon 3</figcaption>
-                </figure>
-                
-                <figure class="pelicula">
-                    <img src="../image/Forjadores/wall e.jpg" alt="Wall-e">
-                    <div class="ver-mas">Ver más</div>
-                    <figcaption>Wall-e</figcaption>
-                </figure>
-                
-                <figure class="pelicula">
-                    <img src="../image/Forjadores/toy story 2.jpeg" alt="Toy Story 2">
-                    <div class="ver-mas">Ver más</div>
-                    <figcaption>Toy Story 2</figcaption>
-                </figure>
-                
-                <figure class="pelicula">
-                    <img src="../image/Forjadores/mientras dormias.jpg" alt="Mientras Dormías">
-                    <div class="ver-mas">Ver más</div>
-                    <figcaption>Mientras dormias</figcaption>
-                </figure>
-                
-                <figure class="pelicula">
-                    <img src="../image/Forjadores/orgullo y prejuicio.jpg" alt="Orgullo y Prejuicio">
-                    <figcaption>Orgullo y Prejuicio</figcaption>
-                </figure>
-                
-                <figure class="pelicula">
-                    <img src="../image/Forjadores/una voz silenciosa.jpg" alt="Una Voz Silenciosa">
-                    <div class="ver-mas">Ver más</div>
-                    <figcaption>Una voz silenciosa</figcaption>
-                </figure>
-                
-                <figure class="pelicula">
-                    <img src="../image/Forjadores/tu nombre.jpg" alt="Your Name">
-                    <div class="ver-mas">Ver más</div>
-                    <figcaption>Your Name</figcaption>
-                </figure>
-                
-                <figure class="pelicula">
-                    <img src="../image/Forjadores/ratatouille.jpg" alt="Ratatouille">
-                    <div class="ver-mas">Ver más</div>
-                    <figcaption>Ratatouille</figcaption>
-                </figure>
-                
-                <figure class="pelicula">
-                    <img src="../image/Forjadores/kung fu panda 2.jpg" alt="Kung Fu Panda 2">
-                    <div class="ver-mas">Ver más</div>
-                    <figcaption>Kung Fu Panda</figcaption>
-                </figure>
-                
-                <figure class="pelicula">
-                    <img src="../image/Forjadores/Phineas_y_ferb.jpeg" alt="Phineas y Ferb La Pelicula">
-                    <div class="ver-mas">Ver más</div>
-                    <figcaption>Phineas y Ferb La Pelicula</figcaption>
-                </figure>
-                
-                <figure class="pelicula">
-                    <img src="../image/Forjadores/enredados.jpg" alt="Enredados">
-                    <div class="ver-mas">Ver más</div>
-                    <figcaption>Enredados</figcaption>
-                </figure>
-                
-                <figure class="pelicula">
-                    <img src="../image/Forjadores/belle.jpg" alt="Belle">
-                    <div class="ver-mas">Ver más</div>
-                    <figcaption>Belle</figcaption>
-                </figure>
-
-                <figure class="pelicula">
-                    <img src="../image/Forjadores/La_tumba_de_las_luciernagas.jpeg" alt="La Tumba de las Luciernagas">
-                    <div class="ver-mas">Ver más</div>
-                    <figcaption>La Tumba de las Luciernagas</figcaption>
-                </figure>
-                
+                <?php
+                include('../php_funcion/cargar_cartelera.php'); // Cargar películas dinámicamente
+                ?>
             </section>
-
         </main>
     </div>
 </body>

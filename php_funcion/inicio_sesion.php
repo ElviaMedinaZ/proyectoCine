@@ -1,7 +1,6 @@
 <?php
-
-require_once('database.php');
-session_start(); // Asegurarse de iniciar la sesión
+require_once('../php_funcion/database.php');
+session_start();
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $user = trim($_POST['user'] ?? '');
@@ -13,33 +12,25 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         exit();
     }
 
-    // Actualizar consulta SQL con el nombre correcto de las columnas
-    $sql = "SELECT ID_Usuario, Username, Password FROM usuario WHERE Username = ?";
+    // Consulta SQL para verificar el usuario y la contraseña
+    $sql = "SELECT id_usuario, usuario, contraseña FROM usuarios WHERE usuario = ? AND contraseña = ?";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("s", $user);
+    $stmt->bind_param("ss", $user, $password);
     $stmt->execute();
     $result = $stmt->get_result();
 
     if ($result->num_rows === 1) {
         $row = $result->fetch_assoc();
 
-        // Verificar la contraseña
-        if (password_verify($password, $row['Password'])) {
-            // Establecer variables de sesión
-            $_SESSION['user_id'] = $row['ID_Usuario'];
-            $_SESSION['username'] = $row['Username'];
-            
-            // Redirigir al dashboard
-            header("Location: ../php_html/landingSesionAbierta.php");
-            exit();
-        } else {
-            // Contraseña incorrecta
-            echo "<script>alert('Contraseña incorrecta.'); window.history.back();</script>";
-            exit();
-        }
+        // Establecer variables de sesión
+        $_SESSION['user_id'] = $row['id_usuario'];
+        $_SESSION['username'] = $row['usuario'];
+
+        // Redirigir al dashboard
+        header("Location: ../php_html/landingSesionAbierta.php");
+        exit();
     } else {
-        // Usuario no encontrado
-        echo "<script>alert('El usuario no existe.'); window.history.back();</script>";
+        echo "<script>alert('Usuario o contraseña incorrectos.'); window.history.back();</script>";
         exit();
     }
 } else {
@@ -47,6 +38,5 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     exit();
 }
 
-// Cerrar conexión
 $conn->close();
 ?>
