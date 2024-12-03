@@ -3,138 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- libreria font awesome (iconos) -->
+    <!-- Librería Font Awesome (Iconos) -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
-    <!-- fuente de la pagina -->
+    <!-- Fuente Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <!-- hoja de estilos -->
-    <link rel="stylesheet" href="../CSS/style.css">
-
-    <title>Cineplus</title>
+    <!-- Hoja de estilos -->
+    <link rel="stylesheet" href="../CSS/style_perfil.css">
+    <title>Cineplus - Información Personal</title>
 </head>
 <body>
 
     <?php
-        include ('header.php');
+        // Incluir el encabezado
+        include('header.php');
+
+        // Simulación de datos del usuario para pruebas (puedes reemplazar con consulta real a la base de datos)
+        $usuario = [
+            'nombre' => 'Kristofer',
+            'apellido' => 'Hernandez',
+            'usuario' => 'Krhe_22',
+            'correo' => 'krhe_22@alu.uabcs.mx',
+            'puntos' => 0,
+            'imagen' => '../image/profile.png' // Imagen de perfil por defecto
+        ];
     ?>
-    
-    <div class="container-cartelera">
-        <main>
-            <h1>Cartelera</h1>
-            <section class="cartelera">
-                
-                <figure class="pelicula">
-                    <img src="../image/Forjadores/cenicienta.jpg" alt="Cenicienta">
-                    <div class="ver-mas">Ver más</div>
-                    <figcaption>Cenicienta</figcaption>
-                </figure>
-                
-                <figure class="pelicula">
-                    <img src="../image/Forjadores/romper circulo.jpg" alt="Romper el Círculo">
-                    <div class="ver-mas">Ver más</div>
-                    <figcaption>Romper el círculo</figcaption>
-                </figure>
 
-                <figure class="pelicula">
-                    <img src="../image/Forjadores/Deadpool&Wolverine.jpg" alt="Deadpool y Wolverine">
-                    <div class="ver-mas">Ver más</div>
-                    <figcaption>Deadpool y Wolverine</figcaption>
-                </figure>
-                
-                <figure class="pelicula">
-                    <img src="../image/Forjadores/alien.jpeg" alt="Alien">
-                    <div class="ver-mas">Ver más</div>
-                    <figcaption>Alien</figcaption>
-                </figure>
+    <div class="container">
+        <h1>Información Personal</h1>
+        <form action="procesar_perfil.php" method="POST" enctype="multipart/form-data">
+            <div class="profile-section">
+                <!-- Imagen de perfil -->
+                <div class="profile-image">
+                    <img src="<?= htmlspecialchars($usuario['imagen']); ?>" alt="Imagen de perfil" onclick="document.getElementById('image').click();">
+                    <p>Puntos: <?= htmlspecialchars($usuario['puntos']); ?></p>
+                    <input type="file" id="image" name="image" style="display: none;" accept="image/*">
+                    <span class="upload-text">Subir imagen</span>
+                </div>
 
-                <figure class="pelicula">
-                    <img src="../image/Forjadores/shrek 2.jpg" alt="Wall-e">
-                    <div class="ver-mas">Ver más</div>
-                    <figcaption>Wall-e</figcaption>
-                </figure>
-                
-                <figure class="pelicula">
-                    <img src="../image/Forjadores/como entrenar a tu dragon 3.jpg" alt="Como Entrenar a tu Dragon 3">
-                    <div class="ver-mas">Ver más</div>
-                    <figcaption>Como entrenar a tu dragon 3</figcaption>
-                </figure>
-                
-                <figure class="pelicula">
-                    <img src="../image/Forjadores/wall e.jpg" alt="Wall-e">
-                    <div class="ver-mas">Ver más</div>
-                    <figcaption>Wall-e</figcaption>
-                </figure>
-                
-                <figure class="pelicula">
-                    <img src="../image/Forjadores/toy story 2.jpeg" alt="Toy Story 2">
-                    <div class="ver-mas">Ver más</div>
-                    <figcaption>Toy Story 2</figcaption>
-                </figure>
-                
-                <figure class="pelicula">
-                    <img src="../image/Forjadores/mientras dormias.jpg" alt="Mientras Dormías">
-                    <div class="ver-mas">Ver más</div>
-                    <figcaption>Mientras dormias</figcaption>
-                </figure>
-                
-                <figure class="pelicula">
-                    <img src="../image/Forjadores/orgullo y prejuicio.jpg" alt="Orgullo y Prejuicio">
-                    <figcaption>Orgullo y Prejuicio</figcaption>
-                </figure>
-                
-                <figure class="pelicula">
-                    <img src="../image/Forjadores/una voz silenciosa.jpg" alt="Una Voz Silenciosa">
-                    <div class="ver-mas">Ver más</div>
-                    <figcaption>Una voz silenciosa</figcaption>
-                </figure>
-                
-                <figure class="pelicula">
-                    <img src="../image/Forjadores/tu nombre.jpg" alt="Your Name">
-                    <div class="ver-mas">Ver más</div>
-                    <figcaption>Your Name</figcaption>
-                </figure>
-                
-                <figure class="pelicula">
-                    <img src="../image/Forjadores/ratatouille.jpg" alt="Ratatouille">
-                    <div class="ver-mas">Ver más</div>
-                    <figcaption>Ratatouille</figcaption>
-                </figure>
-                
-                <figure class="pelicula">
-                    <img src="../image/Forjadores/kung fu panda 2.jpg" alt="Kung Fu Panda 2">
-                    <div class="ver-mas">Ver más</div>
-                    <figcaption>Kung Fu Panda</figcaption>
-                </figure>
-                
-                <figure class="pelicula">
-                    <img src="../image/Forjadores/Phineas_y_ferb.jpeg" alt="Phineas y Ferb La Pelicula">
-                    <div class="ver-mas">Ver más</div>
-                    <figcaption>Phineas y Ferb La Pelicula</figcaption>
-                </figure>
-                
-                <figure class="pelicula">
-                    <img src="../image/Forjadores/enredados.jpg" alt="Enredados">
-                    <div class="ver-mas">Ver más</div>
-                    <figcaption>Enredados</figcaption>
-                </figure>
-                
-                <figure class="pelicula">
-                    <img src="../image/Forjadores/belle.jpg" alt="Belle">
-                    <div class="ver-mas">Ver más</div>
-                    <figcaption>Belle</figcaption>
-                </figure>
+                <!-- Información del usuario -->
+                <div class="profile-details">
+                    <div class="form-group">
+                        <label for="nombre">Nombre(s)</label>
+                        <input type="text" id="nombre" name="nombre" value="<?= htmlspecialchars($usuario['nombre']); ?>" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="apellido">Apellido</label>
+                        <input type="text" id="apellido" name="apellido" value="<?= htmlspecialchars($usuario['apellido']); ?>" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="usuario">Usuario</label>
+                        <input type="text" id="usuario" name="usuario" value="<?= htmlspecialchars($usuario['usuario']); ?>" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="correo">Correo</label>
+                        <input type="email" id="correo" name="correo" value="<?= htmlspecialchars($usuario['correo']); ?>" readonly>
+                    </div>
+                </div>
+            </div>
 
-                <figure class="pelicula">
-                    <img src="../image/Forjadores/La_tumba_de_las_luciernagas.jpeg" alt="La Tumba de las Luciernagas">
-                    <div class="ver-mas">Ver más</div>
-                    <figcaption>La Tumba de las Luciernagas</figcaption>
-                </figure>
-                
-            </section>
-
-        </main>
+            <!-- Botones -->
+            <div class="buttons">
+                <button type="button" class="cancel" onclick="location.href='index.php';">Cancelar</button>
+                <button type="submit" class="save">Guardar</button>
+            </div>
+        </form>
     </div>
+
 </body>
 </html>

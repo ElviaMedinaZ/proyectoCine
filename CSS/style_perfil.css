@@ -4,42 +4,64 @@
     margin: 50px auto;
     padding: 20px;
     background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     font-family: Arial, sans-serif;
     text-align: center;
 }
 
 /* Título */
 .container h1 {
-    color: #b36b00;
+    color: #AD6D01;
     font-size: 24px;
     margin-bottom: 20px;
 }
 
 /* Sección de perfil */
 .profile-section {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas: 1 para nombre y usuario, 2 para apellido y correo */
+    gap: 20px; /* Espacio entre columnas */
+    text-align: center;
     align-items: center;
-    justify-content: space-between;
+}
+
+/* Contenedor adicional para la imagen */
+.profile-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 3px solid #E0CB9B;
+    overflow: hidden; /* Asegura que la imagen no sobresalga */
+    position: relative; /* Permite posicionar el texto encima de la imagen */
+    cursor: pointer;
+}
+
+/* Texto "Subir imagen" */
+.upload-text {
+    position: absolute; /* Posicionar sobre la imagen */
+    color: white; /* Color blanco */
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+
+    border-radius: 50%; /* Asegura que el fondo tenga forma circular */
+    display: block; /* Mostrar por defecto */
+    z-index: 1; /* Asegura que el texto esté por encima de la imagen */
 }
 
 /* Imagen de perfil */
-.profile-image {
-    text-align: center;
-    margin-right: 20px;
-    flex: 1;
-}
-
 .profile-image img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #ddd;
-    margin-bottom: 10px;
+    width: 100%; /* La imagen ocupa todo el espacio disponible */
+    height: 100%; /* La imagen ocupa todo el espacio disponible */
+    object-fit: cover; /* Mantiene la proporción y ajusta la imagen */
+    border-radius: 50%; /* Asegura que la imagen sea redonda */
+    filter: brightness(16%); /* Filtro de brillo */
+    z-index: 0; /* Asegura que la imagen esté por debajo del texto */
 }
 
+/* Espacio para el input de imagen */
 .profile-image input {
     display: block;
     margin: 10px auto;
@@ -47,13 +69,25 @@
     padding: 5px 10px;
 }
 
-/* Detalles del perfil */
+/* Detalles del perfil - Nombre y Usuario en la primera columna */
 .profile-details {
-    flex: 2;
+    display: grid;
+    grid-template-columns: 1fr; /* Una columna para los campos de nombre y usuario */
+    gap: 20px; /* Espacio entre campos */
     text-align: left;
 }
 
-.profile-details label {
+/* Detalles del perfil - Apellido y Correo en la segunda columna */
+.profile-section .second-column {
+    display: grid;
+    grid-template-columns: 1fr; /* Una columna para los campos de apellido y correo */
+    gap: 20px; /* Espacio entre los campos */
+    text-align: left;
+}
+
+/* Estilo para las etiquetas y los campos de entrada */
+.profile-details label,
+.second-column label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
@@ -61,7 +95,8 @@
     font-size: 14px;
 }
 
-.profile-details input {
+.profile-details input,
+.second-column input {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -90,12 +125,12 @@ button {
 
 /* Botón Cancelar */
 button[type="button"] {
-    background-color: #d9534f;
+    background-color: #E0190B;
     color: white;
 }
 
 button[type="button"]:hover {
-    background-color: #c9302c;
+    background-color: rgb(170, 32, 27);
 }
 
 /* Botón Guardar */

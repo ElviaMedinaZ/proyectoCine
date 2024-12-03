@@ -1,5 +1,8 @@
 <?php
-session_start();
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+
 require_once('../php_funcion/database.php');
 
 // Verificar si el usuario está autenticado
@@ -25,9 +28,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Actualizar datos en la base de datos
-    $sql = "UPDATE usuario SET Nombre = ?, Apellido = ?, Imagen = ? WHERE ID_Usuario = ?";
+    $sql = "UPDATE usuario SET Nombre = ?, Imagen = ? WHERE ID_Usuario = ?";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("sssi", $nombre, $apellido, $image_name, $user_id);
+    $stmt->bind_param("sssi", $nombre, $image_name, $user_id);
 
     if ($stmt->execute()) {
         header("Location: ../php_html/landingSesionAbierta.php");
@@ -39,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 // Obtener los datos del usuario para mostrar en el formulario
-$sql = "SELECT Nombre, Apellido, Username, Correo, Imagen, Puntos FROM usuario WHERE ID_Usuario = ?";
+$sql = "SELECT Nombre, Username, Correo, Imagen, Puntos FROM usuario WHERE ID_Usuario = ?";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("i", $user_id);
 $stmt->execute();
@@ -55,5 +58,4 @@ $conn->close();
 
 // Asignar imagen por defecto si no hay ninguna
 $user_image = $user['Imagen'] ? "../uploads/" . $user['Imagen'] : "../image/profile.png";
-
 ?>
