@@ -295,47 +295,140 @@ input::placeholder {
     margin-top: 15px;
 }
 
+.remember-me {
+    display: none; /* Oculta la casilla en pantallas grandes */
+}
+
 .login-page .text-container a {
     color: #003EDF;
     text-decoration: none;
     font-weight: bold;
 }
 
-/* ======================================= Hoja de estilo register =======================================*/
-.login-page .btn-register {
-    background-color: #f3f3f3;
-    width: 100%;
-    padding: 10px 20px;
-    margin-bottom: 20px;
-    border: 1px solid black;
-    border-radius: 10px;
-    font-size: 20px;
-    box-sizing: border-box;
-    font-weight: 700;
+
+@media (max-width: 500px) {
+    .login-page {
+        background-color: #ffffff;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .login-page .header {
+        margin-top: 60px;
+        background-color: white;
+    }
+
+    .login-page .container {
+        background-color: #ffffff;
+        box-shadow: none;
+        color: #000000; /* Texto en negro */
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .forget-password {
+        visibility: hidden; /* Oculta el texto original pero mantiene el espacio ocupado */
+        position: relative; /* Necesario para colocar el pseudo-elemento */
+        display: flex;
+        align-items: center;
+        font-size: 12px; /* Tamaño ajustado */
+    }
+
+    .forget-password::after {
+        content: "Recuperar contraseña"; /* Nuevo texto */
+        font-family: "Montserrat", sans-serif;
+        color: #830C00; /* Color del nuevo texto */
+        visibility: visible; /* Asegura que el texto generado sea visible */
+        position: fixed; /* Lo posiciona de manera fija en la pantalla */
+        bottom: 160px; /* Ajusta la distancia desde el fondo de la pantalla */
+        right: 100px; /* Ajusta la distancia desde el borde derecho de la pantalla */
+        font-size: 12px; /* Tamaño ajustado del texto */
+    }
+    
+    
+    .login-page .title {
+        color: #830C00;
+        font-weight: 600px;
+        margin-top: -10px;
+        align-items: center;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .login-page label {
+        font-size: 12px; /* Tamaño ajustado */
+        color: #830C00; /* Color del texto del label */
+    }
+
+    .login-page input {
+        background-color: #eaeaea; /* Fondo gris */
+        color: #830C00;
+        border-color: #000000; /* Borde negro */
+        font-size: 12px; /* Tamaño ajustado */
+    }
+
+    .login-page input::placeholder {
+        color: #830C00;
+    }
+
+    /* Contenedor para la casilla "Recordarme" y el enlace "Recuperar contraseña" */
+    .login-page .remember-me-container {
+        display: flex; /* Asegura que ambos elementos estén en una fila */
+        align-items: center; /* Alinea verticalmente */
+        justify-content: flex-start; /* Alinea a la izquierda */
+        font-size: 12px; /* Tamaño ajustado */
+    }
+    
+    .login-page .remember-me {
+        display: flex; /* Alinea la casilla con el texto */
+        align-items: center;
+        margin-right: 10px; /* Espacio entre la casilla y el enlace */
+    }
+
+    .login-page .remember-me input {
+        margin-right: 2px; /* Espacio entre la casilla y el texto */
+        transform: scale(0.8); /* Reduce el tamaño de la casilla */
+    }
+
+    /* Asegura que el enlace "Recuperar contraseña" esté en la misma línea */
+    .login-page .forget-password {
+        display: inline-flex; /* Asegura que el enlace esté en la misma fila */
+        color: #830C00;
+        font-size: 12px; /* Tamaño ajustado */
+        text-decoration: none;
+    }
+
+    .login-page .forget-password {
+        color: #830C00;
+        font-size: 12px; /* Tamaño ajustado */
+    }
+
+    .login-page .btn-login {
+        background-color: #AD6D01;
+        color: white;
+        border: 1px solid #000000;
+    }
+
+    .login-page .text-container a {
+        font-size: 12px; /* Tamaño ajustado */
+        color: #830C00;
+        display: block;
+    }
+
+    .login-page input::placeholder {
+        font-size: 12px; /* Tamaño ajustado */
+    }
+
+    .login-page .text-container {
+        font-size: 12px; /* Tamaño ajustado */
+    }
+
+    .login-page .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px; /* Tamaño ajustado */
+    }
 }
 
-.login-page .btn-register {
-    background-color: #AD6D01;
-    padding: 15px 10px;
-    color: white;
-    cursor: pointer;
-    margin-top: 20px;
-    font-weight: 600;
-}
-
-.login-page .title-register {
-    color: #AD6D01;
-    font-weight: 700;
-    font-size: 30px;
-    text-align: center;
-    margin: 180px;
-}
-
-.login-page .email {
-    font-size: 20px;
-    color: #830c00;
-    font-weight: 400;
-}
 /* ======================================= Hoja de estilo recuperar contraseña ======================================*/
 .login-page img{
     width: 40%;

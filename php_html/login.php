@@ -27,7 +27,7 @@
                 <div>
                     <label for="password">Contraseña</label>
                     <input type="password" id="password" name="password" placeholder="•••••••••••" required>
-                    <a class="forget-password" href="../HTML/olvidarContrasena.html">¿Olvidaste tu contraseña?</a>
+                    <a class="forget-password" href="../php_html/olvidarContrasena.php">¿Olvidaste tu contraseña?</a>
                 </div>
 
                 <button type="submit" class="btn-login">Ingresar</button>
@@ -36,8 +36,11 @@
                     <span class="text">¿No tienes cuenta?</span>
                     <a class="register" href="../php_html/register.php">Regístrate</a>
                 </div>
+
+                
             </form>
         </main>
+        
     </div>
 </body>
 </html>
