@@ -80,7 +80,7 @@
 /* Estilo del título en la tarjeta */
 .tarjeta h2 {
     margin-top: 10px;
-    font-size: 1.1em;
+    font-size: 1.3em;
     /* Tamaño más pequeño para el título */
     color: #A01010;
     margin-bottom: 10px;
@@ -90,7 +90,7 @@
 .tarjeta p {
     font-size: 0.85em;
     /* Tamaño más pequeño para el texto */
-    margin: 6px;
+    margin: 9px;
     /* Reduce el margen entre los párrafos */
     color: #000000;
 }
@@ -100,20 +100,20 @@
 }
 
 /* Estilo para el total de la compra */
-.total {
+.total{
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     font-weight: bold;
     margin-top: 20px;
-    font-size: 0.9em;
+    font-size: 2em;
     /* Tamaño más pequeño para el total */
 }
 
 .total-precio {
     color: #581E1E;
     font-weight: bold;
-    font-size: 0.9em;
+    font-size: 1em;
     /* Tamaño más pequeño para el precio */
 }

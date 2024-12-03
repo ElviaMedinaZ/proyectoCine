@@ -37,7 +37,7 @@
                     <p><strong class="color">Hora:</strong> 18:12</p>
                     <p><strong class="color">Asientos:</strong> B4, B5, B6</p>
                     <p><strong class="color">ID cine:</strong> 8457</p>
-                    <img src="/image/Forjadores/cenicienta.jpg" alt="Póster de película">
+                    <img src="../image/Forjadores/cenicienta.jpg" alt="Póster de película">
                     <p class="total"><strong class="color">Total de la compra:</strong> <span class="total-precio">$180</span></p>
                 </div>
     
@@ -50,7 +50,7 @@
                     <p><strong class="color">Hora:</strong> 18:12</p>
                     <p><strong class="color">Asientos:</strong> B4, B5, B6</p>
                     <p><strong class="color">ID cine:</strong> 8457</p>
-                    <img src="/image/Forjadores/alien.jpeg" alt="Póster de película">
+                    <img src="../image/Forjadores/alien.jpeg" alt="Póster de película">
                     <p class="total"><strong class="color">Total de la compra:</strong> <span class="total-precio">$180</span></p>
                 </div>
             </div>
