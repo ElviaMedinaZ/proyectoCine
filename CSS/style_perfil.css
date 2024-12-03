@@ -35,7 +35,6 @@
     border: 3px solid #E0CB9B;
     overflow: hidden; /* Asegura que la imagen no sobresalga */
     position: relative; /* Permite posicionar el texto encima de la imagen */
-    cursor: pointer;
 }
 
 /* Texto "Subir imagen" */
@@ -45,7 +44,7 @@
     font-size: 16px;
     font-weight: bold;
     padding: 10px;
-
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para visibilidad */
     border-radius: 50%; /* Asegura que el fondo tenga forma circular */
     display: block; /* Mostrar por defecto */
     z-index: 1; /* Asegura que el texto esté por encima de la imagen */
