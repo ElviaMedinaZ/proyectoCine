@@ -361,13 +361,17 @@ input::placeholder {
     gap: 3vw; /* Espacio entre filas y columnas adaptado a la pantalla */
     padding: 6vh 5vw;
     margin: 0 5vw;
+
+    align-items: start;
+    
 }
 
 .pelicula {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 40vh; /* Altura fija de las tarjetas de las pelis */
+    justify-content: space-between; /* Distribuye los elementos de la tarjeta */
+    height: 40vh; /* Altura fija de las tarjetas de las películas */
     width: 100%; /* Mantener el ancho del contenedor */
     position: relative; /* Necesario para el posicionamiento del overlay */
     overflow: hidden; /* Ocultar cualquier desbordamiento */
@@ -381,18 +385,28 @@ input::placeholder {
 }
 
 .pelicula img {
-    width: 100%; /* Imagen ocupa el ancho del contenedor */
-    height: 85%; /* Ajuste de altura relativo al contenedor */
+    width: 100%;
+    height: 100%; /* La imagen ocupará todo el contenedor */
     object-fit: cover; /* Asegura que la imagen cubra el contenedor sin distorsionarse */
     border: 0.1vw solid #AD6D01;
     border-radius: 1vw;
-    transition: transform 0.3s ease; /* Transición suave para la escala */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Sombra predeterminada */
+}
+
+figcaption {
+    margin-top: 0.5vh;
+    font-weight: bold;
+    color: #830C00;
+    text-align: center;
+    font-size: 1vw; /* Tamaño adaptable */
+    min-height: 2rem; /* Asegura que los textos tengan un espacio mínimo fijo */
 }
 
 /* Efecto de escala al pasar el cursor sobre la imagen */
 .pelicula:hover img {
     transform: scale(1.05); /* Escala la imagen al 105% */
 }
+
 
 /* Overlay oscuro en la imagen */
 .pelicula img:hover {
@@ -525,37 +539,45 @@ figcaption {
 }
 
 
-/* ======================================= Estilos de la sección de pago ======================================= */
-.carousel {
-    padding: 20px 0;
+/* ======================================= Estilos de la landing page ======================================= */
+.carousel-container {
+    margin: 60px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    border-radius: 20px; /* Mantén el redondeo si lo necesitas */
+    background: #20232a; /* Fondo oscuro (opcional, en caso de errores de carga) */
+    width: 1000px; /* Ancho completo del contenedor */
+    height: 400px; /* Altura fija del carrusel */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Sombra opcional */
 }
 
-.carousel-container {
-    width: 80%; /* Ancho del contenedor del carrusel */
-    max-width: 1000px; /* Ancho máximo */
-    overflow: hidden;
-    border-radius: 10px; /* Bordes redondeados */
+.carousel {
+  transition: transform 0.5s ease-in-out; /* Animación suave para scroll */
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-item {
+  flex: 0 0 100%; /* Cada imagen ocupa el 100% del contenedor */
+  height: 100%; /* Altura completa */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%; /* La imagen ocupará todo el contenedor */
+    border: 0.1vw solid #AD6D01;
+    border-radius: 1vw;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Sombra predeterminada */
 }
 
 .carousel-slide img {
-    width: 100% !important;
-    height: 250px !important;
+    width:1150px!important;
+    height: 1000px !important;
     object-fit: cover;
-    border-radius: 10px;
 }
-
-.carousel:hover img {
-    transform: scale(1.05); /* Escala la imagen al 105% */
-}
-
-/* Overlay oscuro en la imagen */
-.carousel img:hover {
-    filter: brightness(50%); /* Reduce el brillo para oscurecer la imagen */
-}
-
 
 .destacadas {
     padding: 20px;
@@ -602,8 +624,8 @@ h1{
 img{
     display: flex;
     float: right;
-    width: 35em; 
-    height: 25em; 
+    width: 35em;
+    height: 25em;
     margin: 5%;
 }
 
