@@ -771,25 +771,45 @@ figcaption {
 .cancel-btn:hover {
     background-color: #9b2727;
 }
+
 /* =====================vista nosotros========================= */
-h1 {
+/* contenedor principal */
+.container-about {
     display: flex;
-    justify-content: center;
-    margin-top: 2%;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    margin: 0 auto;
+    max-width: 1200px; 
+}
+
+/* titulo */
+.container-about h1 {
+    text-align: center;
+    margin-bottom: 50px;
     color: #AD6D01;
 }
 
-img {
+/* contenido ambos parrafos */
+.container-about .content {
     display: flex;
-    float: right;
-    width: 35em;
-    height: 25em;
-    margin: 5%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px; 
+    width: 100%; 
 }
 
-.about {
-    margin: 5%;
+/* imagen */
+.container-about img {
+    width: 500px;
+    height: auto;
+    flex-shrink: 0; /* imagen de tamaño fijo al hacer zoom */
+}
+
+/* parrafos del texto */
+.container-about .about {
     font-size: 20px;
+    text-align: left;
 }
 
 /* =====================vista puntos y recompensas========================= */
@@ -875,13 +895,13 @@ h2 {
     margin: 35px;
     width: 250px;
     height: auto;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 /* texto de la tarjeta */
 .elemento p {
     padding: 30px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     font-weight: 700;
     font-size: 25px;
     color: #830c00;

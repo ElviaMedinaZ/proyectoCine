@@ -19,34 +19,24 @@
         include ('header.php');
     ?>
 
-    <div class="container-about">
-        <main>
+<div class="container-about">
+    <main>
+        <section>
             <h1>Nosotros</h1>
-            <div>
+            <div class="content">
+                <div class="about">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipiscing elit placerat elementum, blandit faucibus nisi litora. Risus varius arcu dictum suscipit fermentum tellus curabitur molestie vulputate malesuada, tristique at auctor magna nibh habitant sodales ullamcorper aliquet, vitae dis porttitor scelerisque dapibus libero mauris primis dui. Turpis sollicitudin ut blandit elementum orci, habitant eleifend metus accumsan faucibus interdum, aptent at egestas quam.
+                    </p>
+                    <br>
+                    <p>
+                        Purus morbi bibendum viverra nec potenti congue condimentum non eros iaculis, dictum montes natoque sociosqu hac risus consequat mollis mus, facilisi aliquet sem tempor dapibus tellus quisque felis maecenas. Scelerisque purus platea phasellus congue morbi, facilisis varius pretium leo.
+                    </p>
+                </div>
                 <img src="../image/imagen-nosotros.png" alt="Personas disfrutando el cine">
             </div>
-            <div class="about">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur, adipiscing elit 
-                    <br>placerat elementum, blandit faucibus nisi litora. Risus varius 
-                    <br>arcu dictum suscipit fermentum tellus curabitur molestie 
-                    <br>vulputate malesuada, tristique at auctor magna nibh habitant 
-                    <br>sodales ullamcorper aliquet, vitae dis porttitor scelerisque 
-                    <br>dapibus libero mauris primis dui. Turpis sollicitudin ut blandit 
-                    <br>elementum orci, habitant eleifend metus accumsan faucibus 
-                    <br>interdum, aptent at egestas quam.
-                </p>
-                <br>
-                <p>
-                    Purus morbi bibendum viverra nec potenti congue 
-                    <br>condimentum non eros iaculis, dictum montes natoque 
-                    <br>sociosqu hac risus consequat mollis mus, facilisi aliquet sem 
-                    <br>tempor dapibus tellus quisque felis maecenas. Scelerisque 
-                    <br>purus platea phasellus congue morbi, facilisis varius pretium 
-                    <br>leo.
-                </p>
-            </div>
-        </main>
-    </div>
+        </section>
+    </main>
+</div>
 </body>
 </html>
