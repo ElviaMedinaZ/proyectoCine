@@ -793,36 +793,53 @@ img {
 }
 
 /* =====================vista puntos y recompensas========================= */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos horizontalmente */
+    gap: 20px;
+}
+
 h1 {
     display: flex;
+    font-size: 35px;
     justify-content: center;
-    margin-top: 2%;
+    margin-top: 35px;
     color: #AD6D01;
 }
 
 h2 {
-    float: right;
-    margin-right: 5em;
-    color: #830c00;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    gap: 20px;
+    color: #830C00;
 }
 
 .carrusel {
     display: flex;
     align-items: center;
-    /* Alinea verticalmente los elementos */
-    margin-top: 5%;
-    gap: 4%;
-    /* Espaciado uniforme entre elementos */
-    overflow: hidden;
+    justify-content: center;
+    margin-top: 70px;
+    gap: 40px;
+}
+
+.tarjetas-container {
+    display: flex;
+    justify-content: center; 
+    gap: 50px; 
+    flex-wrap: wrap;
 }
 
 .elemento {
-    flex: auto;
+    flex: none; 
     background-color: #E0CB9B;
-    width: 10em;
-    height: 25em;
+    width: 360px; 
+    height: 440px;
     border-radius: 30px;
-    position: relative;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 0; 
 }
 
 .elemento-seleccion {
@@ -830,8 +847,8 @@ h2 {
 }
 
 .carrusel .flechas {
-    margin: 2em;
-    /* Márgenes horizontales más pequeños */
+    margin: 20px;
+    display: flex;
 }
 
 .flechas img {
@@ -841,22 +858,22 @@ h2 {
 }
 
 .recompensa {
-    margin: 3.2em;
-    width: 15em;
+    margin: 35px;
+    width: 250px;
     height: auto;
-    margin-bottom: 10%;
-    /* Espacio entre la imagen y el texto */
+    margin-bottom: 35px;
 }
 
 .elemento p {
-    margin: 12%;
+    padding: 30px;
+    margin-bottom: 40px;
     font-weight: 700;
     font-size: 25px;
     color: #830c00;
 }
 
 .elemento a {
-    margin: 30%;
+    margin: 80px;
     font-weight: 500;
     font-size: 20px;
     color: #830c00;

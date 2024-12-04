@@ -11,40 +11,44 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!-- hoja de estilos -->
     <link rel="stylesheet" href="../CSS/style.css">
-    <title>Document</title>
+    <title>Cineplus</title>
 </head>
 <body>
     <?php
         include ('header.php');
     ?>
 
-    <div class="container-about">
+    <div class="container">
         <main>
-            <h1>Puntos y recompensas</h1>
-            <h2>Puntos: 10</h2>
+            <section>
+                <h1>Puntos y recompensas</h1>
+                <h2>Puntos: 10</h2>
                 <div class="carrusel">
                     <div class="flechas">
                         <img src="../image/recompensas/Chevron left.png" alt="flecha izquierda">
                     </div>
-                    <div class="elemento elemento-seleccion">
-                        <img class="recompensa" src="../image/recompensas/entrada.png" alt="boletos">
-                        <p>Lorem ipsum dolor sit amet.</p>
-                        <a>lorem ipsum</a>
-                    </div>
-                    <div class="elemento">
-                        <img class="recompensa" src="../image/recompensas/image 2.png" alt="boletos">
-                        <p>Lorem ipsum dolor sit amet.</p>
-                        <a>lorem ipsum</a>
-                    </div>
-                    <div class="elemento">
-                        <img class="recompensa" src="../image/recompensas/nachos.png" alt="boletos">
-                        <p>Lorem ipsum dolor sit amet.</p>
-                        <a>lorem ipsum</a>
+                    <div class="tarjetas-container">
+                        <div class="elemento elemento-seleccion">
+                            <img class="recompensa" src="../image/recompensas/entrada.png" alt="boletos">
+                            <p>Lorem ipsum dolor sit amet.</p>
+                            <a>lorem ipsum</a>
+                        </div>
+                        <div class="elemento">
+                            <img class="recompensa" src="../image/recompensas/image 2.png" alt="boletos">
+                            <p>Lorem ipsum dolor sit amet.</p>
+                            <a>lorem ipsum</a>
+                        </div>
+                        <div class="elemento">
+                            <img class="recompensa" src="../image/recompensas/nachos.png" alt="boletos">
+                            <p>Lorem ipsum dolor sit amet.</p>
+                            <a>lorem ipsum</a>
+                        </div>
                     </div>
                     <div class="flechas">
                         <img src="../image/recompensas/Chevron right.png" alt="flecha derecha">
                     </div>
                 </div>
+            </section>
         </main>
     </div>
 </body>
