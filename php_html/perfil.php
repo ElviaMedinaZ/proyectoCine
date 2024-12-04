@@ -22,37 +22,56 @@
     ?>
 
     <div class="container">
-        <h1>Información personal</h1>
-        <form action="../php_funcion/perfil.php" method="POST" enctype="multipart/form-data">
-            <div class="profile-section">
-            <div class="profile-image">
-                <!-- Texto "Subir Imagen" cuando no haya imagen -->
-                <span class="upload-text">Subir imagen</span>
-                <img id="profilePic" src="<?= htmlspecialchars($user_image); ?>" alt="Imagen de perfil" onclick="document.getElementById('image').click();" />
-                <input type="file" name="image" id="image" accept="image/*" style="display: none;" onchange="previewImage(event)">
-                <input type="hidden" name="current_image" value="<?= htmlspecialchars($user['Imagen']); ?>">
-            </div>
-
-                <div class="profile-details">
-                    <label for="nombre">Nombre(s)</label>
-                    <input type="text" id="nombre" name="nombre" value="<?= htmlspecialchars($user['Nombre']); ?>" required>
-
-                    <label for="apellido">Apellido</label>
-                    <input type="text" id="apellido" name="apellido" value="" >
-
-                    <label for="username">Usuario</label>
-                    <input type="text" id="username" name="username" value="<?= htmlspecialchars($user['Username']); ?>" readonly>
-
-                    <label for="correo">Correo</label>
-                    <input type="email" id="correo" name="correo" value="<?= htmlspecialchars($user['Correo']); ?>" readonly>
-
-                    <label for="puntos">Puntos</label>
-                    <input type="text" id="puntos" name="puntos" value="<?= htmlspecialchars($user['Puntos']); ?>" readonly>
+        <form action="../php_funcion/perfil.php" method="POST" enctype="multipart/form-data" class="profile-form">
+            <div class="profile-container">
+                <!-- Contenedor izquierdo: Imagen y puntos -->
+                <div class="profile-image-container">
+                    <span class="upload-text">Subir imagen</span>
+                    <img id="profilePic" src="<?= htmlspecialchars($user_image); ?>" alt="Imagen de perfil" onclick="document.getElementById('image').click();" />
+                    <input type="file" name="image" id="image" accept="image/*" style="display: none;" onchange="previewImage(event)">
+                    <input type="hidden" name="current_image" value="<?= htmlspecialchars($user['Imagen']); ?>">
                 </div>
-            </div>
-            <div class="buttons">
-                <button type="button" onclick="location.href='../php_html/landingSesionAbierta.php'">Cancelar</button>
-                <button type="submit">Guardar</button>
+
+                <!-- Contenedor derecho: Campos del perfil -->
+                <div class="profile-details-container">
+                    <h1 class="title">Información personal</h1>
+                    <div class="profile-details">
+                        <div class="input-group">
+                            <div>
+                                <label for="first-name">Nombre(s)</label>
+                                <input type="text" id="first-name">
+                            </div>
+                            <div>
+                                <label for="last-name">Apellido</label>
+                                <input type="text" id="last-name">
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <div>
+                                <label for="user">Usuario</label>
+                                <input type="text" id="user">
+                            </div>
+                            <div>
+                                <label for="email">Correo</label>
+                                <input type="text" id="email">
+                            </div>
+                        </div>
+
+                        <div class="form-buttons">
+                            <button class="btn cancel-btn">Cancelar</button>
+                            <button class="btn save-btn">Guardar</button>
+                        </div>
+
+                    </div>
+
+                    <div class="points-container">
+                            <p class="points">Puntos: <span id="points"><?= htmlspecialchars($user['Puntos']); ?></span></p>
+                    </div>
+
+                </div>
+
+                </div>
             </div>
         </form>
     </div>
