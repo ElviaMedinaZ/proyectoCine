@@ -1,3 +1,8 @@
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -29,7 +34,10 @@
                 <h2>Shrek 2</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec lacinia dui. Etiam vehicula neque in dolor vehicula, sed sagittis metus sagittis. Fusce sit amet hendrerit purus. Nunc accumsan, nunc ac fermentum feugiat, tortor sapien laoreet ligula, a consequat nisi eros non lorem.</p>
                 <p> <spam class="color">Género:</spam> Animación, Aventura</p>
-                <p> <spam class="color">Clasificación:</spam> Para todo público</p>
+
+                <p class="classification"> <span class="color">Clasificación:</span> <span class="b-letter">B</span></p>
+
+
                 <p> <spam class="color">Duración:</spam> 113 min</p>
             </div>
         </section>
@@ -45,7 +53,7 @@
             <!-- Tabla de fechas -->
             <table>
 
-                <p class="cine-texto"> <spam class="color">Cine </spam> Bella Vista</p>
+                <p class="cine-texto"> <spam class="color">Cine </spam> Forjadores</p>
                 <div class="cine-linea"></div> <!-- Línea debajo del nombre del cine -->
                 <p class="cine-texto"> <spam class="color">Fecha </spam></p>
 

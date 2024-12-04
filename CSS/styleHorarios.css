@@ -13,54 +13,85 @@
 /* Estilos del contenedor de los detalles de la película */
 .detalle-pelicula {
     display: flex;
-    gap: 50px;
-    /* Aumenta el espacio entre la imagen y el texto */
+    gap: 20px;
     padding: 20px;
     border-radius: 8px;
 }
 
 .pelicula-poster {
     width: 240px;
+    margin-left: -20px;
     height: auto;
-    border-radius: 5px;
+    border-radius: 10px;
+    border: #a76b0b solid 1px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Agrega la sombra */
 }
 
 .pelicula-info h2 {
-    margin: 0 0 15px 0;
-    /* Añade un margen inferior al título */
+    margin: 15px 0 15px 0;
     font-size: 38px;
     color: #a76b0b;
+    text-align: left;
 }
 
 .pelicula-info p {
     font-size: 16px;
     line-height: 1.5;
     margin-bottom: 10px;
-    /* Espacio entre párrafos */
+    text-align: justify;
+}
+
+.pelicula-info .classification,
+.pelicula-info .genre,
+.pelicula-info .duration {
+    position: relative;
+    display: inline-block;
+    font-weight: normal;
+}
+
+.pelicula-info .classification,
+.pelicula-info .genre ,
+.pelicula-info .duration {
+    font-weight: bold;
+}
+
+.pelicula-info .classification::after,
+.pelicula-info .genre::after,
+.pelicula-info .duration::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    background-color: #830C00; /* Color rojo */
 }
 
 .pelicula-info p .color {
-    color: #e1190a;
+    color: #830C00;
+    font-weight: bold;
 }
+
+.cine-texto .color {
+    font-weight: normal; /* Asegura que el color no tenga negrita */
+}
+
 
 /* Contenedor principal de horarios */
 .horarios {
-    width: 120vw;
-    max-width: 800px;
-    /* Puedes ajustar el ancho máximo */
+    width: 1600px;
+    max-width: 900px;
     font-family: Arial, sans-serif;
-    border: 1px solid #333;
-    /* Borde negro */
+    border: 1px solid #444444;
     border-radius: 8px;
     overflow: hidden;
-    margin: 3px auto;
+    font-weight: normal;
+    margin: 30px auto 70px 0px;
     padding-bottom: 100px;
-    /* Centra el contenedor */
 }
 
 /* Encabezado de la sección con fondo de color */
 .horarios-header {
-    background-color: #e3c197;
+    background-color: #E0CB9B;
     padding: 15px;
     text-align: left;
     color: #A01010;
@@ -70,7 +101,7 @@
     margin: 0;
     font-size: 22px;
     color: #A01010;
-    font-weight: bold;
+    font-weight: 10;
 }
 
 .horarios-header p {
@@ -81,7 +112,7 @@
 }
 
 .cine-linea {
-    border-top: 1px solid #575756;
+    border-top: 1px solid #7171714c;
     margin: 10px 20px;
 }
 
@@ -97,40 +128,37 @@
 
 .cine-texto {
     margin-top: 10px;
-    /* Espacio hacia abajo desde el borde superior */
     margin-left: 20px;
-    /* Espacio hacia la derecha desde el borde izquierdo */
     padding-top: 10px;
-    /* Espacio dentro del contenedor */
+    font-weight: bold;
 }
 
 .horarios .color {
-    color: #e1190a;
+    color: #830C00;
 }
 
 .horarios th {
-    font-weight: normal;
-    font-size: 14px;
+    font-size: 13px;
     padding: 8px;
+    font-weight: bold;
 }
 
 .fila-fechas td {
-    border-top: 1px solid #e1190a;
-    border-bottom: 1px solid #e1190a;
+    border-top: 1px solid #830C00;
+    border-bottom: 1px solid #830C00;
     padding: 10px 5px;
-    /* Ajusta el padding para dar espacio en los bordes */
 }
 
 /* Estilo normal de los enlaces de fecha */
 .fecha {
-    color: #e1190a;
+    color: #7F5656;
+    font-weight: bold;
     text-decoration: none;
     padding: 2px 4px;
     border-radius: 4px;
     display: inline-block;
     white-space: nowrap;
-    font-size: 11px;
-    /* Tamaño de letra más pequeño */
+    font-size: 13px;
     transition: color 0.3s, background-color 0.3s;
 }
 
@@ -141,25 +169,15 @@
 
 /* Estilo para la fecha seleccionada */
 .fecha-input:checked+.fecha {
-    border: 2px solid red;
-    /* Borde rojo alrededor */
-    background-color: #e1190a;
-    /* Fondo rojo */
+    border: 2px solid #830C00;
+    background-color: #830C00;
     color: white;
-    /* Texto blanco */
-}
-
-.horarios td {
-    font-size: 14px;
-    color: #e1190a;
-    padding: 8px;
-    font-weight: normal;
 }
 
 /* Tipos de sesión */
 .sesion-tipo {
     font-size: 16px;
-    color: #e1190a;
+    color: #830C00;
     margin: 15px 0 8px;
     text-align: left;
     padding-left: 20px;
@@ -173,10 +191,8 @@
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
-    /* Espaciado entre los elementos de la lista */
     background-color: #fff;
     justify-content: flex-start;
-    /* Alineación a la izquierda */
 }
 
 .horarios ul li {
@@ -187,30 +203,44 @@
 
 .horario {
     display: block;
-    /* Asegura que el label ocupe todo el ancho del li */
     padding: 4px 7px;
-    /* Ajusta el espacio interno para que el área clicable sea más cómoda */
     border-radius: 6px;
-    background-color: #e6c083;
-    /* Fondo normal */
-    color: #333;
+    background-color: #E0CB9B;
+    color: #7F5656;
     font-weight: bold;
     text-align: center;
     cursor: pointer;
-    /* Cambia el cursor para indicar que es seleccionable */
     transition: background-color 0.3s, color 0.3s;
 }
 
 /* Estilo para el horario seleccionado */
 .horario-input:checked+.horario {
-    background-color: #5a3c1d;
-    /* Color más fuerte y oscuro para el horario seleccionado */
+    background-color: #AD6D01;
     color: white;
     border: none;
-    /* Elimina bordes no deseados */
 }
 
 /* Asegura que el input no interfiera */
 .horario-input {
     display: none;
+}
+
+.pelicula-info .b-letter {
+    position: relative;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    background-color: #575756; 
+    padding: 2px 6px; /* Añade más espacio alrededor de la letra */
+}
+
+
+.pelicula-info .b-letter::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #830C00; /* Color rojo */
 }
