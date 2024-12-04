@@ -18,7 +18,7 @@
         include ('header.php');
     ?>
 
-    <div class="container">
+    <div class="container-rewards">
         <main>
             <section>
                 <h1>Puntos y recompensas</h1>
