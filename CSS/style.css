@@ -664,7 +664,6 @@ figcaption {
 }
 
 /* ======================================= Estilos de la sección de pago ======================================= */
-
 .payment-section {
     background-color: #ffffff;
     border: 1px solid #ddd;
@@ -676,10 +675,13 @@ figcaption {
 }
 
 .payment-section h2 {
+    position: absolute;
     color: #AD6D01;
     font-weight: 700;
     margin-bottom: 15px;
-    font-size: 24px;
+    font-size: 25px;
+    text-align: left;
+    margin-left: auto;
 }
 
 
@@ -693,9 +695,10 @@ figcaption {
 
 .payment-info {
     display: flex;
-    gap: 10px;
+    gap: 20px;
     flex-wrap: wrap;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    margin-top: 40px;
 }
 
 .payment-info .input-field {
@@ -709,9 +712,10 @@ figcaption {
 
 .payment-method {
     display: flex;
-    gap: 10px;
+    gap: 20px;
     flex-wrap: wrap;
     margin-bottom: 20px;
+    margin-top: 80px;
 }
 
 .payment-option {
@@ -724,6 +728,7 @@ figcaption {
     cursor: pointer;
     text-align: center;
     transition: background-color 0.3s ease;
+    margin-top: 0;
 }
 
 .payment-option:hover {
@@ -745,6 +750,7 @@ figcaption {
     cursor: pointer;
     font-weight: 700;
     transition: background-color 0.3s ease;
+    margin-top: 10px;
 }
 
 .confirm-btn {
@@ -764,7 +770,6 @@ figcaption {
 .cancel-btn:hover {
     background-color: #9b2727;
 }
-
 
 /* =====================vista nosotros========================= */
 h1 {
