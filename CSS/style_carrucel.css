@@ -95,31 +95,86 @@
     color: #900;
 }
 
-.movies-container {
+
+.container-cartelera h1 {
     display: flex;
+    font-weight: 800;
+    /* Aumenta el grosor de la fuente */
+    color: #AD6D01;
+    align-items: center;
     justify-content: center;
-    gap: 15px;
-    width: 800px;
-    flex-wrap: wrap;
+}
+
+.cartelera {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    /* Mantiene 6 columnas flexibles */
+    gap: 3vw;
+    /* Espacio entre filas y columnas adaptado a la pantalla */
+    padding: 6vh 5vw;
+    margin: 0 5vw;
+
+    align-items: start;
+
 }
 
 .pelicula {
-    width: 120px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    /* Distribuye los elementos de la tarjeta */
+    height: 40vh;
+    /* Altura fija de las tarjetas de las películas */
+    width: 100%;
+    /* Mantener el ancho del contenedor */
+    position: relative;
+    /* Necesario para el posicionamiento del overlay */
+    overflow: hidden;
+    /* Ocultar cualquier desbordamiento */
+}
+
+.pelicula .img-container {
+    width: 100%;
+    height: 85%;
+    /* Altura relativa al contenedor */
+    border-radius: 1vw;
+    overflow: hidden;
+    /* Asegura que el borde redondeado se mantenga */
 }
 
 .pelicula img {
     width: 100%;
-    border-radius: 8px;
-    margin-bottom: 5px;
+    height: 100%;
+    /* La imagen ocupará todo el contenedor */
+    object-fit: cover;
+    /* Asegura que la imagen cubra el contenedor sin distorsionarse */
+    border: 0.1vw solid #AD6D01;
+    border-radius: 1vw;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    /* Sombra predeterminada */
 }
 
-.pelicula p {
-    font-size: 14px;
-    color: #333;
+figcaption {
+    margin-top: 0.5vh;
+    font-weight: bold;
+    color: #830C00;
+    text-align: center;
+    font-size: 1vw;
+    /* Tamaño adaptable */
+    min-height: 2rem;
+    /* Asegura que los textos tengan un espacio mínimo fijo */
 }
 
-.ver-mas a {
-    color: #ffff;
-    text-decoration: none;
+/* Efecto de escala al pasar el cursor sobre la imagen */
+.pelicula:hover img {
+    transform: scale(1.05);
+    /* Escala la imagen al 105% */
+}
+
+
+/* Overlay oscuro en la imagen */
+.pelicula img:hover {
+    filter: brightness(50%);
+    /* Reduce el brillo para oscurecer la imagen */
 }

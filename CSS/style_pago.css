@@ -1,0 +1,108 @@
+/* ======================================= Estilos de la sección de pago ======================================= */
+
+.payment-section {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 60px auto;
+    max-width: 800px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.payment-section h2 {
+    position: absolute;
+    color: #AD6D01;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 25px;
+    text-align: left;
+    margin-left: auto;
+}
+
+
+.payment-section input::placeholder {
+    color: #2e2e2e;
+    /* Color gris */
+    opacity: 1;
+    /*no transparente */
+    font-weight: 500;
+}
+
+.payment-info {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    margin-top: 40px;
+}
+
+.payment-info .input-field {
+    width: calc(50% - 10px);
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+}
+
+.payment-method {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    margin-top: 80px;
+}
+
+.payment-option {
+    flex: 1 1 calc(50% - 10px);
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    margin-top: 0;
+}
+
+.payment-option:hover {
+    background-color: #e6e6e6;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.confirm-btn,
+.cancel-btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.confirm-btn {
+    background-color: #AD6D01;
+    color: #ffffff;
+}
+
+.confirm-btn:hover {
+    background-color: rgb(123, 97, 47);
+}
+
+.cancel-btn {
+    background-color: #E0190B;
+    color: #ffffff;
+}
+
+.cancel-btn:hover {
+    background-color: #9b2727;
+}

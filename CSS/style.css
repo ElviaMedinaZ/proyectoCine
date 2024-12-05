@@ -1,5 +1,4 @@
 /* ======================================= Estilos del menu principal =======================================*/
-
 * {
     margin: 0;
     box-sizing: border-box;
@@ -542,235 +541,6 @@ input::placeholder {
     margin-bottom: 10px;
 }
 
-/* ======================================= Hoja de estilo cartelera ======================================*/
-.container-cartelera h1 {
-    display: flex;
-    font-weight: 800;
-    /* Aumenta el grosor de la fuente */
-    color: #AD6D01;
-    align-items: center;
-    justify-content: center;
-}
-
-.cartelera {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    /* Mantiene 6 columnas flexibles */
-    gap: 3vw;
-    /* Espacio entre filas y columnas adaptado a la pantalla */
-    padding: 6vh 5vw;
-    margin: 0 5vw;
-
-    align-items: start;
-
-}
-
-.pelicula {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    /* Distribuye los elementos de la tarjeta */
-    height: 40vh;
-    /* Altura fija de las tarjetas de las películas */
-    width: 100%;
-    /* Mantener el ancho del contenedor */
-    position: relative;
-    /* Necesario para el posicionamiento del overlay */
-    overflow: hidden;
-    /* Ocultar cualquier desbordamiento */
-}
-
-.pelicula .img-container {
-    width: 100%;
-    height: 85%;
-    /* Altura relativa al contenedor */
-    border-radius: 1vw;
-    overflow: hidden;
-    /* Asegura que el borde redondeado se mantenga */
-}
-
-.pelicula img {
-    width: 100%;
-    height: 100%;
-    /* La imagen ocupará todo el contenedor */
-    object-fit: cover;
-    /* Asegura que la imagen cubra el contenedor sin distorsionarse */
-    border: 0.1vw solid #AD6D01;
-    border-radius: 1vw;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-    /* Sombra predeterminada */
-}
-
-figcaption {
-    margin-top: 0.5vh;
-    font-weight: bold;
-    color: #830C00;
-    text-align: center;
-    font-size: 1vw;
-    /* Tamaño adaptable */
-    min-height: 2rem;
-    /* Asegura que los textos tengan un espacio mínimo fijo */
-}
-
-/* Efecto de escala al pasar el cursor sobre la imagen */
-.pelicula:hover img {
-    transform: scale(1.05);
-    /* Escala la imagen al 105% */
-}
-
-
-/* Overlay oscuro en la imagen */
-.pelicula img:hover {
-    filter: brightness(50%);
-    /* Reduce el brillo para oscurecer la imagen */
-}
-
-/* Texto "Ver más" */
-.pelicula .ver-mas {
-    position: absolute;
-    top: 50%;
-    /* Centra verticalmente */
-    left: 50%;
-    /* Centra horizontalmente */
-    transform: translate(-50%, -50%);
-    /* Ajusta la posición para centrar */
-    color: white;
-    /* Color del texto */
-    font-size: 1vw;
-    /* Tamaño adaptable */
-    font-weight: bold;
-    /* Negrita */
-    opacity: 0;
-    /* Ocultarlo */
-    transition: opacity 0.3s ease;
-    /* Transición suave */
-    z-index: 2;
-    /* sobre la imagen el texto*/
-}
-
-.pelicula img:hover+.ver-mas {
-    opacity: 1;
-    /* Muestra el texto al pasar el mouse */
-}
-
-figcaption {
-    margin-top: 0.5vh;
-    font-weight: bold;
-    color: #830C00;
-    text-align: center;
-    font-size: 1vw;
-    /* Tamaño adaptable */
-}
-
-/* ======================================= Estilos de la sección de pago ======================================= */
-
-.payment-section {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 15px;
-    padding: 20px;
-    margin: 60px auto;
-    max-width: 800px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.payment-section h2 {
-    position: absolute;
-    color: #AD6D01;
-    font-weight: 700;
-    margin-bottom: 15px;
-    font-size: 25px;
-    text-align: left;
-    margin-left: auto;
-}
-
-
-.payment-section input::placeholder {
-    color: #2e2e2e;
-    /* Color gris */
-    opacity: 1;
-    /*no transparente */
-    font-weight: 500;
-}
-
-.payment-info {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-bottom: 30px;
-    margin-top: 40px;
-}
-
-.payment-info .input-field {
-    width: calc(50% - 10px);
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 16px;
-    background-color: #f9f9f9;
-}
-
-.payment-method {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-    margin-top: 80px;
-}
-
-.payment-option {
-    flex: 1 1 calc(50% - 10px);
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 16px;
-    background-color: #f9f9f9;
-    cursor: pointer;
-    text-align: center;
-    transition: background-color 0.3s ease;
-    margin-top: 0;
-}
-
-.payment-option:hover {
-    background-color: #e6e6e6;
-}
-
-.action-buttons {
-    display: flex;
-    gap: 10px;
-    justify-content: flex-end;
-}
-
-.confirm-btn,
-.cancel-btn {
-    padding: 12px 20px;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-    font-weight: 700;
-    transition: background-color 0.3s ease;
-    margin-top: 10px;
-}
-
-.confirm-btn {
-    background-color: #AD6D01;
-    color: #ffffff;
-}
-
-.confirm-btn:hover {
-    background-color: rgb(123, 97, 47);
-}
-
-.cancel-btn {
-    background-color: #E0190B;
-    color: #ffffff;
-}
-
-.cancel-btn:hover {
-    background-color: #9b2727;
-}
 
 /* =====================vista nosotros========================= */
 /* contenedor principal */
@@ -780,7 +550,7 @@ figcaption {
     align-items: center;
     padding: 15px;
     margin: 0 auto;
-    max-width: 1200px; 
+    max-width: 1200px;
 }
 
 /* titulo */
@@ -795,15 +565,16 @@ figcaption {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 60px; 
-    width: 100%; 
+    gap: 60px;
+    width: 100%;
 }
 
 /* imagen */
 .container-about img {
     width: 500px;
     height: auto;
-    flex-shrink: 0; /* imagen de tamaño fijo al hacer zoom */
+    flex-shrink: 0;
+    /* imagen de tamaño fijo al hacer zoom */
 }
 
 /* parrafos del texto */
@@ -811,123 +582,3 @@ figcaption {
     font-size: 20px;
     text-align: left;
 }
-
-/* =====================vista puntos y recompensas========================= */
-/* contenedor principal */
-.container-rewards {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
-/* titulo */
-h1 {
-    display: flex;
-    font-size: 35px;
-    justify-content: center;
-    margin-top: 35px;
-    color: #AD6D01;
-}
-
-/* estilo puntaje */
-h2 {
-    display: flex;
-    flex-direction: column;
-    text-align: right;
-    gap: 20px;
-    color: #830C00;
-}
-
-/* estilo de todo el carrusel */
-.carrusel {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 50px;
-    gap: 40px;
-    overflow: visible;
-    position: relative;
-    width: 100%;
-    max-width: 1200px;
-}
-
-/* contenedor de las tarjetas */
-.tarjetas-container {
-    display: flex;
-    justify-content: center; 
-    gap: 50px; 
-    flex-wrap: nowrap;
-}
-
-/* tarjetas */
-.elemento {
-    flex: none; 
-    background-color: #E0CB9B;
-    width: 340px; 
-    height: 420px;
-    border-radius: 30px;
-    padding: 10px;
-    box-sizing: border-box;
-    margin: 0; 
-}
-
-/* tarjeta seleccionada */
-.elemento-seleccion {
-    background-color: #E5BC60;
-}
-
-/* flechas del carrusel */
-.carrusel .flechas {
-    margin: 20px;
-    display: flex;
-}
-
-/* imagen de las flechas */
-.flechas img {
-    justify-content: center;
-    width: 40px;
-    height: auto;
-}
-
-/* imagen de las tarjetas */
-.recompensa {
-    margin: 35px;
-    width: 250px;
-    height: auto;
-    margin-bottom: 20px;
-}
-
-/* texto de la tarjeta */
-.elemento p {
-    padding: 30px;
-    margin-bottom: 20px;
-    font-weight: 700;
-    font-size: 25px;
-    color: #830c00;
-}
-
-/* puntaje de las tarjetas */
-.elemento a {
-    margin: 85px;
-    font-weight: 500;
-    font-size: 20px;
-    color: #830c00;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,3 +1,32 @@
+<?php
+// Incluir archivo de conexión a la base de datos
+require_once('../php_funcion/database.php'); 
+
+// Obtener el id_cartelera desde la URL
+$id_cartelera = $_GET['id_cartelera'] ?? null;
+
+if (!$id_cartelera) {
+    die("ID de cartelera no proporcionado.");
+}
+
+// Consultar detalles de la película usando el id_cartelera
+$sql = "SELECT c.titulo, c.foto, c.duracion, c.clasificacion, c.genero, c.idioma, c.descripcion, cine.nombre AS cine
+        FROM cartelera c
+        JOIN cine ON c.id_cine = cine.id_cine
+        WHERE c.id_cartelera = ?";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("i", $id_cartelera); // ID de cartelera como parámetro
+$stmt->execute();
+$result = $stmt->get_result();
+
+if ($result->num_rows > 0) {
+    $pelicula = $result->fetch_assoc();
+} else {
+    die("No se encontró la película con ese ID.");
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -11,7 +40,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!-- hoja de estilos -->
     <link rel="stylesheet" href="../CSS/style.css">
-    <link rel="stylesheet" href="../CSS/styleAsientos.css">
+    <link rel="stylesheet" href="../CSS/style_Asientos.css">
     <title>Cineplus</title>
 </head>
 <body>
@@ -52,25 +81,23 @@
         <!-- Selección de Asientos -->
         <section class="seleccion-asientos">
 
-
-
             <h2>Selección de asientos</h2>
 
             <div class="leyenda">
                 <div class="opcion">
-                    <img src="/image/asientos/asiento_normal.png" alt="Disponible" class="icono-asiento">
+                    <img src="../image/asientos/asiento_normal.png" alt="Disponible" class="icono-asiento">
                     <span>Disponible</span>
                 </div>
                 <div class="opcion">
-                    <img src="/image/asientos/asiento dorado .png" alt="Selección" class="icono-asiento">
+                    <img src="../image/asientos/asiento dorado .png" alt="Selección" class="icono-asiento">
                     <span>Selección</span>
                 </div>
                 <div class="opcion">
-                    <img src="/image/asientos/asiento rojo .png" alt="Ocupado" class="icono-asiento">
+                    <img src="../image/asientos/asiento rojo .png" alt="Ocupado" class="icono-asiento">
                     <span>Ocupado</span>
                 </div>
                 <div class="opcion">
-                    <img src="/image/asientos/asiento_discapacitados.png" alt="Silla de ruedas" class="icono-asiento">
+                    <img src="../image/asientos/asiento_discapacitados.png" alt="Silla de ruedas" class="icono-asiento">
                     <span>Silla de ruedas</span>
                 </div>
             </div>
@@ -82,85 +109,84 @@
                 <!-- Fila A -->
                 <div class="fila">
                     <span class="fila-label">A</span>
-    
-                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
-                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
-                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
-                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
-                    <div class="asiento "><img src="/image/asientos/asiento rojo .png" alt=""></div>
-                    <div class="asiento "><img src="/image/asientos/asiento rojo .png" alt=""></div>
-                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
-                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
-                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
-                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="blanco "><img src="" alt=""></div>
+                    <div class="blanco "><img src="" alt=""></div>
+                    <div class="asiento "><img src="../image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento "><img src="../image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento "><img src="../image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento "><img src="../image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento "> <img src="../image/asientos/asiento_discapacitados.png" alt=""></div>
+                    <div class="asiento "> <img src="../image/asientos/asiento_discapacitados.png" alt=""></div>
+                    <div class="blanco "><img src="" alt=""></div>
+                    <div class="blanco "><img src="" alt=""></div>
                 </div>
                 
                 <!-- Fila B -->
                 <div class="fila">
                     <span class="fila-label">B</span>
-                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
-                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
-                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
-                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
-                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
-                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
-                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
-                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
-                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
-                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="blanco "><img src="" alt=""></div>
+                    <div class="blanco "><img src="" alt=""></div>
+                    <div class="asiento "><img src="../image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento "><img src="../image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento "><img src="../image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento "><img src="../image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento "><img src="../image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento "><img src="../image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="blanco "><img src="" alt=""></div>
+                    <div class="blanco "><img src="" alt=""></div>  
                 </div>
                 
                 <!-- Fila C -->
                 <div class="fila">
                     <span class="fila-label">C</span>
-                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
-                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
-                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
-                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
-                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
-                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
-                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
-                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
-                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
-                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="blanco "><img src="" alt=""></div>
+                    <div class="blanco "><img src="" alt=""></div>
+                    <div class="asiento "><img src="../image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento "><img src="../image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento "><img src="../image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento "><img src="../image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento "><img src="../image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento "><img src="../image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="blanco "><img src="" alt=""></div>
+                    <div class="blanco "><img src="" alt=""></div>
                 </div>
                 <!-- Fila D -->
                 <div class="fila">
                     <span class="fila-label">D</span>
-                    <div class="asiento "> <img src="/image/asientos/asiento_discapacitados.png" alt=""></div>
-                    <div class="asiento "> <img src="/image/asientos/asiento_discapacitados.png" alt=""></div>
-                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
-                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
-                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
-                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
-                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
-                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
-                    <div class="asiento"> <img src="/image/asientos/asiento_discapacitados.png" alt=""></div>
-                    <div class="asiento"> <img src="/image/asientos/asiento_discapacitados.png" alt=""></div>
+                    <div class="blanco "><img src="" alt=""></div>
+                    <div class="blanco "><img src="" alt=""></div>
+                    <div class="asiento "><img src="../image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento "><img src="../image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento "><img src="../image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento "><img src="../image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento "><img src="../image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento "><img src="../image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="blanco "><img src="" alt=""></div>
+                    <div class="blanco "><img src="" alt=""></div>
                 </div>
                 <!-- Fila E -->
                 <div class="fila">
                     <span class="fila-label">E</span>
-                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
-                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
-                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
-                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
-                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
-                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
-                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
-                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
-                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
-                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div><div class="blanco"></div>
+                    <div class="blanco "><img src="" alt=""></div>
+                    <div class="asiento "><img src="../image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento "><img src="../image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento "><img src="../image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento "><img src="../image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento "><img src="../image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento "><img src="../image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento "><img src="../image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento "><img src="../image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="blanco "><img src="" alt=""></div>
                 </div>
                 <!-- Fila F -->
                 <div class="fila">
                     <span class="fila-label">F</span>
-                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
-                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
-                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
-                    <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
-                    <div class="asiento "><img src="/image/asientos/asiento dorado .png" alt=""></div>
-                    <div class="asiento "><img src="/image/asientos/asiento dorado .png" alt=""></div>
+                    <div class="asiento "><img src="../image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento "><img src="../image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento "><img src="../image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento "><img src="../image/asientos/asiento_normal.png" alt=""></div>
+                     <div class="asiento "><img src="../image/asientos/asiento_normal.png" alt=""></div>
+                    <div class="asiento "><img src="../image/asientos/asiento_normal.png" alt=""></div>
                     <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
                     <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>
                     <div class="asiento "><img src="/image/asientos/asiento_normal.png" alt=""></div>

@@ -2,7 +2,7 @@
 require_once('database.php'); // Conexión a la base de datos
 
 // Obtener el cine seleccionado
-$cine_seleccionado = $_POST['selection_places'] ?? 'plazas'; // Valor por defecto: 'plazas'
+$cine_seleccionado = $_GET['selection_places'] ?? 'plazas';
 
 // Mapear los nombres de los cines a sus IDs
 $mapa_cines = [
@@ -12,30 +12,22 @@ $mapa_cines = [
 ];
 
 // Obtener el ID del cine
-$id_cine = $mapa_cines[$cine_seleccionado] ?? 1; // Por defecto: Las Plazas
+$id_cine = $mapa_cines[$cine_seleccionado] ?? 1;
 
 // Consultar las películas del cine seleccionado
-$sql = "SELECT titulo, foto FROM cartelera WHERE id_cine = ?";
+$sql = "SELECT DISTINCT titulo, foto FROM cartelera WHERE id_cine = ?";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("i", $id_cine);
 $stmt->execute();
 $result = $stmt->get_result();
 
-// Lista para almacenar películas mostradas
-$peliculas_mostradas = [];
-
-// Generar HTML dinámico
+// Generar el HTML de la cartelera
 while ($row = $result->fetch_assoc()) {
-    if (!in_array($row['titulo'], $peliculas_mostradas)) { // Evitar repetición
-        echo '<figure class="pelicula">';
-        echo '<img src="' . htmlspecialchars($row['foto']) . '" alt="' . htmlspecialchars($row['titulo']) . '">';
-        echo '<div class="ver-mas">Ver más</div>';
-        echo '<figcaption>' . htmlspecialchars($row['titulo']) . '</figcaption>';
-        echo '</figure>';
-
-        // Agregar la película a la lista de mostradas
-        $peliculas_mostradas[] = $row['titulo'];
-    }
+    echo '<figure class="pelicula">';
+    echo '<img src="' . htmlspecialchars($row['foto']) . '" alt="' . htmlspecialchars($row['titulo']) . '">';
+    echo '<a class="ver-mas" href="../php_html/seleccionHorarios.php?titulo=' . urlencode($row['titulo']) . '&id_cine=' . $id_cine . '&selection_places=' . urlencode($cine_seleccionado) . '">Ver más</a>';
+    echo '<figcaption>' . htmlspecialchars($row['titulo']) . '</figcaption>';
+    echo '</figure>';
 }
 
 // Cerrar conexión
