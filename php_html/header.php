@@ -11,6 +11,10 @@ if (!isset($_SESSION['user_id'])) {
 $cine_seleccionado = $_GET['selection_places'] ?? $_POST['selection_places'] ?? 'plazas';
 ?>
 <header class="header">
+
+    <input type="checkbox">
+    <i class="fa-solid fa-bars"></i>
+
     <div class="nav-container">
         <div class="logo">
             <img src="/proyectoCine/image/logo_cineplus.png" alt="logo cineplus">

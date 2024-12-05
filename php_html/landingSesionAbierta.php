@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="stylesheet" href="../CSS/style_carrucel.css">
+    <link rel="stylesheet" href="../CSS/style_cartelera.css">
     
     <title>Cineplus</title>
 </head>

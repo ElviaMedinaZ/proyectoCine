@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -53,19 +54,26 @@
         let paginaActual = 0; // Página actual
         const elementosPorPagina = 2; // Número de elementos por página
 
+
+
         // Función para renderizar las tarjetas
         function renderizarTarjetas() {
+
             tarjetasContainer.innerHTML = ''; // Limpiar contenido anterior
             const inicio = paginaActual * elementosPorPagina;
             const fin = inicio + elementosPorPagina;
             const tarjetasAMostrar = historial.slice(inicio, fin);
 
-            tarjetasAMostrar.forEach(compra => {
+
+            tarjetasAMostrar.forEach((compra,i) => {
+
+                console.log(i);
+                
                 const tarjeta = document.createElement('div');
                 tarjeta.className = 'tarjeta';
                 tarjeta.innerHTML = `
                     <h2>${compra.titulo}</h2>
-                    <p><strong class="color">Número de transacción:</strong> ${compra.num_transaccion}</p>
+                    <p data-id="${i}"><strong class="color">Número de transacción:</strong> ${compra.num_transaccion}</p>
                     <p><strong class="color">Cine:</strong> Cineplus, ${compra.cine}</p>
                     <p><strong class="color">Sala:</strong> ${compra.sala}</p>
                     <p><strong class="color">Fecha:</strong> ${compra.fecha}</p>

@@ -24,6 +24,36 @@ body {
     /* Asegura que el menú tenga 100% de ancho */
 }
 
+.header input[type="checkbox"] {
+    position: absolute;
+    /* Permite colocar el checkbox en la posición deseada */
+    width: 45px;
+    height: 45px;
+    top: 20px;
+    /* Alinea en la parte superior */
+    right: 5px;
+    /* Espacio desde la derecha */
+    z-index: 2;
+    /* Mayor valor para que esté delante */
+    display: none;
+    /* Cambia a block para mostrar el checkbox */
+}
+
+.header i {
+    color: #ffffff;
+    font-size: 45px;
+    position: absolute;
+    /* Permite colocar el ícono en la posición deseada */
+    top: 20px;
+    /* Alinea en la parte superior */
+    right: 5px;
+    /* Se coloca al borde derecho */
+    z-index: 1;
+    display: none;
+    /* Cambia a block para mostrar el ícono */
+}
+
+
 .search::placeholder {
     color: rgba(88, 30, 30, 0.7);
     font-family: "Montserrat", sans-serif;

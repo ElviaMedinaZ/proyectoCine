@@ -168,7 +168,7 @@ if ($result->num_rows > 0) {
                 <div class="fila">
                     <span class="fila-label">E</span>
                     <div class="blanco "><img src="" alt=""></div>
-                    <div class="asiento "><img src="../image/asientos/asiento_normal.png" alt=""></div>
+                    <div class=" "><img src="../image/asientos/asiento_normal.png" alt=""></div>
                     <div class="asiento "><img src="../image/asientos/asiento_normal.png" alt=""></div>
                     <div class="asiento "><img src="../image/asientos/asiento_normal.png" alt=""></div>
                     <div class="asiento "><img src="../image/asientos/asiento_normal.png" alt=""></div>
