@@ -1,10 +1,38 @@
 <?php
-session_start(); // Inicia sesión para manejo de autenticación
+// Verifica si la sesión ya está iniciada antes de llamar a session_start()
+if (session_status() == PHP_SESSION_NONE) {
+    session_start(); // Solo inicia la sesión si no está activa
+}
 
 // Verifica si el usuario está autenticado
 if (!isset($_SESSION['user_id'])) {
     header("Location: login.php");
     exit();
+}
+
+// Conectar a la base de datos
+require_once('../php_funcion/database.php');
+
+// Obtener la imagen de perfil del usuario desde la base de datos
+$user_id = $_SESSION['user_id'];
+$sql = "SELECT imagen_blob FROM usuarios WHERE id_usuario = ?";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("i", $user_id);
+$stmt->execute();
+$result = $stmt->get_result();
+$user_image = null;
+
+if ($result->num_rows === 1) {
+    $user = $result->fetch_assoc();
+    // Si existe la imagen en la base de datos, la asignamos a la variable $user_image
+    if ($user['imagen_blob']) {
+        $user_image = 'data:image/png;base64,' . base64_encode($user['imagen_blob']);
+    }
+}
+
+// Si no hay imagen, usar la imagen por defecto
+if (!$user_image) {
+    $user_image = "/proyectoCine/image/profile.png";
 }
 
 // Obtener la selección actual del cine (desde GET o POST)
@@ -41,7 +69,8 @@ $cine_seleccionado = $_GET['selection_places'] ?? $_POST['selection_places'] ?? 
         </div>
         <div class="profile">
             <div class="profile-icon">
-                <img src="/proyectoCine/image/profile.png" alt="Profile Image">
+                <!-- Aquí se muestra la imagen de perfil obtenida desde la base de datos o la predeterminada -->
+                <img src="<?php echo $user_image; ?>" alt="Profile Image">
             </div>
             <div class="dropdown-menu">
                 <a href="/proyectoCine/php_html/perfil.php">Perfil</a>
