@@ -592,14 +592,12 @@ input::placeholder {
 
 .login-page .btn-resetPassword {
     background-color: #AD6D01;
+    padding: 15px 10px;
     color: white;
-    font-size: 18px;
-    font-weight: 700;
-    padding: 12px;
-    border: none;
-    border-radius: 10px;
     cursor: pointer;
-    width: 100%;
+    margin-top: 20px;
+    font-weight: 600;
+    border-radius: 20px;
 }
 
 /* =====================vista nosotros========================= */

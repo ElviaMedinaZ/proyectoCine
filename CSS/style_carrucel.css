@@ -7,9 +7,9 @@
     overflow: hidden;
     position: relative;
     border-radius: 20px;
-    width: 1200px;
+    width: 900px;
     /* Ancho del carrusel */
-    height: 600px;
+    height: 400px;
     /* Altura del carrusel */
     background: #20232a;
     /* Fondo oscuro */
@@ -49,37 +49,35 @@
 }
 
 /* Flechas de navegación */
+/* Flechas de navegación */
 .flecha {
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     position: absolute;
-    top: 50%;
-    /* Centrado vertical */
+    top: 50%; /* Centrado vertical */
     transform: translateY(-50%);
-    z-index: 2;
-    /* Asegura que estén sobre las imágenes */
+    z-index: 2; /* Asegura que estén sobre el carrusel */
 }
 
-.flecha img {
-    width: 35px;
-    /* Ajustar el tamaño de las flechas */
-    height: auto;
-}
-
-.flecha-izquierda {
-    left: 90px;
-    /* Más pegado al contenedor */
+ .flecha .flecha-izquierda {
+    left: 90px; /* Posición fija desde el borde izquierdo */
+    
 }
 
 .flecha-derecha {
-    right: 90px;
-    /* Más pegado al contenedor */
+    right: 30px; /* Posición fija desde el borde derecho */
 }
 
+.flecha img {
+    width: 35px; /* Ajusta el tamaño de las flechas */
+    height: auto;
+}
+
+
 .destacadas {
-    padding: 40px;
+    padding: 70px;
     text-align: center;
 }
 
@@ -88,57 +86,47 @@
     color: #900;
     text-align: left;
     margin-bottom: 35px;
-    margin-left: 145px;
+    margin-left: 80px;
 }
 
 .titulo-destacadas h1 {
     color: #900;
+    font-size: 15px;
 }
 
 @media (max-width: 500px) {
+    /* Carrusel */
     .carousel-container {
-        margin-top: 150px;
-        width: 80%; 
-        height: 25vh; 
+        margin-top: 2em;
+        width: 80%; /* Reducir el ancho para pantallas pequeñas */
+        height: 200px; /* Altura ajustada para dispositivos móviles */
+    }
+
+    .flecha {
+        top:220px; /* Ajustar la posición fija vertical */
+        transform: none; /* Elimina el ajuste dinámico basado en altura */
     }
 
     .flecha img {
-        width: 15px; 
-        /* margin-bottom: 10px; */
+        width: 20px; /* Tamaño más pequeño de flechas */
     }
 
     .flecha-izquierda {
-        left: 20px; 
+        left: 20px; /* Ajustar separación del borde izquierdo */
     }
 
     .flecha-derecha {
-        right: 20px;
+        right: 20px; /* Ajustar separación del borde derecho */
     }
 
     .titulo-destacadas {
-        margin-left: 10px; 
+        position: relative; /* Cambiar para evitar superposición */
+        margin-top: -10px;
+        margin-left: -19px;
+        text-align: left;
     }
 
-    .titulo-destacadas h1 {
-        font-size: 1.5rem; 
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); /* dividir en 2 columnas */
-        gap: 20px; 
-        justify-items: center;
-        padding: 10px;
-        margin-top: 10px;
-    }
 
-    .destacadas {
-        padding: 20px; 
-    }
 
-    .cartelera {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); 
-        gap: 20px; 
-        justify-items: center; 
-        padding: 20px;
-        margin-top: 60px;
-    }
+    
 }

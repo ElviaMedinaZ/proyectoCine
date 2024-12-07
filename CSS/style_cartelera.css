@@ -5,20 +5,18 @@
     /* Aumenta el grosor de la fuente */
     color: #AD6D01;
     align-items: center;
+    margin-top: 20px;
     justify-content: center;
 }
+
 
 .cartelera {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    /* Mantiene 6 columnas flexibles */
-    gap: 3vw;
-    /* Espacio entre filas y columnas adaptado a la pantalla */
-    padding: 6vh 5vw;
-    margin: 0 5vw;
-
+    gap: 24px; /* Espacio fijo en píxeles */
+    padding: 48px 40px; /* Espaciado interno fijo */
+    margin: 0 40px;
     align-items: start;
-
 }
 
 .pelicula {
@@ -27,9 +25,9 @@
     align-items: center;
     justify-content: space-between;
     /* Distribuye los elementos de la tarjeta */
-    height: 40vh;
+    height: 240px;
     /* Altura fija de las tarjetas de las películas */
-    width: 100%;
+    width: 120px;
     /* Mantener el ancho del contenedor */
     position: relative;
     /* Necesario para el posicionamiento del overlay */
@@ -53,9 +51,11 @@
     object-fit: cover;
     /* Asegura que la imagen cubra el contenedor sin distorsionarse */
     border: 0.1vw solid #AD6D01;
-    border-radius: 1vw;
+    border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
     /* Sombra predeterminada */
+
+    
 }
 
 figcaption {
@@ -117,4 +117,37 @@ figcaption {
     text-align: center;
     font-size: 1vw;
     /* Tamaño adaptable */
+}
+
+@media (max-width: 500px) {
+    /* Cambiar a 2 columnas en dispositivos móviles */
+    .cartelera {
+        grid-template-columns: repeat(2, 1fr); /* Ajuste óptimo para móviles */
+        gap: 30px;
+        padding: 5px;
+        align-items: center;
+        align-content: center;
+        margin: 0;
+    }
+
+
+    .pelicula {
+        height: 300px;
+        width: 160px;
+        left: -17px;
+    }
+
+    figcaption {
+        font-size: 0.8rem;
+        margin: 4px;
+    }
+
+    .pelicula .ver-mas {
+        font-size: 10px;
+    }
+
+    .cartelera-forjadores .cartelera {
+        margin-left:60px;
+        margin-top: 50px;
+    }
 }

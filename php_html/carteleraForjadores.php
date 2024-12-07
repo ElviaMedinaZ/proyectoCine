@@ -19,7 +19,7 @@
 
     <?php include('header.php'); ?>
 
-    <div class="container-cartelera">
+    <div class="container-cartelera cartelera-forjadores">
         <main>
             <h1>Cartelera</h1>
             <section class="cartelera">
