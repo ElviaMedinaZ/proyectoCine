@@ -333,6 +333,12 @@ input::placeholder {
     text-align: center;
 }
 
+/* Aplica content: none solo para la página de login */
+.login-page .header::before {
+    content: none;
+}
+
+
 /* Estilos para el label y el input */
 .login-page label {
     display: block;
@@ -409,14 +415,36 @@ input::placeholder {
 
 
 @media (max-width: 500px) {
+
+    
+/* Estilos del contenedor de login */
+.login-page .container {
+    display: flex;
+    background-color: #ffffff;
+    width: 400px;
+    /* Ajusta el ancho para coincidir con la imagen */
+    padding: 30px 100px;
+    border-radius: 15px;
+    margin: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    /* Añade sombra */
+    text-align: center;
+    /* Centra el contenido */
+    justify-content: center;
+    /* Centra verticalmente */
+    align-items: center;
+    /* Centra horizontalmente */
+
+}
+
     .login-page {
-        background-color: #ffffff;
+        background-color: #830C00;
         font-family: "Montserrat", sans-serif;
     }
 
     .login-page .header {
         margin-top: 60px;
-        background-color: white;
+        background-color: #830C00;
     }
 
     .login-page .container {
@@ -428,24 +456,12 @@ input::placeholder {
     }
 
     .forget-password {
-        visibility: hidden;
-        /* Oculta el texto original pero mantiene el espacio ocupado */
-        position: relative;
-        /* Necesario para colocar el pseudo-elemento */
-        display: flex;
-        align-items: center;
         font-size: 12px;
         /* Tamaño ajustado */
     }
 
     .forget-password::after {
-        content: "Recuperar contraseña";
-        /* Nuevo texto */
         font-family: "Montserrat", sans-serif;
-        color: #830C00;
-        /* Color del nuevo texto */
-        visibility: visible;
-        /* Asegura que el texto generado sea visible */
         position: fixed;
         /* Lo posiciona de manera fija en la pantalla */
         bottom: 160px;
@@ -486,47 +502,15 @@ input::placeholder {
         color: #830C00;
     }
 
-    /* Contenedor para la casilla "Recordarme" y el enlace "Recuperar contraseña" */
-    .login-page .remember-me-container {
-        display: flex;
-        /* Asegura que ambos elementos estén en una fila */
-        align-items: center;
-        /* Alinea verticalmente */
-        justify-content: flex-start;
-        /* Alinea a la izquierda */
-        font-size: 12px;
-        /* Tamaño ajustado */
-    }
 
-    .login-page .remember-me {
-        display: flex;
-        /* Alinea la casilla con el texto */
-        align-items: center;
-        margin-right: 10px;
-        /* Espacio entre la casilla y el enlace */
-    }
-
-    .login-page .remember-me input {
-        margin-right: 2px;
-        /* Espacio entre la casilla y el texto */
-        transform: scale(0.8);
-        /* Reduce el tamaño de la casilla */
-    }
-
-    /* Asegura que el enlace "Recuperar contraseña" esté en la misma línea */
+    /* Estilo del enlace de "Olvidaste tu contraseña" */
     .login-page .forget-password {
-        display: inline-flex;
-        /* Asegura que el enlace esté en la misma fila */
-        color: #830C00;
+        display: block;
+        color: #003EDF;
         font-size: 12px;
-        /* Tamaño ajustado */
         text-decoration: none;
-    }
-
-    .login-page .forget-password {
-        color: #830C00;
-        font-size: 12px;
-        /* Tamaño ajustado */
+        margin-bottom: 20px;
+        text-align: left;
     }
 
     .login-page .btn-login {
@@ -538,7 +522,7 @@ input::placeholder {
     .login-page .text-container a {
         font-size: 12px;
         /* Tamaño ajustado */
-        color: #830C00;
+        color: #003EDF;
         display: block;
     }
 
