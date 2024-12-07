@@ -203,19 +203,19 @@ input::placeholder {
 /* Menú desplegable oculto inicialmente */
 .dropdown-menu {
     display: none;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 50%; /* Media pantalla */
-    height: 100%;
+    width: 50%; /* Media pantalla horizontalmente */
+    height: 100vh; /* Altura completa de la pantalla */
     background-color: #830c00;
     z-index: 10;
     transition: transform 0.3s ease;
-  }
+}
 
   /* El menú se muestra cuando el checkbox está marcado */
 .menu-toggle:checked + .menu-icon + .dropdown-menu {
-  display: block;
+display: block;
 }
 
 
