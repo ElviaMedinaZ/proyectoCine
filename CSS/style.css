@@ -474,7 +474,7 @@ input::placeholder {
 
 
     .login-page .title {
-        color: #830C00;
+        color: #AD6D01;
         font-weight: 600px;
         margin-top: -10px;
         align-items: center;
@@ -489,7 +489,7 @@ input::placeholder {
     }
 
     .login-page input {
-        background-color: #eaeaea;
+        background-color: #EAEAEA;
         /* Fondo gris */
         color: #830C00;
         border-color: #000000;
@@ -516,7 +516,13 @@ input::placeholder {
     .login-page .btn-login {
         background-color: #AD6D01;
         color: white;
-        border: 1px solid #000000;
+        font-size: 18px;
+        font-weight: 700;
+        padding: 12px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        width: 100%;
     }
 
     .login-page .text-container a {
@@ -568,7 +574,7 @@ input::placeholder {
     font-weight: 600;
 }
 
-.login-page .title-register {
+.title-register {
     color: #AD6D01;
     font-weight: 700;
     font-size: 30px;
@@ -577,21 +583,24 @@ input::placeholder {
 }
 
 .login-page .email {
-    font-size: 20px;
+    font-size: 12px;
     color: #830c00;
     font-weight: 400;
 }
 
 /* ======================================= Hoja de estilo recuperar contraseña ======================================*/
-.login-page img {
-    width: 40%;
-}
 
-.login-page p {
-    margin-top: 10px;
-    margin-bottom: 10px;
+.login-page .btn-resetPassword {
+    background-color: #AD6D01;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
 }
-
 
 /* =====================vista nosotros========================= */
 /* contenedor principal */

@@ -23,28 +23,31 @@
 
         <main>
 
-            <form class="form" action="Index.html" method="GET">
-                
-                <h1 class="title">Restablecer contraseña</h1>
+            <form class="form" id="registerForm" action="../php_funcion/registro.php" method="POST">
+            
+                <h1 class="title">Reestablecer contraseña</h1>
 
                 <div>
-                    <img src="../image/Lock.png" alt="candado seguridad">
-                </div>
-
-                <div>
-                    <p>Ingrese su correo electrónico  para 
-                        <br>enviarle un código de verificación</p>
-                </div>
-
-                <div>
+                    <label class="user" for="user">Usuario</label>
                     <input type="text" id="user" name="user">
                 </div>
 
-                <button type="submit" id="btn-register" name="btn-register" class="btn-register">Enviar</button>
+                <div>
+                    <label class="password" for="password">Nueva contraseña</label>
+                    <input type="password" id="password" name="password">
+                </div>
+
+                <div>
+                    <label class="confirm-password" for="confirm-password">Confirmar contraseña</label>
+                    <input type="email" id="confirm-password" name="confirm-password">
+                </div>
+
+                    <button type="submit" id="btn-resetPassword" name="btn-resetPassword" class="btn-resetPassword">Reestablecer</button>
             </form>
-            
         </main>
     </div>
 
+
+    <script src="../JS/registro.js"></script>
 </body>
 </html>
