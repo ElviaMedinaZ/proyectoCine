@@ -94,3 +94,51 @@
 .titulo-destacadas h1 {
     color: #900;
 }
+
+@media (max-width: 500px) {
+    .carousel-container {
+        margin-top: 150px;
+        width: 80%; 
+        height: 25vh; 
+    }
+
+    .flecha img {
+        width: 15px; 
+        /* margin-bottom: 10px; */
+    }
+
+    .flecha-izquierda {
+        left: 20px; 
+    }
+
+    .flecha-derecha {
+        right: 20px;
+    }
+
+    .titulo-destacadas {
+        margin-left: 10px; 
+    }
+
+    .titulo-destacadas h1 {
+        font-size: 1.5rem; 
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* dividir en 2 columnas */
+        gap: 20px; 
+        justify-items: center;
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    .destacadas {
+        padding: 20px; 
+    }
+
+    .cartelera {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 20px; 
+        justify-items: center; 
+        padding: 20px;
+        margin-top: 60px;
+    }
+}

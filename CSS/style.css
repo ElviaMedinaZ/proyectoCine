@@ -233,6 +233,43 @@ input::placeholder {
     display: block;
 }
 
+@media (max-width: 500px) {
+    .header {
+        /* background-color: #830c00; */
+        padding: 35px 0;
+        /* Ajusta el padding arriba y abajo*/
+        width: 100%;
+        /* Asegura que el menú tenga 100% de ancho */
+    }
+
+    .header i {
+        display: block; 
+        font-size: 24px;
+        color: #ffffff;
+        margin-left: 10px; 
+        position: absolute; 
+        left: 10px; 
+        cursor: pointer;
+    }
+
+    .header::before { 
+        content: "Cineplus";
+        text-align: center;
+        font-size: 24px;
+        color: #ffffff;
+        font-weight: bold;
+        display: block;
+    }
+
+    .header i {
+        display: flex;
+    }
+
+    .profile-icon, .places, .nav-container, .logo img, .search-container{
+        display: none;
+    }
+}
+
 /* ======================================= Estilos del login =======================================*/
 .login-page {
     background-color: #830c00;
