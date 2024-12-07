@@ -1,4 +1,5 @@
 <?php
+
 // Verifica si la sesión ya está iniciada antes de llamar a session_start()
 if (session_status() == PHP_SESSION_NONE) {
     session_start(); // Solo inicia la sesión si no está activa
@@ -40,8 +41,22 @@ $cine_seleccionado = $_GET['selection_places'] ?? $_POST['selection_places'] ?? 
 ?>
 <header class="header">
 
-    <input type="checkbox">
-    <i class="fa-solid fa-bars"></i>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    
+    <!-- Icono del botón de menú -->
+    <label for="menu-toggle" class="menu-icon">
+        <i>☰</i>
+    </label>
+    
+    <!-- Contenedor del rectángulo rojo -->
+    <div class="dropdown-menu">
+    <a href="perfil.php">Perfil</a>
+        <a href="historial.php">Historial</a>
+        <a href="carteleraForjadores.php">Cartelera</a>
+        <a href="recompensas.php">Recompensas</a>
+        <a href="nosotros.php">Nosotros</a>
+        <a href="../index.php">Cerrar sesión</a>
+    </div>
 
     <div class="nav-container">
         <div class="logo">
