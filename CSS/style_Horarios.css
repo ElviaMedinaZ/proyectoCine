@@ -249,3 +249,51 @@
     background-color: #830C00;
     /* Color rojo */
 }
+
+@media (max-width: 500px){
+    .detalle-pelicula-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .detalle-pelicula {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .pelicula-poster {
+        width: 100%; 
+        height: auto; 
+        margin-left: 0; 
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .pelicula-info {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .pelicula-info h2 {
+        font-size: 24px; 
+    }
+
+    .pelicula-info p {
+        font-size: 14px; 
+    }
+
+    .cine-texto {
+        margin-top: 10px;
+        padding-top: 10px;
+    }
+
+    .horarios {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .classification{
+        margin-right: 280px;
+    }
+}
