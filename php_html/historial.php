@@ -52,23 +52,28 @@
         const historial = <?php echo json_encode($historial); ?>; // Historial en formato JSON
         const tarjetasContainer = document.getElementById('tarjetas-container');
         let paginaActual = 0; // Página actual
-        const elementosPorPagina = 2; // Número de elementos por página
+        const elementosPorPaginaEscritorio = 2; // Número de elementos por página en escritorio
+        const elementosPorPaginaMovil = 1; // Número de elementos por página en móvil
 
+        // Detectar si es móvil
+        function esMovil() {
+            return window.innerWidth <= 500; // Define el límite para considerar "móvil"
+        }
 
+        // Función para calcular cuántos elementos mostrar por página
+        function obtenerElementosPorPagina() {
+            return esMovil() ? elementosPorPaginaMovil : elementosPorPaginaEscritorio;
+        }
 
         // Función para renderizar las tarjetas
         function renderizarTarjetas() {
-
             tarjetasContainer.innerHTML = ''; // Limpiar contenido anterior
+            const elementosPorPagina = obtenerElementosPorPagina();
             const inicio = paginaActual * elementosPorPagina;
             const fin = inicio + elementosPorPagina;
             const tarjetasAMostrar = historial.slice(inicio, fin);
 
-
-            tarjetasAMostrar.forEach((compra,i) => {
-
-                console.log(i);
-                
+            tarjetasAMostrar.forEach((compra, i) => {
                 const tarjeta = document.createElement('div');
                 tarjeta.className = 'tarjeta';
                 tarjeta.innerHTML = `
@@ -88,13 +93,21 @@
 
         // Función para cambiar de página
         function cambiarPagina(direccion) {
+            const elementosPorPagina = obtenerElementosPorPagina();
             const totalPaginas = Math.ceil(historial.length / elementosPorPagina);
             paginaActual = Math.min(Math.max(paginaActual + direccion, 0), totalPaginas - 1);
             renderizarTarjetas();
         }
 
+        // Detectar cambio de tamaño de ventana y actualizar vista
+        window.addEventListener('resize', () => {
+            paginaActual = 0; // Reinicia a la primera página en cambio de tamaño
+            renderizarTarjetas();
+        });
+
         // Inicializar la vista
         renderizarTarjetas();
     </script>
+
 </body>
 </html>

@@ -673,15 +673,6 @@ display: block;
         display: none;
     }
 
-    .header::before { 
-        content: "Nosotros";
-        text-align: center;
-        font-size: 24px;
-        color: #ffffff;
-        font-weight: bold;
-        display: block;
-    }
-
     /* contenido ambos parrafos */
     .container-about .content {
         flex-direction: column;

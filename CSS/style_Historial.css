@@ -117,3 +117,32 @@
     font-size: 1em;
     /* Tamaño más pequeño para el precio */
 }
+
+@media (max-width: 500px){
+    /* Contenedor principal */
+    .historial-compras {
+        overflow: hidden
+    }
+
+    /* Título principal */
+    .historial-compras h1 {
+        display: none;
+    }
+
+    /* Fecha actual */
+    .fecha-actual {
+        font-size: 1em;
+        color: #8E2413;
+        margin-bottom: 50px;
+        margin-left: 100px;
+        margin-top: 50px;
+        font-weight: bold;
+    }
+
+    .tarjetas-wrapper {
+        display: flex;
+        justify-content: flex-start; 
+        gap: 0; 
+    }
+    
+}
