@@ -187,7 +187,10 @@ input::placeholder {
 .profile-icon img {
     width: 60px;
     height: 60px;
+    border-radius: 50%; /* Hace la imagen circular */
+    object-fit: cover; 
     cursor: pointer;
+    margin-left: 40px;
     margin-left: 40px;
     /* Ajusta el margen a la izquierda para la foto de perfil */
 }
