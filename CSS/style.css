@@ -167,6 +167,10 @@ body {
         background-color: #ffffff;
         color: #830c00;
     }
+
+    .profile-icon img { /*desaparece la foto de perfil en el movil*/
+        display: none;
+    }
 }
 
 
@@ -271,7 +275,7 @@ body {
         position: absolute;
         top: 70px;
         right: 0;
-        background-color: #ffffff;
+        background-color: #830C00;
         box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
         width: 150px;
         border-radius: 5px;
@@ -281,7 +285,7 @@ body {
     .dropdown-menu a {
         display: block;
         padding: 10px;
-        color: #830c00;
+        color: #ffffff;
         text-decoration: none;
         font-weight: bold;
         border-bottom: 1px solid #e0e0e0;

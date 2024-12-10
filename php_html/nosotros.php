@@ -26,13 +26,13 @@
             <div class="content">
                 <img src="../image/imagen-nosotros.png" alt="Personas disfrutando el cine">
                 <div class="about">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipiscing elit placerat elementum, blandit faucibus nisi litora. Risus varius arcu dictum suscipit fermentum tellus curabitur molestie vulputate malesuada, tristique at auctor magna nibh habitant sodales ullamcorper aliquet, vitae dis porttitor scelerisque dapibus libero mauris primis dui. Turpis sollicitudin ut blandit elementum orci, habitant eleifend metus accumsan faucibus interdum, aptent at egestas quam.
-                    </p>
-                    <br>
-                    <p>
-                        Purus morbi bibendum viverra nec potenti congue condimentum non eros iaculis, dictum montes natoque sociosqu hac risus consequat mollis mus, facilisi aliquet sem tempor dapibus tellus quisque felis maecenas. Scelerisque purus platea phasellus congue morbi, facilisis varius pretium leo.
-                    </p>
+                <p>
+                    CinePlus es la experiencia definitiva para los amantes del cine, ofreciendo comodidad, innovación y entretenimiento de calidad. Nuestra misión es brindarte momentos inolvidables a través de una amplia selección de películas, desde los últimos estrenos hasta los clásicos más queridos. Cada detalle está diseñado para que disfrutes de la magia del cine como nunca antes.
+                </p>
+                <br>
+                <p>
+                    Contamos con salas de última generación, asientos reclinables y un sistema de sonido envolvente que te sumerge en cada escena. Además, nuestra cartelera incluye contenido para toda la familia, eventos especiales y promociones exclusivas para nuestros miembros. Vive el cine, siente la emoción, y sé parte de la comunidad CinePlus.
+                </p>
                 </div>
             </div>
         </section>

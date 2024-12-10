@@ -49,7 +49,7 @@
 
 /* Tarjetas */
 .tarjeta {
-    background-color: #f7e6c3;
+    background-color: #E0CB9B;
     border-radius: 15px;
     padding: 20px;
     width: 400px;
@@ -82,7 +82,7 @@
     margin-top: 10px;
     font-size: 1.3em;
     /* Tamaño más pequeño para el título */
-    color: #A01010;
+    color: #830C00;
     margin-bottom: 10px;
 }
 
