@@ -47,10 +47,25 @@ body {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 10px 15px;
+        padding: 30px 35px;
         background-color: #830c00;
         position: relative;
         z-index: 1000;
+    }
+
+    .header::before { 
+        content: "Cineplus";
+        text-align: center;
+        align-items: center;
+        font-size: 24px;
+        color: #ffffff;
+        font-weight: bold;
+        display: block;
+        padding: 10px 35%;
+    }
+
+    .logo img {
+        display: none;
     }
 
     /* Ícono del menú hamburguesa */
@@ -131,6 +146,7 @@ body {
         display: flex;
         flex-direction: column;
         gap: 10px;
+        margin-top: 50px;
     }
 
     .nav-left li a {
