@@ -12,7 +12,6 @@
     <title>Cineplus</title>
 </head>
 <body class="login-page">
-    
     <header class="header">
         <div class="logo">
             <img src="../image/logo_cineplus.png" alt="logo cineplus">
@@ -20,11 +19,8 @@
     </header>
 
     <div class="container">
-
         <main>
-
-            <form class="form" id="registerForm" action="../php_funcion/registro.php" method="POST">
-            
+            <form class="form" id="cambiarForm" action="../php_funcion/cambiar_contraseña.php" method="POST" onsubmit="return validarFormulario()">
                 <h1 class="title">Reestablecer contraseña</h1>
 
                 <div>
@@ -39,15 +35,32 @@
 
                 <div>
                     <label class="confirm-password" for="confirm-password">Confirmar contraseña</label>
-                    <input type="email" id="confirm-password" name="confirm-password">
+                    <input type="password" id="confirm-password" name="confirm-password">
                 </div>
 
-                    <button type="submit" id="btn-resetPassword" name="btn-resetPassword" class="btn-resetPassword">Reestablecer</button>
+                <button type="submit" id="btn-resetPassword" name="btn-resetPassword" class="btn-resetPassword">Reestablecer</button>
             </form>
         </main>
     </div>
 
+    <script>
+        function validarFormulario() {
+            const usuario = document.getElementById('user').value.trim();
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
 
-    <script src="../JS/registro.js"></script>
+            if (!usuario || !password || !confirmPassword) {
+                alert('Todos los campos son obligatorios.');
+                return false;
+            }
+
+            if (password !== confirmPassword) {
+                alert('Las contraseñas no coinciden.');
+                return false;
+            }
+
+            return true;
+        }
+    </script>
 </body>
 </html>

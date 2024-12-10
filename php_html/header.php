@@ -41,22 +41,12 @@ $cine_seleccionado = $_GET['selection_places'] ?? $_POST['selection_places'] ?? 
 ?>
 <header class="header">
 
-    <input type="checkbox" id="menu-toggle" class="menu-toggle">
-    
-    <!-- Icono del botón de menú -->
+     <!-- Checkbox para controlar el menú -->
+     <input type="checkbox" id="menu-toggle">
     <label for="menu-toggle" class="menu-icon">
-        <i>☰</i>
+        <i class="fa-solid fa-bars"></i>
     </label>
-    
-    <!-- Contenedor del rectángulo rojo -->
-    <div class="dropdown-menu">
-    <a href="perfil.php">Perfil</a>
-        <a href="historial.php">Historial</a>
-        <a href="carteleraForjadores.php">Cartelera</a>
-        <a href="recompensas.php">Recompensas</a>
-        <a href="nosotros.php">Nosotros</a>
-        <a href="../index.php">Cerrar sesión</a>
-    </div>
+
 
     <div class="nav-container">
         <div class="logo">
@@ -70,9 +60,19 @@ $cine_seleccionado = $_GET['selection_places'] ?? $_POST['selection_places'] ?? 
             </ul>
         </nav>
         <div class="search-container">
-            <input type="search" id="site-search" class="search" placeholder="Buscar película" />
-            <i class="fa-solid fa-magnifying-glass"></i>
+            <form method="GET" action="/proyectoCine/php_html/carteleraForjadores.php">
+                <input 
+                    type="search" 
+                    name="site-search" 
+                    id="site-search" 
+                    class="search" 
+                    placeholder="Buscar película" 
+                    value="<?php echo htmlspecialchars($_GET['site-search'] ?? '', ENT_QUOTES); ?>" 
+                />
+                <input type="hidden" name="selection_places" value="<?php echo htmlspecialchars($cine_seleccionado); ?>">
+            </form>
         </div>
+
         <div class="select_places">
             <form method="GET" action="/proyectoCine/php_html/carteleraForjadores.php" id="cineForm">
                 <select class="places" name="selection_places" id="places" onchange="document.getElementById('cineForm').submit();">

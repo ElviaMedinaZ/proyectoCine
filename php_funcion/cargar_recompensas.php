@@ -1,27 +1,22 @@
 <?php
 require_once('database.php'); // Conexión a la base de datos
 
-// Consultar las recompensas
-$sql = "SELECT nombre, imagen, costo, descripcion FROM recompensas"; // Cambiar 'img' a 'imagen'
+$recompensas = [];
+
+// Consultar las recompensas desde la base de datos
+$sql = "SELECT nombre, imagen, costo, descripcion FROM recompensas";
 $result = $conn->query($sql);
 
-// Lista para almacenar recompensas mostradas
-$recompensas_mostradas = [];
-
-// Generar HTML dinámico
+// Crear un arreglo de recompensas para usar en el carrusel
 while ($row = $result->fetch_assoc()) {
-    if (!in_array($row['nombre'], $recompensas_mostradas)) { // Evitar repetición
-        echo '<div class="elemento">';
-        echo '<img class="recompensa" src="' . htmlspecialchars($row['imagen']) . '" alt="' . htmlspecialchars($row['nombre']) . '">';
-        echo '<p>' . htmlspecialchars($row['descripcion']) . '</p>';
-        echo '<a>' . htmlspecialchars($row['nombre']) . '</a>';
-        echo '</div>';
-
-        // Agregar la recompensa a la lista de mostradas
-        $recompensas_mostradas[] = $row['nombre'];
-    }
+    $recompensas[] = [
+        'nombre' => $row['nombre'],
+        'imagen' => $row['imagen'],
+        'costo' => $row['costo'],
+        'descripcion' => $row['descripcion']
+    ];
 }
 
-// Cerrar conexión
+// Cerrar la conexión a la base de datos
 $conn->close();
 ?>

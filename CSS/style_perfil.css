@@ -1,4 +1,3 @@
-
 .container {
     max-width: 900px;
     margin: 0 auto;
@@ -22,23 +21,32 @@
 
 .profile-image-container {
     display: flex;
-    flex-direction: column; /* Alineación vertical para la imagen y "Puntos" */
+    flex-direction: column;
+    /* Alineación vertical para la imagen y "Puntos" */
     justify-content: center;
     align-items: center;
-    width: 300px; /* Tamaño del círculo */
-    height: 300px; /* Tamaño del círculo */
-    border-radius: 50%; /* Hace que el contenedor sea circular */
-    border: 3px solid #E0CB9B;
-    overflow: hidden; /* Evita que la imagen sobresalga del círculo */
-    position: relative; /* Permite posicionar texto encima de la imagen */
-    margin-bottom: 10px; /* Espaciado con el texto "Puntos" */
+    width: 300px;
+    /* Tamaño del círculo */
+    height: 300px;
+    /* Tamaño del círculo */
+    border-radius: 50%;
+    /* Hace que el contenedor sea circular */
+
+    overflow: hidden;
+    /* Evita que la imagen sobresalga del círculo */
+    position: relative;
+    /* Permite posicionar texto encima de la imagen */
+    margin-bottom: 10px;
+    /* Espaciado con el texto "Puntos" */
 }
 
 /* Imagen dentro del círculo */
 .profile-image-container img {
     filter: brightness(20%);
-    width: 150%; /* Ajusta la imagen al ancho del contenedor */
-    height: 150%; /* Ajusta la imagen al alto del contenedor */
+    width: 150%;
+    /* Ajusta la imagen al ancho del contenedor */
+    height: 150%;
+    /* Ajusta la imagen al alto del contenedor */
     cursor: pointer;
 }
 
@@ -50,16 +58,22 @@
     font-size: 16px;
     font-weight: bold;
     text-align: center;
-    z-index: 1; /* Asegura que el texto esté por encima de la imagen */
+    z-index: 1;
+    /* Asegura que el texto esté por encima de la imagen */
 }
 
 
 .points-container {
-    text-align: left; /* Alinea los puntos hacia la izquierda */
-    margin-top: 10px; /* Espaciado superior con respecto a la imagen */
-    font-size: 1.2rem; /* Tamaño del texto */
-    position: relative; /* Permite usar `left` para ajustar la posición */
-    left: -270px; /* Mueve los puntos hacia la izquierda */
+    text-align: left;
+    /* Alinea los puntos hacia la izquierda */
+    margin-top: 10px;
+    /* Espaciado superior con respecto a la imagen */
+    font-size: 1.2rem;
+    /* Tamaño del texto */
+    position: relative;
+    /* Permite usar `left` para ajustar la posición */
+    left: -270px;
+    /* Mueve los puntos hacia la izquierda */
     color: #830C00;
     font-weight: bold;
 }
@@ -70,38 +84,52 @@
     margin-top: 30px;
     color: #830C00;
 }
+
 /* Contenedor para los inputs de Nombre y Apellido en línea */
 .profile-details .input-group {
     display: flex;
-    justify-content: space-between; /* Alinea los elementos lado a lado */
-    gap: 100px; /* Espaciado entre los inputs */
+    justify-content: space-between;
+    /* Alinea los elementos lado a lado */
+    gap: 100px;
+    /* Espaciado entre los inputs */
 }
 
 .profile-details input {
-    width: 130%; /* Mantiene el ancho completo del contenedor */
-    padding: 12px; /* Incrementa el espacio interno del input */
-    margin-top: 10px; /* Espaciado entre los inputs */
+    width: 130%;
+    /* Mantiene el ancho completo del contenedor */
+    padding: 12px;
+    /* Incrementa el espacio interno del input */
+    margin-top: 10px;
+    /* Espaciado entre los inputs */
     border: 1px solid black;
     border-radius: 5px;
-    box-sizing: border-box; /* Evita que el padding afecte el tamaño total */
+    box-sizing: border-box;
+    /* Evita que el padding afecte el tamaño total */
     background-color: #E7E7E7;
-    font-size: 13px; /* Incrementa el tamaño del texto dentro del input */
+    font-size: 13px;
+    /* Incrementa el tamaño del texto dentro del input */
 }
 
 
 /* Contenedor para los botones */
 .form-buttons {
-    width: 112%; /* Mantiene el ancho completo del contenedor */
-    margin-top: 50px; /* Ajusta el margen superior para los botones */
+    width: 112%;
+    /* Mantiene el ancho completo del contenedor */
+    margin-top: 50px;
+    /* Ajusta el margen superior para los botones */
     display: flex;
-    flex-direction: row; /* Coloca los botones en una columna */
-    gap: 50px; /* Espaciado entre los botones */
+    flex-direction: row;
+    /* Coloca los botones en una columna */
+    gap: 50px;
+    /* Espaciado entre los botones */
 }
 
 /* Botones */
 .btn {
-    padding: 18px; /* Espaciado interno */
-    width: 100%; /* Asegura que los botones tengan el mismo ancho que los inputs */
+    padding: 18px;
+    /* Espaciado interno */
+    width: 100%;
+    /* Asegura que los botones tengan el mismo ancho que los inputs */
     border: none;
     border-radius: 5px;
     font-size: 16px;
@@ -124,16 +152,18 @@
     color: #fff;
 }
 
-@media (max-width: 500px){
+@media (max-width: 500px) {
     .title {
         display: none;
     }
 
     .profile-image-container {
         display: flex;
-        flex-direction: column; /* Alinea la imagen y los puntos en columna */
+        flex-direction: column;
+        /* Alinea la imagen y los puntos en columna */
         align-items: center;
-        width: auto; /* Ajusta al tamaño disponible */
+        width: auto;
+        /* Ajusta al tamaño disponible */
         height: auto;
         margin-bottom: 10px;
     }
@@ -141,24 +171,24 @@
     .profile-container {
         display: flex;
         flex-direction: column;
-        align-items: center; 
-        gap: 10px; 
+        align-items: center;
+        gap: 10px;
         width: 100%;
         height: auto;
     }
 
     .profile-container img {
-        width: 250px; 
-        height: 250px; 
-        border-radius: 50%; 
-        object-fit: cover; 
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        object-fit: cover;
     }
 
     /* Contenedor de puntos */
     .points-container {
         text-align: center;
-        font-size: 1rem; 
-        margin-top: -600px; 
+        font-size: 1rem;
+        margin-top: -600px;
         left: 0;
         position: static;
     }
@@ -167,9 +197,9 @@
     .profile-details {
         width: 90%;
         display: flex;
-        flex-direction: column; 
+        flex-direction: column;
         gap: 15px;
-        align-items: center; 
+        align-items: center;
     }
 
     .profile-details .input-group {
@@ -182,7 +212,7 @@
         flex-direction: column;
         width: 150%;
     }
-    
+
     .input-group input {
         margin-bottom: -30px;
         width: 200%;
@@ -190,13 +220,13 @@
         /* margin-right: -50px; */
     }
 
-    .input-group label{
+    .input-group label {
         margin-left: -70px;
     }
 
     /* Botones */
     .form-buttons {
-        flex-direction: column-reverse; 
+        flex-direction: column-reverse;
         gap: 15px;
         font-weight: bold;
         margin-top: 30px;
@@ -204,7 +234,7 @@
 
     }
 
-    .form-buttons button{
+    .form-buttons button {
         width: 265%;
         margin-bottom: 10px;
         margin-left: -90px;

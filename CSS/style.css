@@ -1,75 +1,22 @@
-/* ======================================= Estilos del menu principal =======================================*/
+/* General */
 * {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    background-color: #ffffff;
     font-family: "Montserrat", sans-serif;
     background-color: #ffffff;
-    font-family: "Montserrat", sans-serif;
     min-height: 100vh;
     overflow-y: auto;
-    /*scroll vertical */
-
-}
-
-/* menu superior */
-.header {
-    background-color: #830c00;
-    padding: 5px 0;
-    /* Ajusta el padding arriba y abajo*/
-    width: 100%;
-    /* Asegura que el menú tenga 100% de ancho */
 }
 
 .header input[type="checkbox"] {
-    position: absolute;
-    /* Permite colocar el checkbox en la posición deseada */
-    width: 45px;
-    height: 45px;
-    top: 20px;
-    /* Alinea en la parte superior */
-    right: 5px;
-    /* Espacio desde la derecha */
-    z-index: 2;
-    /* Mayor valor para que esté delante */
     display: none;
-    /* Cambia a block para mostrar el checkbox */
+    /* Ocultamos el checkbox */
 }
 
-.header i {
-    color: #ffffff;
-    font-size: 45px;
-    position: absolute;
-    /* Permite colocar el ícono en la posición deseada */
-    top: 20px;
-    /* Alinea en la parte superior */
-    right: 5px;
-    /* Se coloca al borde derecho */
-    z-index: 1;
-    display: none;
-    /* Cambia a block para mostrar el ícono */
-}
-
-
-.search::placeholder {
-    color: rgba(88, 30, 30, 0.7);
-    font-family: "Montserrat", sans-serif;
-    font-size: 16px;
-    font-weight: 800;
-}
-
-.nav-container {
-    display: flex;
-    align-items: center;
-    white-space: nowrap;
-    /* overflow: hidden; */
-    justify-content: center;
-    width: 100%;
-    /* Asegura que el contenedor del menú tenga 100% de ancho */
-}
 
 .logo img {
     width: 79px;
@@ -77,224 +24,307 @@ body {
     margin-right: -35px;
 }
 
-/* -------------------- opciones menu ---------------------- */
-
-/* Elementos de la lista flotante a la derecha */
-.nav-left {
-    display: flex;
-    margin-left: 20px;
-    padding: 10px;
-}
-
-/* Estilo de la lista del menu navegar */
-.nav-left li {
-    list-style-type: none;
-    display: inline-block;
-    padding: 10px;
-}
-
-/* Texto del menu de navegar */
-.nav-left li a {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-weight: 700;
-    font-size: 18px;
-}
-
-
-/* -------------------- barra de busqueda ---------------------- */
-
-.search-container {
-    position: relative;
-    display: flex;
-}
-
-/* Estilos del cuadro de busqueda */
-.search {
-    border-radius: 15px;
-    padding: 10px 20px;
-    width: 360px;
-    margin-left: 20px;
-    /* Mover a la derecha del menu */
-    border: none;
-}
-
-/* icono de busqueda */
-.search-container i {
-    margin: 10px 355px;
+/* Icono del menú hamburguesa (visible solo en móvil) */
+.menu-icon {
+    font-size: 24px;
+    color: #ffffff;
     position: absolute;
-    font-size: 18px;
-    /* Ajusta el tamaño del icono */
-    color: #6c6c6c;
-    /* Cambia el color del icono */
-}
-
-/* -------------------- ubicacion ---------------------- */
-.places {
-    padding: 10px 30px 10px 10px;
-    margin-left: 90px;
-    background-color: #830c00;
-    color: #ffffff;
-    /* Color del texto */
-    border: none;
-    /* Borde */
-    font-size: 18px;
-    /* Tamaño de fuente */
-    font-weight: 700;
-    /* Peso de la fuente */
-    outline: none;
-    /* quita el borde del foco */
-    border-radius: 0px;
-    /* redondea el borde del foco*/
-    appearance: none;
-    /* quita la flecha predeterminada */
-    width: auto;
-}
-
-.places::after {
-    content: "▼";
-    /* personalizar la flecha para el dropdown */
-    font-size: 12px;
-    color: #ffffff;
-    padding-left: 10px;
-}
-
-
-/* Para modificar el texto adentro del input de busqueda */
-input::placeholder {
-    color: #830c00;
-    /* Color del texto */
-    font-family: "Montserrat", sans-serif;
-    /* Tipografía */
-    font-size: 16px;
-    /* Tamaño de fuente */
-    font-weight: 800;
-    /* Peso de la fuente */
-}
-
-/* -------------------- perfil ---------------------- */
-
-/* perfil del usuario */
-.profile {
-    position: relative;
-    display: inline-block;
-    /* margin-left: auto; */
-    margin-left: 40px;
-    margin-right: 10px;
-}
-
-
-.profile-icon img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%; /* Hace la imagen circular */
-    object-fit: cover; 
+    top: 15px;
+    left: 15px;
     cursor: pointer;
-    margin-left: 40px;
-    margin-left: 40px;
-    /* Ajusta el margen a la izquierda para la foto de perfil */
-}
-
-/* Estilo lista desplegable */
-.select-container {
-    position: relative;
-    display: inline-block;
-}
-
-
-/*============================================== MENU HAMBURGUESA ============================================================ */
-/* Menú desplegable oculto inicialmente */
-.dropdown-menu {
+    z-index: 1000;
     display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 50%; /* Media pantalla horizontalmente */
-    height: 100vh; /* Altura completa de la pantalla */
-    background-color: #830c00;
-    z-index: 10;
-    transition: transform 0.3s ease;
+    /* Ocultamos por defecto */
 }
 
-  /* El menú se muestra cuando el checkbox está marcado */
-.menu-toggle:checked + .menu-icon + .dropdown-menu {
-display: block;
-}
-
-
-/* Cambiar el icono a una X al estar abierto */
-.icon {
-    transition: transform 0.3s ease;
-  }
-  
-  /* Cambiar el icono de ☰ a X cuando el menú está abierto */
-  .menu-toggle:checked + .menu-icon .icon {
-    content: "X";
-    transform: rotate(90deg);
-  }
-  
-  /* Ajuste visual para el cambio en el icono */
-  .menu-toggle:checked + .menu-icon .icon {
-    transform: rotate(45deg);
-  }
-
-
-/* Estilos de los enlaces del menú */
-.dropdown-menu a {
-    display: block;
-    padding: 10px;
-    color: #f2f2f2;
-    background-color: #830c00;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.dropdown-menu a:hover {
-    background-color: #f2f2f2;
-    color: #830c00;
-}
-
-/* Mostrar el menú al pasar el ratón o al hacer clic */
-.profile:hover .dropdown-menu,
-.profile:focus-within .dropdown-menu {
-    display: block;
-}
-
+/* ------------------------------------------
+   Versión móvil
+------------------------------------------- */
 @media (max-width: 500px) {
+
+    /* Estilo del Header */
     .header {
-        /* background-color: #830c00; */
-        padding: 35px 0;
-        /* Ajusta el padding arriba y abajo*/
-        width: 100%;
-        /* Asegura que el menú tenga 100% de ancho */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 15px;
+        background-color: #830c00;
+        position: relative;
+        z-index: 1000;
     }
 
-    .header i {
-        display: block; 
-        font-size: 24px;
+    /* Ícono del menú hamburguesa */
+    .menu-icon {
+        display: block;
         color: #ffffff;
-        margin-left: 10px; 
-        position: absolute; 
-        left: 10px; 
+        font-size: 24px;
         cursor: pointer;
     }
 
-    .header::before { 
-        content: "Cineplus";
-        text-align: center;
-        font-size: 24px;
-        color: #ffffff;
-        font-weight: bold;
-        display: block;
+    /* Menú lateral */
+    .nav-container {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: #830c00;
+        z-index: 999;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        gap: 10px;
+        transition: left 0.3s ease-in-out;
     }
 
-    .header i {
+    /* Mostrar el menú lateral cuando el checkbox está activo */
+    #menu-toggle:checked~.nav-container {
+        left: 0;
+    }
+
+    /* Barra de búsqueda */
+    .search-container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .search {
+        width: 100%;
+        padding: 8px;
+        border-radius: 5px;
+        border: none;
+        background-color: #ffffff;
+        color: #830c00;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .search-container i {
+        position: absolute;
+        right: 20px;
+        color: #830c00;
+        font-size: 16px;
+    }
+
+    /* Selector de ubicación */
+    .select_places {
+        margin-bottom: 15px;
+    }
+
+    .places {
+        width: 100%;
+        padding: 8px;
+        border: none;
+        border-radius: 5px;
+        background-color: #ffffff;
+        color: #830c00;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    /* Lista de navegación */
+    .nav-left ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-left li a {
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 8px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .nav-left li a:hover {
+        background-color: #ffffff;
+        color: #830c00;
+    }
+
+    /* Opciones adicionales (Iniciar sesión, Registrarse) */
+    .dropdown-menu {
+        margin-top: 20px;
+    }
+
+    .dropdown-menu a {
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 16px;
+        padding: 8px;
+        border-radius: 5px;
+        display: block;
+        transition: background-color 0.3s ease;
+    }
+
+    .dropdown-menu a:hover {
+        background-color: #ffffff;
+        color: #830c00;
+    }
+}
+
+
+/* ------------------------------------------
+   Versión web
+------------------------------------------- */
+@media (min-width: 501px) {
+
+    /* ------------------------------------------
+   Menú superior
+------------------------------------------- */
+    .header {
+        background-color: #830c00;
+        padding: 5px 0;
+        width: 100%;
+        position: relative;
+        z-index: 100;
+    }
+
+    /* Contenedor del menú */
+    .nav-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .nav-left ul {
+        display: flex;
+        list-style: none;
+    }
+
+    .nav-left li {
+        margin: 0 10px;
+    }
+
+    .nav-left li a {
+        text-decoration: none;
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 18px;
+        transition: color 0.3s ease;
+    }
+
+    .nav-left li a:hover {
+        color: #ffcccb;
+    }
+
+    /* Barra de búsqueda */
+    .search-container {
+        position: relative;
         display: flex;
     }
 
-    .profile-icon, .places, .nav-container, .logo img, .search-container{
+    .search {
+        border-radius: 15px;
+        padding: 10px 20px;
+        width: 360px;
+        border: none;
+        outline: none;
+    }
+
+    .search-container i {
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        transform: translateY(-50%);
+        color: #6c6c6c;
+        font-size: 18px;
+    }
+
+    /* Select de ubicación */
+    .places {
+        padding: 10px 30px;
+        background-color: #830c00;
+        color: #ffffff;
+        border: none;
+        font-size: 16px;
+        font-weight: 700;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    /* Perfil del usuario */
+    .profile {
+        position: relative;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .profile-icon img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    /* Menú desplegable */
+    .dropdown-menu {
         display: none;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: #ffffff;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        width: 150px;
+        border-radius: 5px;
+        z-index: 1000;
+    }
+
+    .dropdown-menu a {
+        display: block;
+        padding: 10px;
+        color: #830c00;
+        text-decoration: none;
+        font-weight: bold;
+        border-bottom: 1px solid #e0e0e0;
+        text-align: center;
+    }
+
+    .dropdown-menu a:hover {
+        background-color: #830c00;
+        color: #ffffff;
+    }
+
+    .profile:hover .dropdown-menu {
+        display: block;
+    }
+
+    .header input[type="checkbox"] {
+        display: none;
+        /* Ocultamos el checkbox en versión web */
+    }
+
+    .menu-icon {
+        display: none;
+        /* Ocultamos el ícono en versión web */
+    }
+
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+    }
+
+    .nav-left ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .profile-icon,
+    .places,
+    .search-container {
+        display: flex;
+        /* Mostramos elementos ocultos en móvil */
     }
 }
 
@@ -444,7 +474,7 @@ display: block;
 
 @media (max-width: 500px) {
 
-    
+
     /* Estilos del contenedor de login */
     .login-page .container {
         display: flex;
@@ -629,7 +659,7 @@ display: block;
     font-weight: 700;
 }
 
-.login-page .btn-resetPassword{
+.login-page .btn-resetPassword {
     background-color: #AD6D01;
     padding: 15px 10px;
     color: white;
@@ -682,7 +712,8 @@ display: block;
     text-align: left;
 }
 
-@media (max-width: 500px){
+@media (max-width: 500px) {
+
     /* titulo */
     .container-about h1 {
         display: none;
@@ -693,14 +724,14 @@ display: block;
         flex-direction: column;
         font-family: "Montserrat", sans-serif;
         align-items: center;
-        gap: 20px; 
-        width: 100%; 
+        gap: 20px;
+        width: 100%;
     }
 
     /* imagen */
     .container-about img {
-        width: 100%; 
-        max-width: 350px; 
+        width: 100%;
+        max-width: 350px;
         height: auto;
         flex-shrink: 0;
         margin-top: 20px;

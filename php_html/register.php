@@ -48,6 +48,5 @@
     </div>
 
 
-    <script src="../JS/registro.js"></script>
 </body>
 </html>

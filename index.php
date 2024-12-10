@@ -30,8 +30,11 @@
     ?>
     <header class="header">
 
-        <input type="checkbox">
-        <i class="fa-solid fa-bars"></i>
+          <!-- Checkbox para controlar el menú -->
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">
+            <i class="fa-solid fa-bars"></i>
+        </label>
 
         <div class="nav-container">
             <div class="logo">
