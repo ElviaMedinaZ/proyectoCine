@@ -26,19 +26,22 @@
             <section>
                 <h1>Puntos y recompensas</h1>
                 <h2>Puntos: <?= htmlspecialchars($puntos) ?></h2>
-                <div class="carrusel">
-                    <div class="flechas">
+                <div class="carrusel-container">
+                    <div class="flecha-izq">
                         <img src="../image/recompensas/Chevron left.png" alt="flecha izquierda">
                     </div>
-                    <div class="tarjetas-container">
-                        <?php include('../php_funcion/cargar_recompensas.php'); ?>
+                    <div class="carrusel">
+                        <div class="tarjetas-container">
+                            <?php include('../php_funcion/cargar_recompensas.php'); ?>
+                        </div>
                     </div>
-                    <div class="flechas">
+                    <div class="flecha-der">
                         <img src="../image/recompensas/Chevron right.png" alt="flecha derecha">
                     </div>
                 </div>
             </section>
         </main>
     </div>
+
 </body>
 </html>

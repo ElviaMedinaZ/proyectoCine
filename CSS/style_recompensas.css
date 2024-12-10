@@ -56,6 +56,7 @@ h2 {
     padding: 10px;
     box-sizing: border-box;
     margin: 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 /* tarjeta seleccionada */
@@ -63,17 +64,29 @@ h2 {
     background-color: #E5BC60;
 }
 
-/* flechas del carrusel */
-.carrusel .flechas {
-    margin: 20px;
-    display: flex;
+/* Flechas del carrusel */
+.flecha-izq, .flecha-der {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 10; 
+    margin-top: 50px;
 }
 
-/* imagen de las flechas */
-.flechas img {
-    justify-content: center;
-    width: 40px;
+.flecha-izq img, .flecha-der img {
+    width: 40px; 
     height: auto;
+    cursor: pointer;
+}
+
+.flecha-izq {
+    left: 80px; 
+}
+
+/* Flecha derecha */
+.flecha-der {
+    right: 80px; 
 }
 
 /* imagen de las tarjetas */
@@ -99,4 +112,70 @@ h2 {
     font-weight: 500;
     font-size: 20px;
     color: #830c00;
+}
+
+@media (max-width: 500px) {
+    /* titulo */
+    h1 {
+        display: none;
+    }
+
+    /* estilo puntaje */
+    h2 {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        color: #830C00;
+        margin-top: 30px;
+    }
+
+    /* Contenedor general del carrusel */
+    .carrusel-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+    }
+
+    /* Contenedor principal del carrusel */
+    .carrusel {
+        display: flex;
+        overflow: hidden; /* Asegura que solo se muestren las tarjetas dentro del carrusel */
+        width: 100%;
+        max-width: 340px; /* Tamaño del carrusel */
+    }
+
+    /* Tarjetas */
+    .tarjetas-container {
+        display: flex;
+        gap: 0;
+        transition: transform 0.3s ease;
+    }
+
+    .elemento{
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Flechas */
+    .flecha-izq, .flecha-der {
+        position: absolute;
+        top: 50%;
+        cursor: pointer;
+    }
+
+    .flecha-izq {
+        left: -40px; /* Ubicación en la izquierda */
+    }
+
+    .flecha-der {
+        right: -40px; /* Ubicación en la derecha */
+    }
+
+    .flecha-izq img, .flecha-der img {
+        width: 30px; /* Tamaño de las flechas */
+        height: auto;
+    }
+
 }
